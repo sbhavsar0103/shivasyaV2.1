@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#scrollbar2::-webkit-scrollbar {
+  width: 100px;
+  height: 8px;
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+  background-image: url('../src/assets/utility/airplane.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  background-color: transparent;
+  border-radius: 10px;
+}
