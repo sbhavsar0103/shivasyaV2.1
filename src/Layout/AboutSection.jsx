@@ -4,18 +4,15 @@ const AboutSection = () => {
     return (
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                {/* Top label */}
                 <span className="inline-block bg-gray-100 text-blue-700 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded mb-4">
                     About Company
                 </span>
 
-                {/* Heading */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 leading-snug">
                     One-Stop Solution For All Your Visa Needs
-                </h2>
+                </h3>
 
-                {/* Subtext */}
-                <p className="text-gray-500 max-w-3xl mx-auto mb-12 text-sm sm:text-base text-justify">
+                <p className="text-gray-600 max-w-5xl mx-auto mb-12 text-sm sm:text-base text-justify leading-relaxed">
                     Global Colliance is a leading study abroad consultant in India, providing expert guidance
                     and complete services for individuals seeking opportunities in overseas education. With
                     over a decade of experience, Global Colliance has established itself as a trusted name
@@ -23,9 +20,7 @@ const AboutSection = () => {
                     excellence to aspiring students.
                 </p>
 
-                {/* Two columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Our Vision */}
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                         <h3 className="text-[#3D1F14] font-semibold flex items-center mb-3">
                             <span className="mr-2">➤</span> Our Vision
@@ -46,7 +41,6 @@ const AboutSection = () => {
                         </div>
                     </div>
 
-                    {/* Our Mission */}
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                         <h3 className="text-[#3D1F14] font-semibold flex items-center mb-3">
                             <span className="mr-2">➤</span> Our Mission
@@ -63,6 +57,9 @@ const AboutSection = () => {
                                 their skills and encourage growth, critical thinking, self-expression, and
                                 multitasking. In addition, our mission is to offer our students exceptional study-abroad
                                 knowledge without compromising their interests or budget.
+                            </p>
+                            <p className="text-gray-500 text-sm sm:text-base mt-4 text-justify">
+                                To achieve this, Global Colliance has committed to collaborating with top-notch colleges and universities in Canada, the UK, the USA,  Australia, New Zealand, Germany, France, and Dubai . Our goal is to ensure the best education for our students, fostering global leaders who can drive meaningful impact in the world.
                             </p>
                         </div>
                     </div>

@@ -1,6 +1,13 @@
 import React from "react";
 import bannerImage from "../assets/aboutus/college-students-pointing-globe-library-1.jpg";
 import AboutSection from "../Layout/AboutSection";
+import WorldMapSection from "../Layout/WorldMapSection";
+import OurServicesSection from "../Layout/OurServicesSection";
+import WhyChooseUs from "../Layout/WhyChooseUs";
+import Destinations from "../Layout/Destinations";
+import Achievements from "../Layout/Achievements";
+// import AwardsRecognition from "../Layout/AwardsRecognition";
+import Footer from "../Layout/footer";
 
 const AboutBanner = () => {
     return (
@@ -31,6 +38,12 @@ const AboutBanner = () => {
                 </div>
             </section>
             <AboutSection />
+            <WorldMapSection />
+            <OurServicesSection />
+            <WhyChooseUs />
+            <Destinations />
+            <Achievements />
+            <Footer />
         </>
     );
 };

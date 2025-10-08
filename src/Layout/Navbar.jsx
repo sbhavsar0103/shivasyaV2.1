@@ -43,7 +43,7 @@ export default function Navbar({ toggleSidebar }) {
                         {coachingOpen && (
                             <ul className="absolute left-0 mt-2 w-32 bg-white border rounded shadow-lg z-50">
                                 <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer">PTE</li>
-                                <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer">ILTS</li>
+                                <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer"><Link to="/ielts-coaching">ILTS</Link></li>
                             </ul>
                         )}
                     </li>
