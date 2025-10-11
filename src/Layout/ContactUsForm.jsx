@@ -86,7 +86,7 @@ export default function ContactForm() {
                                 onChange={(e) =>
                                     setFormData({ ...formData, name: e.target.value })
                                 }
-                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-lime-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
                             />
                             <input
                                 type="tel"
@@ -96,7 +96,7 @@ export default function ContactForm() {
                                 onChange={(e) =>
                                     setFormData({ ...formData, phone: e.target.value })
                                 }
-                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-lime-500 focus:border-transparent outline-none transition-all"
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
                             />
                         </div>
 
@@ -109,7 +109,7 @@ export default function ContactForm() {
                             onChange={(e) =>
                                 setFormData({ ...formData, email: e.target.value })
                             }
-                            className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-lime-500 focus:border-transparent outline-none transition-all"
+                            className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
                         />
 
                         {/* Coaching Type */}
@@ -174,7 +174,7 @@ export default function ContactForm() {
                                         />
                                         <span
                                             className={`justify-center w-full flex items-center gap-2 rounded-lg border-2 text-sm transition-all font-medium ${formData.country === country.code
-                                                    ? "border-lime-500 bg-lime-50 text-lime-700"
+                                                    ? "border-[#3D1F14] bg-lime-50 text-lime-700"
                                                     : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
                                                 }`}
                                         >
@@ -195,7 +195,7 @@ export default function ContactForm() {
                             onChange={(e) =>
                                 setFormData({ ...formData, message: e.target.value })
                             }
-                            className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-lime-500 focus:border-transparent outline-none transition-all resize-none"
+                            className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all resize-none"
                         />
 
                         {/* Privacy Notice */}

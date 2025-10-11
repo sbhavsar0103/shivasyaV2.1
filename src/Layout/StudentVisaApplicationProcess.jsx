@@ -29,7 +29,7 @@ export default function StudentVisaApplicationProcess() {
           <ul className="flex-1 grid grid-cols-1 sm:grid-cols-1 gap-4 self-center">
             {points.map((point, index) => (
               <li key={index} className="flex items-center gap-2 text-gray-800 text-base sm:text-lg">
-                <CheckCircle className="w-5 h-5 text-lime-500 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-[#3D1F14] flex-shrink-0" />
                 {point}
               </li>
             ))}

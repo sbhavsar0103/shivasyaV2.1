@@ -1,39 +1,3 @@
-// import Layout from "./Layout/Layout";
-// import BannerVideo from "./Layout/BannerVideo"
-
-// function App() {
-//   return (
-//     <Layout>
-//       <BannerVideo/>
-//     </Layout>
-//   );
-// }
-
-// export default App;
-
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Layout from "./Layout/Layout";
-// import BannerVideo from "./Layout/BannerVideo";
-// import AboutUs from "./Layout/AboutUsBanner";
-// import IELTSCoaching from "./Layout/IELTSCoaching";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Layout>
-//         <Routes>
-//           <Route path="/" element={<BannerVideo />} />
-//           <Route path="/about" element={<AboutUs />} />
-//           <Route path="/ielts-coaching" element={<IELTSCoaching />} />
-//         </Routes>
-//       </Layout>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import BannerVideo from "./Layout/BannerVideo";
@@ -49,6 +13,7 @@ import IrelandStudy from "./Layout/IrelandStudy";
 import EuropeStudy from "./Layout/EuropeStudy";
 import ItalyStudy from "./Layout/ItalyStudy";
 import AbroadServices from "./Layout/AbroadServices";
+import RussiaStudy from "./Layout/RussiaStudy";
 
 function App() {
   return (
@@ -69,6 +34,7 @@ function App() {
           <Route path="europe-study" element={<EuropeStudy />} />
           <Route path="italy-study" element={<ItalyStudy />} />
           <Route path="abroad-services" element={<AbroadServices />} />
+          <Route path="russia-study" element={<RussiaStudy />} />
         </Route>
       </Routes>
     </Router>

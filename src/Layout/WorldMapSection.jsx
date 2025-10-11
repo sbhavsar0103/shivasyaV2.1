@@ -41,28 +41,28 @@ const WorldMapSection = () => {
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
         <div className="bg-white shadow-md rounded-xl p-6 text-center">
           <p className="text-3xl font-bold text-gray-900">
-            99 <span className="text-blue-600 text-2xl">%</span>
+            99 <span className="text-[#3D1F14] text-2xl">%</span>
           </p>
           <p className="text-gray-500 text-sm mt-1">Visa Success Ratio</p>
         </div>
 
         <div className="bg-white shadow-md rounded-xl p-6 text-center">
           <p className="text-3xl font-bold text-gray-900">
-            22,000 <span className="text-blue-600 text-2xl">+</span>
+            22,000 <span className="text-[#3D1F14] text-2xl">+</span>
           </p>
           <p className="text-gray-500 text-sm mt-1">Students Enrolled</p>
         </div>
 
         <div className="bg-white shadow-md rounded-xl p-6 text-center">
           <p className="text-3xl font-bold text-gray-900">
-            30,000 <span className="text-blue-600 text-2xl">+</span>
+            30,000 <span className="text-[#3D1F14] text-2xl">+</span>
           </p>
           <p className="text-gray-500 text-sm mt-1">Students Counselled</p>
         </div>
 
         <div className="bg-white shadow-md rounded-xl p-6 text-center">
           <p className="text-3xl font-bold text-gray-900">
-            16 <span className="text-blue-600 text-2xl">+</span>
+            16 <span className="text-[#3D1F14] text-2xl">+</span>
           </p>
           <p className="text-gray-500 text-sm mt-1">Years of Experience</p>
         </div>

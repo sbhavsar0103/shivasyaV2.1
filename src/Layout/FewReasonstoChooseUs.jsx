@@ -56,14 +56,6 @@ export default function FewReasons() {
                             key={index}
                             className="flex flex-col items-center text-center group transition-transform duration-500 hover:-translate-y-1"
                         >
-                            {/* <div className="relative w-56 h-56 rounded-full bg-gradient-to-b from-[#d8752c] to-[#c75b1b] flex items-center justify-center overflow-hidden mb-6 shadow-lg">
-                                <div className="absolute top-0 left-0 w-full h-1/2 bg-[#3A1F16]/10 rounded-t-full"></div>
-                                <img
-                                    src={reason.image}
-                                    alt={reason.title}
-                                    className="w-44 h-44 rounded-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-                                />
-                            </div> */}
                             <div className="relative w-56 h-56 rounded-full flex items-center justify-center overflow-hidden mb-6 shadow-lg group">
                                 <img
                                     src={reason.image}
@@ -83,9 +75,11 @@ export default function FewReasons() {
 
                 {/* Button */}
                 <div className="text-center mt-14">
-                    <button className="inline-block bg-[#D8752C] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#3A1F16] transition-colors duration-300">
-                        KNOW MORE
-                    </button>
+                    <Link to="/abroad-services">
+                        <button className="inline-block bg-[#D8752C] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#3A1F16] transition-colors duration-300">
+                            KNOW MORE
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@ const AboutSection = () => {
     return (
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 text-center">
-                <span className="inline-block bg-gray-100 text-blue-700 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded mb-4">
+                <span className="inline-block bg-gray-100 text-[#3D1F14] text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded mb-4">
                     About Company
                 </span>
 
