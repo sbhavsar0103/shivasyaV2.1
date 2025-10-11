@@ -1,14 +1,13 @@
 import { Send } from "lucide-react";
-import IELTSContent from "../Layout/IELTSContent";
-import IELTSModules from "../Layout/IELTSModules";
-import IELTSBands from "../Layout/IELTSBand";
-import IELTSCoachingBenefits from "../Layout/IELTSCoachingBenefits";
-import BestIELTSCoaching from "../Layout/BestIELTSCoaching";
+import PTEContent from "../Layout/PTEContent";
+import EligibilityPTE from "../Layout/EligibilityPTE";
+import PTETestFormat from "../Layout/PTETestFormat";
+import WhyChoosePTECoaching from "../Layout/WhyChoosePTECoaching";
 import Benefits from "../Layout/Benefits";
 import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 
-export default function IELTSCoaching() {
+export default function PTECoaching() {
     return (
         <>
             <section className="bg-gradient-to-br to-white py-20">
@@ -17,7 +16,7 @@ export default function IELTSCoaching() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                IELTS COACHING BY{" "}
+                                PTE COACHING BY{" "}
                                 <span className="relative inline-block">
                                     THE LEADER
                                     <svg
@@ -38,7 +37,7 @@ export default function IELTSCoaching() {
                             </h1>
 
                             <p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0">
-                                Get your desired score with expert coaching
+                                Get your desire score with expert coaching
                             </p>
 
                             <button className="group bg-[#3D1F14] hover:bg-[#C67B3E] hover:text-[#3D1F14] text-[#C67B3E] font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-3 text-lg">
@@ -55,7 +54,7 @@ export default function IELTSCoaching() {
                                     {/* Screen header */}
                                     <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6 mb-4">
                                         <h3 className="text-3xl font-bold text-[#3D1F14] mb-4">
-                                            IELTS
+                                            PTE
                                         </h3>
                                         <div className="space-y-3">
                                             {[1, 2, 3, 4].map((item) => (
@@ -128,15 +127,13 @@ export default function IELTSCoaching() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
-            <IELTSContent />
-            <IELTSModules />
-            <IELTSBands />
-            <IELTSCoachingBenefits />
-            <BestIELTSCoaching />
+            <PTEContent />
+            <EligibilityPTE />
+            <PTETestFormat />
+            <WhyChoosePTECoaching />
             <Benefits />
             <ContactForm />
             <Footer />
