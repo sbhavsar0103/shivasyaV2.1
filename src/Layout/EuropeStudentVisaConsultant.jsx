@@ -5,13 +5,13 @@ export default function EuropeStudentVisaConsultant() {
 
                 {/* H2 */}
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    Why Visa Zone is the Best Europe Student Visa Consultant?
+                    Why Shivasya is the Best Europe Student Visa Consultant?
                 </h3>
 
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        No country in Europe would have the same visa process. Complete visa application requires constant study and analysis. Visa Zone's team are expert supporter of students who want to study in Europe. Not only do we guide students on the choice of student visa, but we also help with the study visa application for successful approval. Also, the assurance of finances and extra aid in the visa process pave the way for an increased chance of visa acceptance. For students who need help with work visas during- or post-completion of the academic program, we cater to this help also. Read what students have as benefits when they consult our Europe Student Visa Consultant in Ahmedabad!
+                        No country in Europe would have the same visa process. Complete visa application requires constant study and analysis. Shivasya's team are expert supporter of students who want to study in Europe. Not only do we guide students on the choice of student visa, but we also help with the study visa application for successful approval. Also, the assurance of finances and extra aid in the visa process pave the way for an increased chance of visa acceptance. For students who need help with work visas during- or post-completion of the academic program, we cater to this help also. Read what students have as benefits when they consult our Europe Student Visa Consultant in Ahmedabad!
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ export default function EuropeStudentVisaConsultant() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Many designated institutes (country-specific) have defined rules and regulations for international students who want to work part-time during their academic course duration. Like the Public Employment Service in Austria or the Student Service Centre in Croatia, one has to follow the work limits decided per the student visa type and enrolled institution in the European country. To clear the confusion, our Europe Student Visa Consultant in Ahmedabad at Visa Zone provides complete assistance.
+                        Many designated institutes (country-specific) have defined rules and regulations for international students who want to work part-time during their academic course duration. Like the Public Employment Service in Austria or the Student Service Centre in Croatia, one has to follow the work limits decided per the student visa type and enrolled institution in the European country. To clear the confusion, our Europe Student Visa Consultant in Ahmedabad at Shivasya provides complete assistance.
                     </p>
                 </div>
 
@@ -70,7 +70,7 @@ export default function EuropeStudentVisaConsultant() {
 
                     </p>
                     <p>
-                        Acquiring a student visa for the European Union may appear challenging, yet with guidance to these steps from Europe Study Visa Consultants in Ahmedabad, careful adherence, and thorough research, it is possible to streamline the procedure and improve the prospects of student visa approval. Take free counseling at Visa Zone Education and Immigration Services Pvt. Ltd. for your Study Abroad in Europe dreams.
+                        Acquiring a student visa for the European Union may appear challenging, yet with guidance to these steps from Europe Study Visa Consultants in Ahmedabad, careful adherence, and thorough research, it is possible to streamline the procedure and improve the prospects of student visa approval. Take free counseling at Shivasya Education and Immigration Services Pvt. Ltd. for your Study Abroad in Europe dreams.
                     </p>
                 </div>
             </div>

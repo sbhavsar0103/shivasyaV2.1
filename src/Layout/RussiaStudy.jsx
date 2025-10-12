@@ -6,6 +6,9 @@ import RussiaInfoSection from "../Layout/RussiaInfoSection";
 import CareerOpportunitiesRussia from "../Layout/CareerOpportunitiesRussia";
 import WhyStudyInRussia from "../Layout/WhyStudyRussia";
 import CostOfLivingRussia from "../Layout/CostOfLivingRussia";
+import RussiaScholarship from "../Layout/RussiaScholarship";
+import RussiaCoursesSection from "../Layout/RussiaCoursesSection";
+import RussiaAdmissionRequirement from "../Layout/RussiaAdmissionRequirement";
 
 export default function RussiaStudySection() {
     return (
@@ -20,6 +23,9 @@ export default function RussiaStudySection() {
             <CareerOpportunitiesRussia />
             <WhyStudyInRussia />
             <CostOfLivingRussia />
+            <RussiaScholarship />
+            <RussiaCoursesSection />
+            <RussiaAdmissionRequirement />
             <ContactForm />
             <Footer />
         </>

@@ -26,11 +26,11 @@ export default function WhyChoosePTECoaching() {
             </div>
 
             <h1 className="mt-8  text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Visa Zone for PTE Coaching?
+                Why Choose Shivasya for PTE Coaching?
             </h1>
             <div className="space-y-4 text-gray-700 text-base leading-relaxed">
                 <p className="text-justify">
-                    Visa Zone has been at the forefront of delivering the best training to its students who want to take the PTE test and study, work, and migrate to other countries. In every PTE Coaching Batch and for each student, we craft a personalized plan that caters to their weaknesses and strengths. If quality education is a priority, then Visa Zone's PTE Coaching in Ahmedabad is where students must enrol.
+                    Shivasya has been at the forefront of delivering the best training to its students who want to take the PTE test and study, work, and migrate to other countries. In every PTE Coaching Batch and for each student, we craft a personalized plan that caters to their weaknesses and strengths. If quality education is a priority, then Shivasya's PTE Coaching in Ahmedabad is where students must enrol.
                 </p>
 
                 <p className="text-justify">

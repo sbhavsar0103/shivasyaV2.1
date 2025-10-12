@@ -69,7 +69,7 @@ export default function OurServices() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg leading-relaxed">
                     <p className="font-semibold">
-                        Why Visa zone is the best place for Coaching ?
+                        Why Shivasya is the best place for Coaching ?
                     </p>
                     <p>
                         The most important step for any one hoping to go to another country for further studies is appearing for the IELTS or PTE.

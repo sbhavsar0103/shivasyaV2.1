@@ -17,15 +17,16 @@
 // }
 
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import { Outlet } from "react-router-dom";
+import ContactFormPopup from "../Layout/ContactFormPopup";
 
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen relative">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex flex-col flex-1">
         <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
@@ -33,6 +34,9 @@ export default function Layout() {
           <Outlet /> {/* Render nested routes here */}
         </main>
       </div>
+
+      {/* Contact form popup overlay */}
+      <ContactFormPopup />
     </div>
   );
 }

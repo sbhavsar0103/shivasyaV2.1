@@ -70,16 +70,16 @@ export default function BenefitsNewZealandStudentVisa() {
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    How is Visa Zone the best New Zealand student visa Consultant?
+                    How is Shivasya the best New Zealand student visa Consultant?
                 </h3>
 
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        A visa permit doesn't come easy to everyone. One has to be well-informed and compliant with New Zealand's rules and regulations. Many students want to work after completing their education from their preferred education consultants in New Zealand. Visa Zone's New Zealand Student Visa Consultant in Ahmedabad helps prevent any disruptions to the study plans of students and also gives them the right guidance for post-study employment opportunities. Our assistance helps students in selecting institutions recognized by the NZQA so that there is no scope for student visa rejection. We have a proactive approach to minimize any delay. Students have to follow the legalities to Study in New Zealand and we guide them so that they adhere to all visa conditions posed by the New Zealand government during this educational period.
+                        A visa permit doesn't come easy to everyone. One has to be well-informed and compliant with New Zealand's rules and regulations. Many students want to work after completing their education from their preferred education consultants in New Zealand. Shivasya's New Zealand Student Visa Consultant in Ahmedabad helps prevent any disruptions to the study plans of students and also gives them the right guidance for post-study employment opportunities. Our assistance helps students in selecting institutions recognized by the NZQA so that there is no scope for student visa rejection. We have a proactive approach to minimize any delay. Students have to follow the legalities to Study in New Zealand and we guide them so that they adhere to all visa conditions posed by the New Zealand government during this educational period.
                     </p>
                     <p>
-                        So, get ready to make the Study Abroad to New Zealand journey a smooth one by taking help from the team of Visa Zone known as the best New Zealand Study Visa Consultant in Ahmedabad.
+                        So, get ready to make the Study Abroad to New Zealand journey a smooth one by taking help from the team of Shivasya known as the best New Zealand Study Visa Consultant in Ahmedabad.
                     </p>
                 </div>
 

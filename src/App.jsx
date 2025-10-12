@@ -14,6 +14,13 @@ import EuropeStudy from "./Layout/EuropeStudy";
 import ItalyStudy from "./Layout/ItalyStudy";
 import AbroadServices from "./Layout/AbroadServices";
 import RussiaStudy from "./Layout/RussiaStudy";
+import ContactUsPage from "./Layout/ContactUsPage";
+import PrivacyPolicy from "./Layout/PrivacyPolicy";
+import Disclaimer from "./Layout/Disclaimer";
+import TermsAndConditions from "./Layout/TermsAndConditions";
+import CopyrightNotice from "./Layout/CopyrightNotice";
+import GDPR from "./Layout/GDPR";
+import MonetaryPolicy from "./Layout/MonetaryPolicy";
 
 function App() {
   return (
@@ -35,6 +42,13 @@ function App() {
           <Route path="italy-study" element={<ItalyStudy />} />
           <Route path="abroad-services" element={<AbroadServices />} />
           <Route path="russia-study" element={<RussiaStudy />} />
+          <Route path="contact-us" element={<ContactUsPage />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="disclaimer" element={<Disclaimer />} />
+          <Route path="terms-conditions" element={<TermsAndConditions />} />
+          <Route path="copyright-notice" element={<CopyrightNotice />} />
+          <Route path="gdpr" element={<GDPR />} />
+          <Route path="monetary-policy" element={<MonetaryPolicy />} />
         </Route>
       </Routes>
     </Router>

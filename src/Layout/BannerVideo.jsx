@@ -1,4 +1,4 @@
-import MainVideo from "../assets/video/venturi-bg-video.mp4";
+import MainVideo from "../assets/video/shiv-bg.mp4";
 import { Globe, Home, DollarSign, FileText, Plane } from "lucide-react";
 import CountrySection from "../Layout/CountryTieUps";
 import TrainingSection from "../Layout/TrainingSection";

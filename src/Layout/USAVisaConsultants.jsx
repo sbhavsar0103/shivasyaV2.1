@@ -4,13 +4,13 @@ export default function USAVisaConsultants() {
             <div className="max-w-7xl mx-auto flex flex-col gap-8">
                 {/* H2 */}
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    Visa Zone- One of the USA Visa Consultants
+                    Shivasya- One of the USA Visa Consultants
                 </h3>
 
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        Students can enroll in USA Educational Institutions depending on their desired schooling level. Choosing the best USA study visa consultant to get enrollment in the desired institution, course, and visa, followed by the documentation or application, can become overwhelming for a student who wants to study in USA. Visa zone's USA Study Visa Consultant in Ahmedabad offers guidance catering to students' requirements, preparation for visa interviews, assistance regarding past-visa denials, SEVIS fee registration, and finally, help with post-visa approval departure. At Visa Zone Educational and Immigration Services Pvt. Ltd., The team provides exclusive visa assistance, securing the dreams of several aspirants willing to move to the USA for study and post-study employment.
+                        Students can enroll in USA Educational Institutions depending on their desired schooling level. Choosing the best USA study visa consultant to get enrollment in the desired institution, course, and visa, followed by the documentation or application, can become overwhelming for a student who wants to study in USA. Shivasya's USA Study Visa Consultant in Ahmedabad offers guidance catering to students' requirements, preparation for visa interviews, assistance regarding past-visa denials, SEVIS fee registration, and finally, help with post-visa approval departure. At Shivasya Educational and Immigration Services Pvt. Ltd., The team provides exclusive visa assistance, securing the dreams of several aspirants willing to move to the USA for study and post-study employment.
                     </p>
                 </div>
 
@@ -83,7 +83,7 @@ export default function USAVisaConsultants() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Students reach out to experts to gain advice on their visa application because the process without any help can divert them from the right path. USA Student Visa Consultant in Ahmedabad, with several years of experience in helping students, offer help by simplifying the visa application journey to study in USA. Being a well-known USA Student Visa Consultants, Our assistance for USA Student Visa has made it possible for students to overcome all the hurdles and find their way to the USA- the dream study destination. Contact Visa Zone Education and Immigration Services Pvt. Ltd. and schedule your counseling to have an in-person interaction with the visa consultants to study in USA.
+                        Students reach out to experts to gain advice on their visa application because the process without any help can divert them from the right path. USA Student Visa Consultant in Ahmedabad, with several years of experience in helping students, offer help by simplifying the visa application journey to study in USA. Being a well-known USA Student Visa Consultants, Our assistance for USA Student Visa has made it possible for students to overcome all the hurdles and find their way to the USA- the dream study destination. Contact Shivasya Education and Immigration Services Pvt. Ltd. and schedule your counseling to have an in-person interaction with the visa consultants to study in USA.
                     </p>
                 </div>
             </div>

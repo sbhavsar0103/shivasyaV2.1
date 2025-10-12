@@ -21,7 +21,7 @@ export default function CostOfLivingRussia() {
   ];
 
   return (
-    <section className="w-full bg-[#C12025] text-white py-16 px-4 sm:px-6 lg:px-16 mb-5">
+    <section className="w-full bg-[#C67B3E] text-white py-16 px-4 sm:px-6 lg:px-16">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           Cost of Living to study in Russia
@@ -41,23 +41,26 @@ export default function CostOfLivingRussia() {
         {/* Responsive Table */}
         <div className="overflow-x-auto">
           <table className="w-full border border-white border-opacity-50 text-left text-white">
-            <thead className="bg-[#B91C1C] text-white">
+            <thead className="bg-[#3D1F14] text-white">
               <tr>
-                <th className="border border-white border-opacity-50 px-4 py-3 font-semibold">
+                <th className="border border-white border-opacity-50 px-4 py-3 font-semibold text-[#C67B3E]">
                   Particular
                 </th>
-                <th className="border border-white border-opacity-50 px-4 py-3 font-semibold">
+                <th className="border border-white border-opacity-50 px-4 py-3 font-semibold text-[#C67B3E]">
                   Cost of living
                 </th>
               </tr>
             </thead>
             <tbody>
               {costs.map((item, index) => (
-                <tr key={index} className="hover:bg-[#b11d1d] transition">
-                  <td className="border border-white border-opacity-50 px-4 py-3">
+                <tr
+                  key={index}
+                  className="hover:bg-[#3D1F14]/70 transition duration-300"
+                >
+                  <td className="border border-white border-opacity-50 px-4 py-3 text-[#3D1F14]">
                     {item.particular}
                   </td>
-                  <td className="border border-white border-opacity-50 px-4 py-3">
+                  <td className="border border-white border-opacity-50 px-4 py-3 text-[#3D1F14]">
                     {item.cost}
                   </td>
                 </tr>

@@ -44,7 +44,7 @@ export default function FreeStudyInItaly() {
                 {/* Section Heading */}
                 <div className="text-center mb-14">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Why Visa zone is the Best for Free{" "}
+                        Why Shivasya is the Best for Free{" "}
                         <span className="relative inline-block">
                             Study in Italy?
                             <svg
@@ -65,7 +65,7 @@ export default function FreeStudyInItaly() {
 
                     </h1>
                     <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Here’s why choosing Visa zone is the most magnificent decision for your free study in Italy:
+                        Here’s why choosing Shivasya is the most magnificent decision for your free study in Italy:
                     </p>
                 </div>
 

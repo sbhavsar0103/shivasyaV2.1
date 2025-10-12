@@ -47,7 +47,7 @@ export default function DocumentsRequiredForUSA() {
             The consular officer’s discretion would be considered last upon the approval of Visa. You would also need to pay additional issuance fees after approval.
           </p>
           <p>
-            A visa denial can hugely hinder your potential to continue your Study in USA. To avoid hiccups in your easy and smooth US visa process, move to Visa Zone now, one of the best USA student Visa Consultant in Ahmedabad.
+            A visa denial can hugely hinder your potential to continue your Study in USA. To avoid hiccups in your easy and smooth US visa process, move to Shivasya now, one of the best USA student Visa Consultant in Ahmedabad.
           </p>
         </div>
       </div>

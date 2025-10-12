@@ -18,6 +18,7 @@ export default function Navbar({ toggleSidebar }) {
         { name: "Ireland", code: "IE", path: "/ireland-study" },
         { name: "Europe", code: "EU", path: "/europe-study" },
         { name: "Italy", code: "IT", path: "/italy-study" },
+        { name: "Russia", code: "RU", path: "/russia-study" },
     ];
 
     return (
@@ -128,7 +129,7 @@ export default function Navbar({ toggleSidebar }) {
 
                     <li>
                         <Link
-                            to="/contact"
+                            to="/contact-us"
                             className="hover:underline hover:underline-offset-4 hover:decoration-3 hover:decoration-[#3D1F14]"
                         >
                             <b>Contact Us</b>

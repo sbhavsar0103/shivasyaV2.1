@@ -31,7 +31,7 @@ export default function StudentVisaConsultantForUK() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Requirements of universities and colleges in the UK differ for examinations like IELTS, PTE, TOEFL iBT, Duolingo, etc. The preparation of these tests has to be based on the same. Visa Zone's UK Education Consultants in Ahmedabad share the details, format, and required scores to secure admission to the desired institutions. They also help to select the educational institution if a student has already achieved a desired language proficiency test score. Many students do not qualify due to low test scores in these examinations, we help select universities that accept retake scores or those universities where students can study without taking these tests. If any concerns, there is a facility for coaching at our institution where they can learn skills and increase their chances of selection.
+                        Requirements of universities and colleges in the UK differ for examinations like IELTS, PTE, TOEFL iBT, Duolingo, etc. The preparation of these tests has to be based on the same. Shivasya's UK Education Consultants in Ahmedabad share the details, format, and required scores to secure admission to the desired institutions. They also help to select the educational institution if a student has already achieved a desired language proficiency test score. Many students do not qualify due to low test scores in these examinations, we help select universities that accept retake scores or those universities where students can study without taking these tests. If any concerns, there is a facility for coaching at our institution where they can learn skills and increase their chances of selection.
                     </p>
                 </div>
 
@@ -42,7 +42,7 @@ export default function StudentVisaConsultantForUK() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Students have concerns regarding the medical facilities in international land. The UK Education Consultants in Ahmedabad at Visa Zone guide students about the facilities they can avail of and if they have to register with UK Healthcare- NHS (National Health Service) (depending on the study duration). Students, when choosing our consultation, get information about other ways to health and wellness services possible in the UK. From registration in the UK post-arrival to surcharge payment, we help them become familiar with every process. Contact the UK Education Consultants at our institution for the complete details (pre-departure and post-departure) related to medical requirements and assistance.
+                        Students have concerns regarding the medical facilities in international land. The UK Education Consultants in Ahmedabad at Shivasya guide students about the facilities they can avail of and if they have to register with UK Healthcare- NHS (National Health Service) (depending on the study duration). Students, when choosing our consultation, get information about other ways to health and wellness services possible in the UK. From registration in the UK post-arrival to surcharge payment, we help them become familiar with every process. Contact the UK Education Consultants at our institution for the complete details (pre-departure and post-departure) related to medical requirements and assistance.
                     </p>
                 </div>
 
@@ -64,7 +64,7 @@ export default function StudentVisaConsultantForUK() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        To study in UK, the Requirements of universities and colleges differ for examinations like IELTS, PTE, TOEFL iBT, Duolingo, etc. The preparation of these tests has to be based on the same. Visa Zone's UK Education Consultants in Ahmedabad share the details, format, and required scores to secure admission to the desired institutions for aspirants who want to study in UK. They also help to select the educational consultant in UK if a student has already achieved a desired language proficiency test score. Many students do not qualify due to low test scores in these examinations, we help select universities that accept retake scores or those universities where students can study without taking these tests. If any concerns, there is a facility for coaching at our institution where they can learn skills and increase their chances of selection.
+                        To study in UK, the Requirements of universities and colleges differ for examinations like IELTS, PTE, TOEFL iBT, Duolingo, etc. The preparation of these tests has to be based on the same. Shivasya's UK Education Consultants in Ahmedabad share the details, format, and required scores to secure admission to the desired institutions for aspirants who want to study in UK. They also help to select the educational consultant in UK if a student has already achieved a desired language proficiency test score. Many students do not qualify due to low test scores in these examinations, we help select universities that accept retake scores or those universities where students can study without taking these tests. If any concerns, there is a facility for coaching at our institution where they can learn skills and increase their chances of selection.
                     </p>
                 </div>
 
@@ -81,19 +81,19 @@ export default function StudentVisaConsultantForUK() {
 
                 {/* H2 */}
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    Why Visa Zone is the most trusted Student Visa Consultant for UK?
+                    Why Shivasya is the most trusted Student Visa Consultant for UK?
                 </h3>
 
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        One of the most valuable services provided by UK Study Visa Consultants in Ahmedabad is assisting students in charting their visa process, which is otherwise complex and confusing. To ease students' difficulties, the team works closely with them to align their career aspirations and ambitions by devising personalized study visa plans to help them achieve their goals of study in UK. Visa Zone's UK Student Visa Consultants in Ahmedabad are the best guides for students, ensuring a smooth and successful student visa grant ahead of studying and working in the UK
+                        One of the most valuable services provided by UK Study Visa Consultants in Ahmedabad is assisting students in charting their visa process, which is otherwise complex and confusing. To ease students' difficulties, the team works closely with them to align their career aspirations and ambitions by devising personalized study visa plans to help them achieve their goals of study in UK. Shivasya's UK Student Visa Consultants in Ahmedabad are the best guides for students, ensuring a smooth and successful student visa grant ahead of studying and working in the UK
                     </p>
                     <p>
-                        We guide the students because the application process is complex, and students may make errors in documentation and filling out the application form, often leading to visa rejection. Take counseling from our UK Student Visa Consultants in Ahmedabad, and there will remain no scope of getting the visa rejected. Contact Visa Zone Education and Immigration Services Pvt. Ltd. for consultancy services for the UK.
+                        We guide the students because the application process is complex, and students may make errors in documentation and filling out the application form, often leading to visa rejection. Take counseling from our UK Student Visa Consultants in Ahmedabad, and there will remain no scope of getting the visa rejected. Contact Shivasya Education and Immigration Services Pvt. Ltd. for consultancy services for the UK.
                     </p>
                     <p>
-                        Our consultants offer invaluable support in guiding various post-visa aspects, such as helping students find suitable housing, establish bank accounts, and access healthcare services. Make an informed decision to have an error-free visa application process by taking consultancy services for Study Abroad to the UK plan from Visa Zone Education and Immigration Services Pvt. Ltd. As your ambition is to pursue studies in the UK, engaging the services of the best UK Student Visa Consultant in Ahmedabad proves to be the right investment. Collaborate with the team to enhance your prospects for success, enabling you to have an extraordinary educational experience in the UK. Contact us at the earliest.
+                        Our consultants offer invaluable support in guiding various post-visa aspects, such as helping students find suitable housing, establish bank accounts, and access healthcare services. Make an informed decision to have an error-free visa application process by taking consultancy services for Study Abroad to the UK plan from Shivasya Education and Immigration Services Pvt. Ltd. As your ambition is to pursue studies in the UK, engaging the services of the best UK Student Visa Consultant in Ahmedabad proves to be the right investment. Collaborate with the team to enhance your prospects for success, enabling you to have an extraordinary educational experience in the UK. Contact us at the earliest.
                     </p>
                 </div>
 

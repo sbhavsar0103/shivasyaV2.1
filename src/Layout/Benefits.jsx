@@ -44,7 +44,7 @@ export default function Benefits() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Benefits of Choosing{" "}
             <span className="relative inline-block">
-              Visa Zone
+              Shivasya
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 height="12"
@@ -63,7 +63,7 @@ export default function Benefits() {
 
           </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Discover the key reasons why Visa Zone’s IELTS coaching stands out —
+            Discover the key reasons why Shivasya’s IELTS coaching stands out —
             designed to empower your international education journey.
           </p>
         </div>

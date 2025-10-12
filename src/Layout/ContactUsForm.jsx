@@ -75,18 +75,19 @@ export default function ContactForm() {
             </div>
 
             <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
-                <div className="w-full lg:w-1/2 p-8 sm:p-10 lg:p-12">
+                <div className="w-full lg:w-3/5 p-8 sm:p-10 lg:p-12">
                     <form onSubmit={handleSubmit} className="space-y-6">
+                        {/* Name and Phone */}
                         <div className="grid sm:grid-cols-2 gap-4">
                             <input
                                 type="text"
-                                placeholder="Full Name *"
+                                placeholder="Name *"
                                 required
                                 value={formData.name}
                                 onChange={(e) =>
                                     setFormData({ ...formData, name: e.target.value })
                                 }
-                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                             <input
                                 type="tel"
@@ -96,7 +97,7 @@ export default function ContactForm() {
                                 onChange={(e) =>
                                     setFormData({ ...formData, phone: e.target.value })
                                 }
-                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                         </div>
 
@@ -109,7 +110,7 @@ export default function ContactForm() {
                             onChange={(e) =>
                                 setFormData({ ...formData, email: e.target.value })
                             }
-                            className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all"
+                            className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                         />
 
                         {/* Coaching Type */}
@@ -134,11 +135,9 @@ export default function ContactForm() {
                                             className="sr-only"
                                         />
                                         <span
-                                            className={`px-6 py-3 rounded-lg border-2 font-medium transition-all ${formData.coachingType === type
-                                                    ? type === "IELTS"
-                                                        ? "border-red-500 bg-red-50 text-red-700"
-                                                        : "border-blue-500 bg-blue-50 text-blue-700"
-                                                    : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
+                                            className={`inline-block px-6 py-2.5 rounded-lg border-2 font-medium transition-all ${formData.coachingType === type
+                                                ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                                                : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
                                                 }`}
                                         >
                                             {type}
@@ -153,12 +152,9 @@ export default function ContactForm() {
                             <p className="text-gray-700 font-medium mb-3">
                                 Which country are you planning to study in?
                             </p>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
                                 {countries.map((country) => (
-                                    <label
-                                        key={country.code}
-                                        className="cursor-pointer flex items-center"
-                                    >
+                                    <label key={country.code} className="cursor-pointer">
                                         <input
                                             type="radio"
                                             name="country"
@@ -173,13 +169,15 @@ export default function ContactForm() {
                                             className="sr-only"
                                         />
                                         <span
-                                            className={`justify-center w-full flex items-center gap-2 rounded-lg border-2 text-sm transition-all font-medium ${formData.country === country.code
-                                                    ? "border-[#3D1F14] bg-lime-50 text-lime-700"
-                                                    : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
+                                            className={`flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition-all ${formData.country === country.code
+                                                ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                                                : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
                                                 }`}
                                         >
-                                            <span className="text-lg">{country.flag}</span>
-                                            <span className="truncate">{country.name}</span>
+                                            <span className="text-2xl">{country.flag}</span>
+                                            <span className="text-xs font-medium text-center leading-tight">
+                                                {country.name}
+                                            </span>
                                         </span>
                                     </label>
                                 ))}
@@ -195,25 +193,13 @@ export default function ContactForm() {
                             onChange={(e) =>
                                 setFormData({ ...formData, message: e.target.value })
                             }
-                            className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#3D1F14] focus:border-transparent outline-none transition-all resize-none"
+                            className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all resize-none"
                         />
 
-                        {/* Privacy Notice */}
-                        <p className="text-sm text-gray-600">
-                            By submitting this form, I agree to the{" "}
-                            <a
-                                href="#"
-                                className="text-[#C67B3E] font-medium hover:text-[#3D1F14] underline"
-                            >
-                                Privacy Policy
-                            </a>{" "}
-                            of Visazone.
-                        </p>
-
-                        {/* Status Message */}
+                        {/* Success Message */}
                         {submitStatus === "success" && (
                             <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
-                                ✅ Form submitted successfully! (Demo mode)
+                                Form submitted successfully!
                             </div>
                         )}
 
@@ -221,13 +207,14 @@ export default function ContactForm() {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full flex items-center justify-center gap-2 bg-[#3D1F14] hover:bg-[#C67B3E] hover:text-[#3D1F14]  text-[#C67B3E] font-bold py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
+                            className="w-full flex items-center justify-center gap-2 bg-[#C67B3E] hover:bg-[#3D1F14] text-white font-bold py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
                         >
                             {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
                             <Send className="w-5 h-5" />
                         </button>
                     </form>
                 </div>
+
 
                 {/* RIGHT IMAGE */}
                 <div className="w-full lg:w-1/2 flex items-center justify-center">

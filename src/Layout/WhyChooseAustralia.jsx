@@ -87,10 +87,10 @@ export default function WhyChooseAustralia() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        Many students require assistance with the choice of education institution because Australia has some of the top-ranking colleges and academic programs, and education consultants handle it. Students face trouble understanding the visa process, choosing the type of visa, and implementing it. Gaining the well-known position as the best Australia Student Visa Consultant in Ahmedabad, Visa Zone has updates regarding the same, knows the details of visa applications, suggests measures to get financial aid and works in a manner to avoid any legal issues during the visa approval procedure for students who want to study in Australia. Visa Zone helps students in any kind of visa application criteria be it a temporary graduate visa, Visa Application Submission, Post-visa Planning, and Assistance, Interview preparation, Student Visas Extension, and Visa Reapplications.
+                        Many students require assistance with the choice of education institution because Australia has some of the top-ranking colleges and academic programs, and education consultants handle it. Students face trouble understanding the visa process, choosing the type of visa, and implementing it. Gaining the well-known position as the best Australia Student Visa Consultant in Ahmedabad, Shivasya has updates regarding the same, knows the details of visa applications, suggests measures to get financial aid and works in a manner to avoid any legal issues during the visa approval procedure for students who want to study in Australia. Shivasya helps students in any kind of visa application criteria be it a temporary graduate visa, Visa Application Submission, Post-visa Planning, and Assistance, Interview preparation, Student Visas Extension, and Visa Reapplications.
                     </p>
                     <p>
-                        So, get ready to fulfill your dream to study at the best university in Australia with none other than Visa Zone-Your Ultimate Study Visa Partner.
+                        So, get ready to fulfill your dream to study at the best university in Australia with none other than Shivasya-Your Ultimate Study Visa Partner.
                     </p>
                 </div>
 
