@@ -5,10 +5,11 @@ const locations = [
   { name: "Canada", top: "25%", left: "28%" },
   { name: "USA", top: "40%", left: "30%" },
   { name: "UK", top: "33%", left: "54%" },
-  { name: "Germany", top: "36%", left: "56%" },
   { name: "France", top: "38%", left: "53%" },
-  { name: "Dubai", top: "49%", left: "64%" },
+  { name: "Ireland", top: "43%", left: "52%" },
+  { name: "Italy", top: "50%", left: "57%" },
   { name: "Australia", top: "75%", left: "82%" },
+  { name: "Russia", top: "30%",left:"82%"},
   { name: "New Zealand", top: "83%", left: "89%" },
 ];
 

@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import TermsAndConditionsSection from "../Layout/TermsAndConditionsSection";
 
@@ -12,7 +11,6 @@ export default function TermsAndConditions() {
                 </h1>
             </section>
             <TermsAndConditionsSection />
-            <ContactForm />
             <Footer />
         </>
     );

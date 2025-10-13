@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import MonetaryPolicySection from "../Layout/MonetaryPolicySection";
 
@@ -12,7 +11,6 @@ export default function MonetaryPolicy() {
                 </h1>
             </section>
             <MonetaryPolicySection />
-            <ContactForm />
             <Footer />
         </>
     );

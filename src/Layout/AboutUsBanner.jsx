@@ -6,7 +6,7 @@ import OurServicesSection from "../Layout/OurServicesSection";
 import WhyChooseUs from "../Layout/WhyChooseUs";
 import Destinations from "../Layout/Destinations";
 import Achievements from "../Layout/Achievements";
-// import AwardsRecognition from "../Layout/AwardsRecognition";
+import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 
 const AboutBanner = () => {
@@ -43,6 +43,7 @@ const AboutBanner = () => {
             <WhyChooseUs />
             <Destinations />
             <Achievements />
+            <ContactForm />
             <Footer />
         </>
     );

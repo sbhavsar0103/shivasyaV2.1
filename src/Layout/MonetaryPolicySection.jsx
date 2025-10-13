@@ -2,11 +2,11 @@ import { Send, CheckCircle } from "lucide-react";
 
 export default function MonetaryPolicySection() {
     const terms = [
-        "Program Packages and service that you purchase at Visa zone comes with a week that is 3 days refund policy wherein you can ask for a refund within 3 days of purchasing a package or if the purchased package has not been put into action.",
+        "Program Packages and service that you purchase at Shivasya comes with a week that is 3 days refund policy wherein you can ask for a refund within 3 days of purchasing a package or if the purchased package has not been put into action.",
         "Once the deliverables in terms of service or package begin, the amount will not be refunded in any case.",
         "In case you receive a refund approval, the GST amount along with the service used will not be repaid.",
         "The amount to be refunded will be transferred to the bank account you paid that amount from within 3 working days.",
-        "Visa zone is not liable for the amount you pay to third parties i.e. our partners use for availing any type of service. The payment information such as credit card details are not stored by any means by us and you provide that information to the third parties based upon your and your parentâ€™s consent."
+        "Shivasya is not liable for the amount you pay to third parties i.e. our partners use for availing any type of service. The payment information such as credit card details are not stored by any means by us and you provide that information to the third parties based upon your and your parentâ€™s consent."
     ];
 
     return (
@@ -24,13 +24,13 @@ export default function MonetaryPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Full payment for any service purchased is required to be made at the time of registration except in cases wherein part payment, instalments, or specific payment situations are agreed upon by Visa zone in writing.
+                        Full payment for any service purchased is required to be made at the time of registration except in cases wherein part payment, instalments, or specific payment situations are agreed upon by Shivasya in writing.
                     </p>
                     <p>
-                        In case of free trials for any service that you opt for, the payment criteria will be decided upon the conclusion of such trials on mutual consent by both the parties that is Visa zone and the customer.
+                        In case of free trials for any service that you opt for, the payment criteria will be decided upon the conclusion of such trials on mutual consent by both the parties that is Shivasya and the customer.
                     </p>
                     <p>
-                        For purchasing any of the services offered by Visa zone through its website, having internet access and a valid payment gateway as specified during the sign-up. As stated in Privacy Policy, Visa zone does not store your payment information such as credit card details and so on provided to third parties i.e. our partners for availing any sorts of service.
+                        For purchasing any of the services offered by Shivasya through its website, having internet access and a valid payment gateway as specified during the sign-up. As stated in Privacy Policy, Shivasya does not store your payment information such as credit card details and so on provided to third parties i.e. our partners for availing any sorts of service.
                     </p>
                     <p>
                         Therefore, you provide that information with your and your parents/guardians' consent, and it is advisable to go through the course and make sure that it satisfies you from every sphere.

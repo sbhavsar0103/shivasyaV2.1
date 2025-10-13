@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import GDPRSection from "../Layout/GDPRSection";
 
@@ -12,7 +11,6 @@ export default function GDPR() {
                 </h1>
             </section>
             <GDPRSection />
-            <ContactForm />
             <Footer />
         </>
     );

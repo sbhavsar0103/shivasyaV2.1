@@ -10,10 +10,10 @@ export default function TermsAndConditionsSection() {
     ];
 
     const Mustnot = [
-        "Republish material from Visa zone",
-        "Sell, rent or sub-license material from Visa zone",
-        "Reproduce, duplicate or copy material from Visa zone",
-        "Redistribute content from Visa zone",
+        "Republish material from Shivasya",
+        "Sell, rent or sub-license material from Shivasya",
+        "Reproduce, duplicate or copy material from Shivasya",
+        "Redistribute content from Shivasya",
     ]
 
     const warrantAndRepresent = [
@@ -58,7 +58,7 @@ export default function TermsAndConditionsSection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        Welcome to Visa zone!̥
+                        Welcome to Shivasya!̥
                     </p>
                     <p>
                         The following terms apply to these Terms and Conditions, Privacy Statement, and Disclaimer Notice, as well as all agreements:
@@ -84,7 +84,7 @@ export default function TermsAndConditionsSection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        We employ the use of cookies. By accessing Visa zone, you agreed to use cookies in agreement with Visa zone Education & Immigration Services Pvt. Ltd.'s Privacy Policy.
+                        We employ the use of cookies. By accessing Shivasya, you agreed to use cookies in agreement with Shivasya Education & Immigration Services Pvt. Ltd.'s Privacy Policy.
                     </p>
                     <p>
                         Most interactive websites use cookies to let us retrieve the userâ€™s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
@@ -98,7 +98,7 @@ export default function TermsAndConditionsSection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Unless otherwise stated, Visa zone Private Limited and/or its licensors own the intellectual property rights for all material on Visa zone. All intellectual property rights are reserved. You may access this from Visa zone for your personal use subjected to restrictions set in these terms and conditions.
+                        Unless otherwise stated, Shivasya Private Limited and/or its licensors own the intellectual property rights for all material on Shivasya. All intellectual property rights are reserved. You may access this from Shivasya for your personal use subjected to restrictions set in these terms and conditions.
                     </p>
                 </div>
 
@@ -125,11 +125,11 @@ export default function TermsAndConditionsSection() {
                     </p>
 
                     <p>
-                        Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Visa zone Private Limited does not filter, edit, publish or review Comments before to their presence on the website. Comments do not reflect the views and opinions of Visa zone Private Limited, its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Visa zone Private Limited shall not be liable for the Comments or any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+                        Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Shivasya Private Limited does not filter, edit, publish or review Comments before to their presence on the website. Comments do not reflect the views and opinions of Shivasya Private Limited, its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Shivasya Private Limited shall not be liable for the Comments or any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
                     </p>
 
                     <p>
-                        Visa zone Private Limited reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+                        Shivasya Private Limited reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
                     </p>
                 </div>
 
@@ -152,7 +152,7 @@ export default function TermsAndConditionsSection() {
                     </ul>
 
                     <p>
-                        You hereby grant Visa zone Private Limited a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any all forms, formats or media.
+                        You hereby grant Shivasya Private Limited a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any all forms, formats or media.
                     </p>
 
                 </div>
@@ -198,13 +198,13 @@ export default function TermsAndConditionsSection() {
                         ))}
                     </ul>
                     <p>
-                        We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavourably to ourselves or our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Visa zone Private Limited, and (d) the link is in the context of general resource information.
+                        We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavourably to ourselves or our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Shivasya Private Limited, and (d) the link is in the context of general resource information.
                     </p>
                     <p>
                         Organizations are allowed to link to our home page under the following conditions: (a) the link is not deceptive; (b) it does not falsely imply sponsorship, endorsement, or approval of the linking party and its products or services; and (c) the link fits within the context of the linking party's site.
                     </p>
                     <p>
-                        If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Visa zone Private Limited. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+                        If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Shivasya Private Limited. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
                     </p>
                 </div>
 
@@ -228,7 +228,7 @@ export default function TermsAndConditionsSection() {
                     </ul>
 
                     <p>
-                        No use of Visa zone Education & Immigration Services Pvt. Ltd.'s logo or other artwork will be allowed for linking absent a trademark license agreement.
+                        No use of Shivasya Education & Immigration Services Pvt. Ltd.'s logo or other artwork will be allowed for linking absent a trademark license agreement.
                     </p>
                 </div>
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">

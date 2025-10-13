@@ -13,7 +13,7 @@ export default function GDPRSection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        This Data Processing Addendum (this "DPA") is incorporated into the Terms of Service located at https://visazone.in/terms-and-conditions (the "Agreement") between the undersigned customer ("Customer") and Visa zone Education & Immigration Services Pvt. Ltd., an Indian corporation (the "Company").
+                        This Data Processing Addendum (this "DPA") is incorporated into the Terms of Service located at https://visazone.in/terms-and-conditions (the "Agreement") between the undersigned customer ("Customer") and Shivasya Education & Immigration Services Pvt. Ltd., an Indian corporation (the "Company").
                     </p>
                     <p>
                         Capitalized but undefined terms used in this DPA will have the meanings assigned to those terms in the Agreement.

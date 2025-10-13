@@ -25,10 +25,10 @@ export default function IELTSBands() {
                     <table className="w-1/2 border border-gray-300 text-gray-800 text-sm sm:text-base">
                         <thead className="bg-gray-100">
                             <tr>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold">
+                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-center">
                                     Band Score
                                 </th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold">
+                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-center">
                                     English Proficiency
                                 </th>
                             </tr>

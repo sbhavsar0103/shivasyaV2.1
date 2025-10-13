@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import DisclaimerSection from "../Layout/DisclaimerSection";
 
@@ -12,7 +11,6 @@ export default function Disclaimer() {
                 </h1>
             </section>
             <DisclaimerSection />
-            <ContactForm />
             <Footer />
         </>
     );

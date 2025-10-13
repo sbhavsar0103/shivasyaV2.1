@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import PrivacyPolicySection from "../Layout/PrivacyPolicySection";
 
@@ -12,7 +11,6 @@ export default function PrivacyPolicy() {
                 </h1>
             </section>
             <PrivacyPolicySection />
-            <ContactForm />
             <Footer />
         </>
     );

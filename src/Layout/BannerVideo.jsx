@@ -6,6 +6,8 @@ import PopularCourses from "../Layout/PopularCourses";
 import EightSteps from "../Layout/EightSteps";
 import FewReasons from "../Layout/FewReasonstoChooseUs";
 import Reviews from "../Layout/StudentReviews";
+import AboutCompany from "../Layout/AboutCompany";
+import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 
 export default function LoopVideo() {
@@ -63,7 +65,9 @@ export default function LoopVideo() {
             <PopularCourses />
             <EightSteps />
             <FewReasons />
+            <AboutCompany />
             <Reviews />
+            <ContactForm />
             <Footer />
         </>
     );

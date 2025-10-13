@@ -1,4 +1,3 @@
-import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 import CopyrightNoticeSection from "../Layout/CopyrightNoticeSection";
 
@@ -12,7 +11,6 @@ export default function CopyrightNotice() {
                 </h1>
             </section>
             <CopyrightNoticeSection />
-            <ContactForm />
             <Footer />
         </>
     );

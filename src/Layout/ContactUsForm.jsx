@@ -27,11 +27,48 @@ const countries = [
     { code: "Austria", name: "Austria", flag: "🇦🇹" },
 ];
 
+// Course data
+const faqData = [
+    {
+        title: "Management",
+        items: ["MBA/ MIM", "Luxury Brand Management", "Sports Management"],
+    },
+    {
+        title: "Business",
+        items: [
+            "International Business",
+            "Entrepreneurship",
+            "Sales, Marketing and Finance",
+        ],
+    },
+    {
+        title: "Computer Science & IT",
+        items: ["Artificial Intelligence", "Robotics", "Data Science & Business Analyst"],
+    },
+    {
+        title: "Engineering",
+        items: ["Computer Engineering", "Mechanical Engineering", "Civil Engineering"],
+    },
+    {
+        title: "Health Science",
+        items: ["Public Health", "Healthcare Administration", "Health Informatics"],
+    },
+    {
+        title: "Law & Legal Studies",
+        items: ["Legal Studies", "International Law", "Business and Commercial"],
+    },
+    {
+        title: "Biological & Life Sciences",
+        items: ["Biotechnology", "Biological Sciences", "Biomedical Engineering"],
+    },
+];
+
 export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         email: "",
+        course: "",
         coachingType: "",
         country: "",
         message: "",
@@ -56,6 +93,7 @@ export default function ContactForm() {
                 name: "",
                 phone: "",
                 email: "",
+                course: "",
                 coachingType: "",
                 country: "",
                 message: "",
@@ -66,27 +104,24 @@ export default function ContactForm() {
     return (
         <section className="px-4 sm:px-8 lg:px-16 mb-20">
             <div className="max-w-7xl mx-auto mb-10">
-                <h1 className="text-4xl font-bold text-gray-900 mb-3">
-                    Book the Demo Class
-                </h1>
+                <h1 className="text-4xl font-bold text-gray-900 mb-3">Book the Demo Class</h1>
                 <p className="text-[#C67B3E] text-lg font-medium">
                     Drop us a line and our expert will get back to you shortly
                 </p>
             </div>
 
             <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                {/* LEFT FORM */}
                 <div className="w-full lg:w-3/5 p-8 sm:p-10 lg:p-12">
                     <form onSubmit={handleSubmit} className="space-y-6">
-                        {/* Name and Phone */}
+                        {/* Name + Phone */}
                         <div className="grid sm:grid-cols-2 gap-4">
                             <input
                                 type="text"
                                 placeholder="Name *"
                                 required
                                 value={formData.name}
-                                onChange={(e) =>
-                                    setFormData({ ...formData, name: e.target.value })
-                                }
+                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                             <input
@@ -94,24 +129,41 @@ export default function ContactForm() {
                                 placeholder="Phone *"
                                 required
                                 value={formData.phone}
-                                onChange={(e) =>
-                                    setFormData({ ...formData, phone: e.target.value })
-                                }
+                                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                         </div>
 
-                        {/* Email */}
-                        <input
-                            type="email"
-                            placeholder="Email *"
-                            required
-                            value={formData.email}
-                            onChange={(e) =>
-                                setFormData({ ...formData, email: e.target.value })
-                            }
-                            className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
-                        />
+                        {/* Email + Course Dropdown */}
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            <input
+                                type="email"
+                                placeholder="Email *"
+                                required
+                                value={formData.email}
+                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
+                            />
+
+                            <select
+                                value={formData.course}
+                                onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+                                className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all hide-scrollbar"
+                                required
+                            >
+                                <option value="">Select Course *</option>
+                                {faqData.map((category) => (
+                                    <optgroup key={category.title} label={category.title}>
+                                        {category.items.map((item) => (
+                                            <option key={item} value={item}>
+                                                {item}
+                                            </option>
+                                        ))}
+                                    </optgroup>
+                                ))}
+                            </select>
+                        </div>
+
 
                         {/* Coaching Type */}
                         <div>
@@ -127,10 +179,7 @@ export default function ContactForm() {
                                             value={type}
                                             checked={formData.coachingType === type}
                                             onChange={(e) =>
-                                                setFormData({
-                                                    ...formData,
-                                                    coachingType: e.target.value,
-                                                })
+                                                setFormData({ ...formData, coachingType: e.target.value })
                                             }
                                             className="sr-only"
                                         />
@@ -161,10 +210,7 @@ export default function ContactForm() {
                                             value={country.code}
                                             checked={formData.country === country.code}
                                             onChange={(e) =>
-                                                setFormData({
-                                                    ...formData,
-                                                    country: e.target.value,
-                                                })
+                                                setFormData({ ...formData, country: e.target.value })
                                             }
                                             className="sr-only"
                                         />
@@ -190,9 +236,7 @@ export default function ContactForm() {
                             required
                             rows={4}
                             value={formData.message}
-                            onChange={(e) =>
-                                setFormData({ ...formData, message: e.target.value })
-                            }
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                             className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all resize-none"
                         />
 
@@ -215,15 +259,24 @@ export default function ContactForm() {
                     </form>
                 </div>
 
-
                 {/* RIGHT IMAGE */}
                 <div className="w-full lg:w-1/2 flex items-center justify-center">
-                    <img
-                        src={ContactImage}
-                        alt="Contact Illustration"
-                    />
+                    <img src={ContactImage} alt="Contact Illustration" />
                 </div>
             </div>
+            <style>
+                {`
+                    .hide-scrollbar {
+                        scrollbar-width: none; /* Firefox */
+                        -ms-overflow-style: none; /* IE 10+ */
+                    }
+
+                    .hide-scrollbar::-webkit-scrollbar {
+                        display: none; /* Chrome, Safari, Opera */
+                    }
+                `}
+            </style>
+
         </section>
     );
 }

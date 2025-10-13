@@ -18,10 +18,10 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
                     <p>
-                        One of the main priorities at Visa zone is to cater to the privacy needs of our customers. This privacy policy states various information that you handover to Visa zone at www.visazone.in to enhance your user experience as per this privacy statement.
+                        One of the main priorities at Shivasya is to cater to the privacy needs of our customers. This privacy policy states various information that you handover to Shivasya at www.visazone.in to enhance your user experience as per this privacy statement.
                     </p>
                     <p>
-                        In the below-mentioned policy, “we”, “us”, “Licensee”, “our”, and “Visa zone” signify the owner of the website who can be contacted at info@visazone.in . Whereas, “you”, “your” signifies the viewer or the user of the website.
+                        In the below-mentioned policy, “we”, “us”, “Licensee”, “our”, and “Shivasya” signify the owner of the website who can be contacted at info@visazone.in . Whereas, “you”, “your” signifies the viewer or the user of the website.
                     </p>
                 </div>
 
@@ -32,7 +32,7 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Visa zone is liable to not share, transfer, or rent the information collected through www.visazone.in from an identifiable physical person as it indirectly or directly includes sensitive personal information like name, address, email id.
+                        Shivasya is liable to not share, transfer, or rent the information collected through www.visazone.in from an identifiable physical person as it indirectly or directly includes sensitive personal information like name, address, email id.
                     </p>
                     <p>
                         This information collected from you on the sign-up page and through lead magnets on various pages to improve the content of our website, to get in touch with you for your queries, and provide you with personalized experiences.
@@ -41,7 +41,7 @@ export default function PrivacyPolicySection() {
                         Further, it can be used to update you regarding major changes in our website, launched services, and some offers that you might find valuable.
                     </p>
                     <p>
-                        By using Visa zone’s website you confirm the use of your personal information which can be shared with our partners for your good.
+                        By using Shivasya’s website you confirm the use of your personal information which can be shared with our partners for your good.
                     </p>
                     <p>
                         This information may be transferred in case of the sale of our business / business assets as a part of the transaction as and when required.
@@ -58,10 +58,10 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Visa zone is the sole data collector and controller of your data uploaded at www.visazone.in .
+                        Shivasya is the sole data collector and controller of your data uploaded at www.visazone.in .
                     </p>
                     <p>
-                        The data is collected and used in line with the GDPR guidelines which Visa zone adheres to since 2016.
+                        The data is collected and used in line with the GDPR guidelines which Shivasya adheres to since 2016.
                     </p>
                 </div>
 
@@ -72,7 +72,7 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Visa zone makes sure to fulfill all the precautionary measures required to protect your online as well as offline data to avoid any unauthorized breach.
+                        Shivasya makes sure to fulfill all the precautionary measures required to protect your online as well as offline data to avoid any unauthorized breach.
                     </p>
                     <p>
                         The data collected might be used in various marketing initiatives such as e-mail marketing, printing catalogs along with giving necessary information to the purchaser of our services.
@@ -81,7 +81,7 @@ export default function PrivacyPolicySection() {
                         Names and email addresses can be shared with our partner also known as the third party from whom you will purchase certain services but payment information including credit cards used at our website will not be shared with anyone.
                     </p>
                     <p>
-                        Your data might be shared under certain circumstances to protect the rights and interests of the Licensee that is “Visa zone.”
+                        Your data might be shared under certain circumstances to protect the rights and interests of the Licensee that is “Shivasya.”
                     </p>
                     <p>
                         Those circumstances might include;
@@ -100,7 +100,7 @@ export default function PrivacyPolicySection() {
                     </ul>
 
                     <p>
-                        Apart from these situations, your data is completely secured with Visa zone.
+                        Apart from these situations, your data is completely secured with Shivasya.
                     </p>
 
                     <p>
@@ -116,11 +116,11 @@ export default function PrivacyPolicySection() {
                     </p>
 
                     <p>
-                        info@visazone.in might contain links to their partner or third-party websites; in that case, we are not liable for any information that you provide and they collect as their websites are not in control of Visa zone.
+                        info@visazone.in might contain links to their partner or third-party websites; in that case, we are not liable for any information that you provide and they collect as their websites are not in control of Shivasya.
                     </p>
 
                     <p>
-                        Therefore, we advise you to go through their legal policies before providing them with any personal or confidential information at your own risk as we are not responsible for notifying them of any change in information from your end at Visa zone’s platform.
+                        Therefore, we advise you to go through their legal policies before providing them with any personal or confidential information at your own risk as we are not responsible for notifying them of any change in information from your end at Shivasya’s platform.
                     </p>
 
                 </div>
@@ -132,13 +132,13 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Visa zone has partnered with various organizations/firms to provide you with the best possible services including but not limited to couriers, loans, payments, and so on.
+                        Shivasya has partnered with various organizations/firms to provide you with the best possible services including but not limited to couriers, loans, payments, and so on.
                     </p>
                     <p>
                         Limited information necessary to provide you with these services will be shared with third parties. A licensee might have partnered with companies that allow you to participate in memberships that provide access to digital wallets, payment or shipping services, and reward programs. If you choose to become a member of our partner service we might disclose limited information required by them to make such a program work but we will not be liable for their privacy practices and thus we advise you to go through the legal policies of companies you are planning to establish membership in.
                     </p>
                     <p>
-                        For displaying advertisements either on www.visazone.in or across the internet we get into contracts with various agencies who serve ads on our behalf. These agencies might collect various information about your visits and your interaction with us on www.visazone.in to provide you with the best ads displaying our goods and services. These agencies can’t sell or share any of your information through the process but if they do, Visa zone is not liable for it.
+                        For displaying advertisements either on www.visazone.in or across the internet we get into contracts with various agencies who serve ads on our behalf. These agencies might collect various information about your visits and your interaction with us on www.visazone.in to provide you with the best ads displaying our goods and services. These agencies can’t sell or share any of your information through the process but if they do, Shivasya is not liable for it.
                     </p>
                     <p>
                         www.visazone.in is not developed to be used by minors and underage children thus, we strictly advise parents and guardians to administer their child’s online activity or make use of various child protection software available online to secure the data provided by your child as it will not be possible without parental permission.
@@ -178,7 +178,7 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        While visiting this website, you agree to the Indian laws stating that this website is governed and maintained according to the legal principles, and the possibilities of disagreement/dispute that might arise between you and Visa zone or the affiliates.
+                        While visiting this website, you agree to the Indian laws stating that this website is governed and maintained according to the legal principles, and the possibilities of disagreement/dispute that might arise between you and Shivasya or the affiliates.
                     </p>
                 </div>
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
@@ -211,7 +211,7 @@ export default function PrivacyPolicySection() {
                 {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        For any queries or concerns related to the legal policies of Visa zone, you can contact us at info@visazone.in or +91-74 8686 0001.
+                        For any queries or concerns related to the legal policies of Shivasya, you can contact us at info@visazone.in or +91-74 8686 0001.
                     </p>
                     <p>
                         We assure you of the efforts from our team in resolving your queries. In absence of laws that require a mandatory response, we cannot ensure a response to your queries unrelated to this privacy policy or our practices.
@@ -227,7 +227,7 @@ export default function PrivacyPolicySection() {
                         This privacy policy is regularly reviewed, and updates may be made as needed. Notations such as "Revised(date)" or equivalent will be included each time the terms are updated and will take immediate effect on this website.
                     </p>
                     <p>
-                        By visiting this website after a privacy policy update, you are consenting to all revisions. It is advised that you review the changes to stay informed about Visa zone's legal updates.
+                        By visiting this website after a privacy policy update, you are consenting to all revisions. It is advised that you review the changes to stay informed about Shivasya's legal updates.
                     </p>
                 </div>
             </div>

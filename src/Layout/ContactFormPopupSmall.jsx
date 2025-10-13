@@ -27,6 +27,42 @@ const countries = [
   { code: "Austria", name: "Austria", flag: "🇦🇹" },
 ];
 
+const faqData = [
+  {
+    title: "Management",
+    items: ["MBA/ MIM", "Luxury Brand Management", "Sports Management"],
+  },
+  {
+    title: "Business",
+    items: [
+      "International Business",
+      "Entrepreneurship",
+      "Sales, Marketing and Finance",
+    ],
+  },
+  {
+    title: "Computer Science & IT",
+    items: ["Artificial Intelligence", "Robotics", "Data Science & Business Analyst"],
+  },
+  {
+    title: "Engineering",
+    items: ["Computer Engineering", "Mechanical Engineering", "Civil Engineering"],
+  },
+  {
+    title: "Health Science",
+    items: ["Public Health", "Healthcare Administration", "Health Informatics"],
+  },
+  {
+    title: "Law & Legal Studies",
+    items: ["Legal Studies", "International Law", "Business and Commercial"],
+  },
+  {
+    title: "Biological & Life Sciences",
+    items: ["Biotechnology", "Biological Sciences", "Biomedical Engineering"],
+  },
+];
+
+
 export default function ContactFormPopupSmall({ onClose }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -64,9 +100,12 @@ export default function ContactFormPopupSmall({ onClose }) {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-[90vh] w-full">
+    <div className="flex flex-col lg:flex-row w-full h-full">
       {/* Form Section */}
-      <div className="w-full lg:w-2/3 p-6 lg:p-8 overflow-y-auto flex flex-col">
+      <div className="w-full lg:w-1/2 p-6 lg:p-8 overflow-y-auto">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 leading-snug">
+          Contact Us
+        </h3>
         <form onSubmit={handleSubmit} className="space-y-3 flex-1 flex flex-col">
           <div className="grid sm:grid-cols-2 gap-2">
             <input
@@ -75,7 +114,7 @@ export default function ContactFormPopupSmall({ onClose }) {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
             />
             <input
               type="tel"
@@ -83,23 +122,43 @@ export default function ContactFormPopupSmall({ onClose }) {
               required
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
             />
           </div>
 
-          <input
-            type="email"
-            placeholder="Email *"
-            required
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
-          />
+          <div className="grid sm:grid-cols-2 gap-4">
+            <input
+              type="email"
+              placeholder="Email *"
+              required
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
+            />
+
+            <select
+              value={formData.course}
+              onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+              className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all hide-scrollbar"
+              required
+            >
+              <option value="">Select Course *</option>
+              {faqData.map((category) => (
+                <optgroup key={category.title} label={category.title}>
+                  {category.items.map((item) => (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </div>
 
           {/* Coaching Type */}
           <div>
             <p className="text-sm font-medium mb-1">Coaching Type</p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {["IELTS", "PTE"].map((type) => (
                 <label key={type} className="cursor-pointer">
                   <input
@@ -111,11 +170,10 @@ export default function ContactFormPopupSmall({ onClose }) {
                     className="sr-only"
                   />
                   <span
-                    className={`px-3 py-1 rounded-lg border text-sm ${
-                      formData.coachingType === type
-                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                    }`}
+                    className={`px-3 py-1 rounded-lg border text-sm ${formData.coachingType === type
+                      ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                      : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                      }`}
                   >
                     {type}
                   </span>
@@ -127,7 +185,7 @@ export default function ContactFormPopupSmall({ onClose }) {
           {/* Country */}
           <div>
             <p className="text-sm font-medium mb-1">Country</p>
-            <div className="grid grid-cols-3 gap-1 max-h-24 overflow-y-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 overflow-y-hidden">
               {countries.map((country) => (
                 <label key={country.code} className="cursor-pointer text-xs">
                   <input
@@ -139,11 +197,10 @@ export default function ContactFormPopupSmall({ onClose }) {
                     className="sr-only"
                   />
                   <span
-                    className={`flex flex-col items-center gap-1 p-1 rounded-lg border ${
-                      formData.country === country.code
-                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                    }`}
+                    className={`flex flex-col items-center gap-1 p-1 rounded-lg border ${formData.country === country.code
+                      ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                      : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                      }`}
                   >
                     <span className="text-lg">{country.flag}</span>
                     {country.name}
@@ -157,10 +214,10 @@ export default function ContactFormPopupSmall({ onClose }) {
           <textarea
             placeholder="Message *"
             required
-            rows={2}
+            rows={3}  // 🔹 smaller message box
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none flex-1"
+            className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none resize-none"
           />
 
           {submitStatus === "success" && (
@@ -181,9 +238,16 @@ export default function ContactFormPopupSmall({ onClose }) {
       </div>
 
       {/* Image Section */}
-      <div className="hidden lg:flex w-1/3 items-center justify-center p-4">
-        <img src={ContactImage} alt="Contact Illustration" className="h-full object-contain" />
+      {/* Image Section */}
+      <div className="hidden lg:flex w-1/2 items-center justify-center rounded-r-3xl overflow-hidden">
+        <img
+          src={ContactImage}
+          alt="Contact Illustration"
+          className="w-auto max-h-[85vh] object-contain" // ✅ shows full image, no crop
+        />
       </div>
+
     </div>
+
   );
 }

@@ -4,7 +4,7 @@ export default function CopyrightNoticeSection() {
     const points = [
         "You are allowed to either print or download it to a local hard disk for your personal and non - commercial use only.",
         `You are allowed to provide it to individual third parties for their personal use.However, you need to acknowledge " www.visazone.in " as the content source.`,
-        "You cannot commercially exploit the content, place it on any other website, or use it in any form of electronic retrieval system without Visa Zone's written consent."
+        "You cannot commercially exploit the content, place it on any other website, or use it in any form of electronic retrieval system without Shivasya's written consent."
     ];
 
     return (
