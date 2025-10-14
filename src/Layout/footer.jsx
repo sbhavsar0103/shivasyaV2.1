@@ -128,8 +128,8 @@ export default function Footer() {
           <ul className="flex flex-wrap gap-4">
             <li><Link to="/privacy-policy" className="hover:text-orange-600">Privacy Policy</Link></li>
             <li><Link to="/disclaimer" className="hover:text-orange-600">Disclaimer</Link></li>
-            <li><Link to="/terms" className="hover:text-orange-600">Terms & Conditions</Link></li>
-            <li><Link to="/copyright" className="hover:text-orange-600">Copyright Notice</Link></li>
+            <li><Link to="/terms-conditions" className="hover:text-orange-600">Terms & Conditions</Link></li>
+            <li><Link to="/copyright-notice" className="hover:text-orange-600">Copyright Notice</Link></li>
             <li><Link to="/gdpr" className="hover:text-orange-600">GDPR</Link></li>
             <li><Link to="/monetary-policy" className="hover:text-orange-600">Monetary Policy</Link></li>
           </ul>

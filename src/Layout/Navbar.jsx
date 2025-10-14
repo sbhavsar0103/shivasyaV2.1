@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import { Link } from "react-router-dom";
@@ -6,9 +6,10 @@ import Mainlogo from "../assets/logo/png/main-logo.png";
 import ContactFormPopup from "../Layout/ContactFormPopup";
 
 export default function Navbar({ toggleSidebar }) {
-    const [coachingOpen, setCoachingOpen] = useState(false);
-    const [studyAbroadOpen, setStudyAbroadOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
     const [isWorkAbroadOpen, setIsWorkAbroadOpen] = useState(false);
+
+    const dropdownRef = useRef(null);
 
     const studyAbroadCountries = [
         { name: "USA", code: "US", path: "/usa-study" },
@@ -22,9 +23,22 @@ export default function Navbar({ toggleSidebar }) {
         { name: "Russia", code: "RU", path: "/russia-study" },
     ];
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setOpenDropdown(null);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
     return (
         <>
-            <nav className="sticky top-0 z-50 flex items-center justify-between bg-white border-b px-4 py-2 shadow-sm text-[#3D1F14]">
+            <nav
+                ref={dropdownRef}
+                className="sticky top-0 z-50 flex items-center justify-between bg-white border-b px-4 py-2 shadow-sm text-[#3D1F14]"
+            >
                 <div className="flex items-center gap-6 w-full lg:w-auto">
                     {/* Mobile Menu Button */}
                     <button className="lg:hidden" onClick={toggleSidebar}>
@@ -58,19 +72,21 @@ export default function Navbar({ toggleSidebar }) {
                         <li className="relative">
                             <div
                                 className="flex items-center gap-1 cursor-pointer"
-                                onClick={() => setCoachingOpen((prev) => !prev)}
+                                onClick={() =>
+                                    setOpenDropdown(openDropdown === "coaching" ? null : "coaching")
+                                }
                             >
                                 <b>Coaching</b> <ChevronDown className="w-4 h-4" />
                             </div>
 
-                            {coachingOpen && (
+                            {openDropdown === "coaching" && (
                                 <ul className="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg z-50">
-                                    <Link to="/ielts-coaching" onClick={() => setCoachingOpen(false)}>
+                                    <Link to="/ielts-coaching" onClick={() => setOpenDropdown(null)}>
                                         <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer">
                                             IELTS
                                         </li>
                                     </Link>
-                                    <Link to="/pte-coaching" onClick={() => setCoachingOpen(false)}>
+                                    <Link to="/pte-coaching" onClick={() => setOpenDropdown(null)}>
                                         <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer">
                                             PTE
                                         </li>
@@ -83,19 +99,22 @@ export default function Navbar({ toggleSidebar }) {
                         <li className="relative cursor-pointer">
                             <div
                                 className="flex items-center gap-1"
-                                onClick={() => setStudyAbroadOpen((prev) => !prev)}
+                                onClick={() =>
+                                    setOpenDropdown(openDropdown === "study" ? null : "study")
+                                }
                             >
                                 <b>Study Abroad</b> <ChevronDown className="w-4 h-4" />
                             </div>
 
-                            {studyAbroadOpen && (
+                            {openDropdown === "study" && (
                                 <ul className="absolute left-0 mt-2 w-52 bg-white border rounded shadow-lg z-50">
                                     {studyAbroadCountries.map((country) => (
-                                        <Link to={country.path} key={country.name}>
-                                            <li
-                                                className="px-4 py-2 hover:bg-blue-100 cursor-pointer flex items-center gap-2"
-                                                onClick={() => setStudyAbroadOpen(false)}
-                                            >
+                                        <Link
+                                            to={country.path}
+                                            key={country.name}
+                                            onClick={() => setOpenDropdown(null)}
+                                        >
+                                            <li className="px-4 py-2 hover:bg-blue-100 cursor-pointer flex items-center gap-2">
                                                 <ReactCountryFlag
                                                     countryCode={country.code}
                                                     svg
@@ -128,7 +147,7 @@ export default function Navbar({ toggleSidebar }) {
                             </Link>
                         </li>
 
-                        {/* 🔹 Work Abroad Capsule Button */}
+                        {/* Work Abroad Button */}
                         <li>
                             <button
                                 onClick={() => setIsWorkAbroadOpen(true)}
@@ -148,7 +167,7 @@ export default function Navbar({ toggleSidebar }) {
                 </div>
             </nav>
 
-            {/* 🔹 Modal appears when clicked */}
+            {/* Modal Popup */}
             <ContactFormPopup
                 open={isWorkAbroadOpen}
                 onClose={() => setIsWorkAbroadOpen(false)}
