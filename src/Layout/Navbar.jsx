@@ -4,6 +4,7 @@ import ReactCountryFlag from "react-country-flag";
 import { Link } from "react-router-dom";
 import Mainlogo from "../assets/logo/png/main-logo.png";
 import ContactFormPopup from "../Layout/ContactFormPopup";
+import MiniNavbar from "./MiniNavbar";
 
 export default function Navbar({ toggleSidebar }) {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -35,6 +36,7 @@ export default function Navbar({ toggleSidebar }) {
 
     return (
         <>
+            <MiniNavbar />
             <nav
                 ref={dropdownRef}
                 className="sticky top-0 z-50 flex items-center justify-between bg-white border-b px-4 py-2 shadow-sm text-[#3D1F14]"
