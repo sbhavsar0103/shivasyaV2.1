@@ -65,7 +65,7 @@ export default function FreeStudyInItaly() {
 
                     </h1>
                     <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Here’s why choosing Shivasya is the most magnificent decision for your free study in Italy:
+                        Here’s why choosing Shivasya is the smartest decision for your tuition-free study in Italy:
                     </p>
                 </div>
 

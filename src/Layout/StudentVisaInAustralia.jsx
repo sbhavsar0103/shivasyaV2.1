@@ -2,73 +2,87 @@ export default function StudentVisaInAustralia() {
     return (
         <section className="w-full pb-16 px-4 sm:px-6 lg:px-16 bg-white">
             <div className="max-w-7xl mx-auto flex flex-col gap-8">
+                
                 {/* H2 */}
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    What are the Types of Student Visa in Australia ?
+                    Types of Student Visas in Australia
                 </h3>
 
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
+                {/* Intro Paragraph */}
+                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Australia has several types of study visas of student visa for international students who want to study in Australia. Relying on the kind of course they are enrolled in, these visas enable people to study in Australia consultants for varying time duration. There are a few of the popular categories of Australian study visas:
+                        Australia offers several visa options for international students based on the 
+                        type of course, study duration, and future career plans. Below are the main 
+                        Australian visa categories relevant to students and graduates:
                     </p>
                 </div>
 
+                {/* Subclass 500 */}
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Student Visa (Subclass 500):
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        This is the primary visa type for international students willing to study in Australia at their desired education institute. It provides both full-time and part-time work during the academic year and breaks.
+                        The Subclass 500 visa is the primary student visa for international students 
+                        enrolled in full-time courses at registered Australian institutions. 
+                        It allows students to stay in Australia for the duration of their course, 
+                        work part-time during study periods, and work full-time during scheduled breaks.
                     </p>
                 </div>
 
+                {/* Subclass 590 */}
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Subclass 590 Visa:
+                    Student Guardian Visa (Subclass 590):
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        Best fit for students who want to pursue less than three-month courses or non-award courses. Enables working opportunities of part-time working while studying.
+                        The Subclass 590 visa is designed for parents or legal guardians who wish to 
+                        accompany and support international students under 18 years of age while 
+                        they study in Australia.
                     </p>
                 </div>
 
+                {/* Subclass 491 */}
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Subclass 491 Visa:
+                    Skilled Work Regional (Provisional) Visa (Subclass 491):
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        It conveys opportunities for education and employment in certain regional locations that can last for five years through the help of many education consultants in Australia.
+                        Although not a student visa, the Subclass 491 visa allows skilled individuals 
+                        to live, work, and study in designated regional areas of Australia for up to 
+                        five years. This visa can potentially lead to permanent residency.
                     </p>
                 </div>
 
+                {/* Subclass 407 */}
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Subclass 402 Visa:
+                    Training Visa (Subclass 407):
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        This type of visa applies to individuals who want to visit Australia periodically to take part in professional development programs, attend or conduct participation in research as a visiting academic, or engage in occupational training.
-
+                        The Subclass 407 Training Visa enables individuals to participate in 
+                        occupational training or professional development programs in Australia. 
+                        It is ideal for those looking to enhance skills related to their field of study or profession.
                     </p>
                 </div>
 
+                {/* Subclass 485 */}
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Subclass 485 Visa:
+                    Temporary Graduate Visa (Subclass 485):
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
-                        For students who want to gain work experience in Australia, an Australia student visa grants full-time employment opportunities for two years after the successful completion of a degree or diploma with the help of an educational consultant in Australia.
+                        The Subclass 485 visa allows international students who have completed 
+                        an eligible Australian qualification to stay and work in Australia temporarily. 
+                        It provides valuable post-study work experience aligned with their field of study.
                     </p>
                 </div>
+
             </div>
         </section>
     );

@@ -8,18 +8,60 @@ export default function TypesEuropeStudentVisas() {
                     What are Types of Europe Student Visas?
                 </h3>
 
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
+                {/* Intro Paragraph */}
+                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
                         Before delving into the concept of choosing the best Europe Student Visa Consultant, it is crucial to know the types of Europe Study Visa for students who want to study in Europe. Here are some common types of student visas in Europe:
                     </p>
                 </div>
 
+                {/* New Content Added As Described */}
+                <div className="space-y-6 text-gray-800 text-base sm:text-lg leading-relaxed">
+
+                    <div>
+                        <h4 className="font-bold text-xl text-gray-900">
+                            Types of Europe Student Visas
+                        </h4>
+                        <p>
+                            Understanding visa types is essential before applying to study in Europe.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h5 className="font-semibold text-lg text-gray-900">
+                            1. Schengen Study Visa
+                        </h5>
+                        <p>
+                            A short-term visa (up to 90 days) for students attending language courses, seminars, or research programs in Schengen countries.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h5 className="font-semibold text-lg text-gray-900">
+                            2. Long-Stay (National) Visa – Type D
+                        </h5>
+                        <p>
+                            Issued to students enrolled in full-time degree programs requiring stays longer than 6 months. A residence permit is typically required after arrival.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h5 className="font-semibold text-lg text-gray-900">
+                            3. Standard Student Visa
+                        </h5>
+                        <p>
+                            Granted after receiving an official admission letter from a recognized European university.
+                        </p>
+                    </div>
+
+                </div>
+
+                {/* Existing Detailed Sections (Kept As It Is) */}
+{/* 
                 <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Europe Schengen Visa
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
                         This type of study visa applies to students who want to study in a Schengen country to pursue any short-term courses, seminars, or research. This is a three-month temporary student visa specifically for international students who want to study in Europe. Students can extend their visas once expire. Moreover, A student may apply for a resident permit if accepted into his or her program. A Schengen study visa may approved without the requirement of an IELTS test score or any other language exam if the organization doesn’t require it.
@@ -30,7 +72,6 @@ export default function TypesEuropeStudentVisas() {
                     Long Stay Visa
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
                         The visa is known as a national visa or type D visa. It is usually dedicated to international students who enrolled in europe study consultants to complete their degrees or courses that require a stay longer than 6 months. A residency permit is also required after arrival.
@@ -41,12 +82,12 @@ export default function TypesEuropeStudentVisas() {
                     Student Visa in Europe
                 </h4>
 
-                {/* Paragraphs */}
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
                         This is considerably the most common type of study visa for international students. One can apply for this visa after receiving an offer of admission or an admission letter. Typically students are allowed to enter the nation to enroll in a particular degree or program at a certain university if they want to study in Europe.
                     </p>
-                </div>
+                </div> */}
+
             </div>
         </section>
     );

@@ -1,182 +1,177 @@
 import React from "react";
 
 export default function IELTSCoachingPage() {
-  return (
-    <main className="mt-5 mx-20 px-2 sm:px-4">
-      {/* Breadcrumb */}
-      <p className="text-sm text-gray-500 mb-4">IELTS Coaching Classes</p>
+  const introParagraphs = [
+    `Begin your global journey with expert IELTS coaching in Ahmedabad.
+     Planning to study, work, or migrate abroad but unsure how to choose
+     the right IELTS coaching? We simplify your search and guide you toward
+     the best IELTS coaching classes in Ahmedabad.`,
 
+    `English language proficiency has become a key requirement for
+     international education and immigration. The International English
+     Language Testing System (IELTS) is one of the most trusted and globally
+     recognized English language tests for non-native speakers.`,
+
+    `IELTS evaluates candidates on four essential language skills:`,
+  ];
+
+  const skills = ["Listening", "Reading", "Writing", "Speaking"];
+
+  const testTypes = [
+    {
+      title: "1. IELTS Academic Test",
+      description:
+        "The IELTS Academic test is designed for:",
+      points: [
+        "Students applying for higher education in English-speaking countries",
+        "Professionals seeking registration in international organizations",
+      ],
+      content:
+        "This test evaluates whether a candidate is ready to study or train in an environment where English is the primary language of communication. The Reading and Writing sections focus on academic-style content and analytical skills.",
+    },
+    {
+      title: "2. IELTS General Training",
+      description:
+        "The IELTS General Training test is ideal for:",
+      points: [
+        "Individuals planning to migrate",
+        "Candidates seeking work experience abroad",
+        "Applicants pursuing non-academic training programs",
+      ],
+      content:
+        "It focuses more on practical, everyday English used in social and workplace environments. While the Listening and Speaking sections remain the same for both formats, the Reading and Writing sections differ in structure and content.",
+    },
+  ];
+
+  const coachingApproach = [
+    {
+      title: "Diagnostic Assessment",
+      content:
+        "Initial evaluation to understand your current proficiency level and identify improvement areas.",
+    },
+    {
+      title: "Focused Practice in All Four Modules",
+      content:
+        "Targeted exercises and mock tests for Listening, Reading, Writing, and Speaking.",
+    },
+    {
+      title: "Vocabulary & Grammar Enhancement",
+      content:
+        "Strengthening grammar, sentence structure, and vocabulary usage with real-time exposure to various accents.",
+    },
+    {
+      title: "Reading Strategies",
+      content:
+        "Techniques for skimming, scanning, and identifying key ideas quickly and accurately.",
+    },
+    {
+      title: "Writing Skill Development",
+      content:
+        "Guidance on brainstorming, structuring essays, and mastering Task 1 and Task 2 with detailed corrections.",
+    },
+    {
+      title: "Speaking Practice Sessions",
+      content:
+        "Mock interviews and daily speaking practice to boost confidence and fluency.",
+    },
+    {
+      title: "Regular Evaluations",
+      content:
+        "Frequent mock tests and quizzes to track progress and highlight improvement areas.",
+    },
+    {
+      title: "Time Management Techniques",
+      content:
+        "Learn effective strategies to manage time efficiently during the exam.",
+    },
+    {
+      title: "Personalized Feedback & Review",
+      content:
+        "Detailed performance analysis with constructive feedback to help you continuously improve.",
+    },
+  ];
+
+  return (
+    
+    <main className="mt-5 mx-20 px-2 sm:px-4">
       {/* Main Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         IELTS Coaching Classes in Ahmedabad
       </h1>
 
-      {/* Introduction Paragraphs */}
-      <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-        <p className="text-justify">
-          Are you willing to board your international journey through IELTS Coaching,
-          but can't figure out the way to find the Best IELTS Coaching Classes? Don't worry,
-          we are here to buzz off all your IELTS Coaching worries and guide you toward a thriving
-          journey in your IELTS Academy hunt.
-        </p>
+      {/* Introduction */}
+      <section className="space-y-4 text-gray-700 text-base leading-relaxed">
+        {introParagraphs.map((para, index) => (
+          <p key={index} className="text-justify">
+            {para}
+          </p>
+        ))}
+
+        <ul className="list-disc ml-8 space-y-1">
+          {skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
 
         <p className="text-justify">
-          Gaining proficiency through coaching in the English language has frequently become
-          a prerequisite for international education migration. The International English Language
-          Testing System (IELTS) is one of the most well-known and recognized tests to serve this domain.
-          IELTS is the most preferred and standardized test for English language proficiency designed
-          for non-native speakers. The IELTS Educational Institute evaluates potential candidates'
-          four key language skills: Listening, Reading, Writing, and Speaking. IELTS is jointly
-          administered by the British Council, IDP Education, and Cambridge Assessment English.
+          The test is jointly administered by the British Council, IDP
+          Education, and Cambridge Assessment English. It is accepted by
+          thousands of universities, employers, professional bodies, and
+          immigration authorities worldwide.
         </p>
-      </div>
+      </section>
 
-      {/* IELTS Test Types Section */}
-      <section className="mt-8">
+      {/* IELTS Test Types */}
+      <section className="mt-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
           IELTS Test Types
         </h2>
 
         <p className="text-gray-700 text-base leading-relaxed text-justify mb-6">
-          The IELTS Academy conducts two basic types of IELTS test formats: IELTS General Training
-          and IELTS Academic Test. Though both IELTS test structures have different purposes,
-          candidates can find the difference in the sorts of information and presentation as well.
+          The IELTS exam is available in two formats, each designed for specific purposes:
         </p>
 
-        {/* IELTS Academic Test */}
-        <article className="mb-6">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-            IELTS Academic Test
-          </h3>
-          <p className="text-gray-700 text-base leading-relaxed text-justify">
-            The structure of this IELTS test is designed for individuals who want to register as
-            professionals in an English-speaking environment and for students seeking enrollment
-            in higher educational institutions. This IELTS test evaluates whether a candidate
-            is suitable for training or study in a setting where English is the most prevalent
-            language.
-          </p>
-        </article>
+        {testTypes.map((test, index) => (
+          <article key={index} className="mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+              {test.title}
+            </h3>
 
-        {/* IELTS General Training */}
-        <article className="mb-6">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-            IELTS General Training
-          </h3>
-          <p className="text-gray-700 text-base leading-relaxed text-justify">
-            This test mainly prioritizes individuals who intend to pursue non-academic training,
-            gain work experience, or for immigration purposes to English-proficient nations like
-            Canada, the United States, the United Kingdom, or New Zealand. It emphasizes more on
-            survival skills in broad social and professional contexts.
-          </p>
-        </article>
+            <p className="text-gray-700 text-base text-justify mb-2">
+              {test.description}
+            </p>
 
-        {/* Typical Components */}
-        <article>
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-            Typical components considered for test format:
-          </h3>
-          <ul className="space-y-3 mx-10">
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Diagnostic Assessment:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  To evaluate where the test-takers need to improve and to measure their initial proficiency level.
-                </span>
-              </div>
+            <ul className="list-disc ml-8 space-y-1 mb-3 text-gray-700">
+              {test.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+
+            <p className="text-gray-700 text-base text-justify">
+              {test.content}
+            </p>
+          </article>
+        ))}
+      </section>
+
+      {/* Coaching Approach */}
+      <section className="mt-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+          Our IELTS Coaching Approach
+        </h2>
+
+        <ul className="space-y-4">
+          {coachingApproach.map((item, index) => (
+            <li key={index}>
+              <span className="font-semibold text-gray-900">
+                {item.title}:{" "}
+              </span>
+              <span className="text-gray-700">
+                {item.content}
+              </span>
             </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Concentrated Practice in Each Area:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  Targeting all four exam sections, there are specific exercises and practice tests that cater to each one.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Improvement in Vocabulary and Grammar:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  Practices aimed at improving vocabulary and enhanced grammar use by listening and exposing a comprehensive speech.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Comprehend Reading Strategies:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  Methods for effectively skimming and scanning texts to grasp and understand main ideas and concepts.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Writing Exercise:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  Help with brainstorming, outlining, and essay structure, as well as suggestions on tackling tasks 1 and 2.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Speaking Training:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                  To help candidates feel more comfortable throughout the IELTS test speaking format, mock interviews and daily speaking training are also planned.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Regular Evaluation:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                   To recognize required pinpoint and improvement areas, practice tests and quizzes are essential.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Time Management Strategies:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                   Learn effective time management techniques during the test.
-                </span>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Feedback and Review:
-                </span>{" "}
-                <span className="text-gray-700 text-base">
-                   Deliver constructive feedback on mock tests and exercises in addition to providing opportunities for feedback and additional practice in weak points.
-                </span>
-              </div>
-            </li>
-          </ul>
-        </article>
+          ))}
+        </ul>
       </section>
     </main>
   );

@@ -16,7 +16,7 @@ export default function NewZealandStudy() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                Discover the Extraordinary Study in:{" "}
+                                Where Education Meets Adventure in:{" "}
                                 <span className="relative inline-block">
                                     New Zealand.
                                     <svg

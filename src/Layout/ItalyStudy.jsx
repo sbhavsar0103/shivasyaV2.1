@@ -14,9 +14,9 @@ export default function ItalyStudy() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                Guaranteed scholarship of{" "}
+                                Secure €7,200 Scholarship{" "}
                                 <span className="relative inline-block">
-                                    € 7,200 every year
+                                    Funding Each Year
                                     <svg
                                         className="absolute -bottom-2 left-0 w-full"
                                         height="12"

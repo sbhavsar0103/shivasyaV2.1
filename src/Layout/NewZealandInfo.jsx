@@ -5,13 +5,41 @@ export default function NewZealandInfo() {
             <section className="w-full bg-[#C67B3E] py-12 px-4 sm:px-6 lg:px-16">
                 <div className="max-w-7xl mx-auto text-center lg:text-left">
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-6">
-                        New Zealand Student Visa Consultant in Ahmedabad
+                        Best New Zealand Student Visa Consultant in Ahmedabad
                     </h3>
+
                     <p className="text-justify text-base sm:text-lg lg:text-xxl text-white/90 leading-relaxed max-w-8xl mx-auto lg:mx-0">
-                        New Zealand is one of the top preferred and safest countries for international students who want to pursue their study abroad journey. Any recognized New Zealand Student Visa Consultants can play the most supportive part in your New Zealand student visa application process to study in New Zealand. They provide consulting services such as assisting students in choosing appropriate colleges or universities, leading them with the visa process, and offering support related to lodging and other additional aspects of studying overseas.
-                    </p><br />
+                        New Zealand is globally recognized as one of the safest and most preferred destinations 
+                        for international students pursuing higher education abroad. With its world-class 
+                        education system, strong academic standards, and exceptional quality of life, 
+                        the country attracts thousands of students from across the globe every year.
+                    </p>
+
+                    <br />
+
                     <p className="text-justify text-base sm:text-lg lg:text-xxl text-white/90 leading-relaxed max-w-8xl mx-auto lg:mx-0">
-                        New Zealand has a plethora of perks to offer for international students such as excellent education, breathtaking sites, and a welcoming culture. Students from India are strongly favored in this country due to its range of positive aspects that they can find highly beneficial for their higher education. From science and arts to humanities and design, choose according to your eligibility and interest. For application purposes and visa approval, one needs the help of appropriate New Zealand Student Visa Consultants. So, If you’re planning to move for better career opportunities then considering any well-known New Zealand Student Visa Consultant would be the best way to know about a student visa application process to gain a student visa for study in New Zealand.
+                        From science, arts, and humanities to business, technology, and design, 
+                        New Zealand offers a wide range of career-focused programs tailored to 
+                        diverse academic backgrounds and professional aspirations. Students from India 
+                        especially prefer New Zealand due to its high-quality education, practical learning approach, 
+                        and promising post-study work opportunities.
+                    </p>
+
+                    <br />
+
+                    <p className="text-justify text-base sm:text-lg lg:text-xxl text-white/90 leading-relaxed max-w-8xl mx-auto lg:mx-0">
+                        Choosing the right course based on your eligibility and long-term career goals 
+                        is crucial. A trusted New Zealand Student Visa Consultant in Ahmedabad can guide 
+                        you through course selection, university applications, documentation, and the 
+                        complete student visa process — ensuring accuracy and minimizing the risk of rejection.
+                    </p>
+
+                    <br />
+
+                    <p className="text-justify text-base sm:text-lg lg:text-xxl text-white/90 leading-relaxed max-w-8xl mx-auto lg:mx-0">
+                        If you are planning to study abroad for better career prospects, seeking 
+                        professional guidance from an experienced and reputable consultant is 
+                        the most reliable way to confidently begin your journey to study in New Zealand.
                     </p>
                 </div>
             </section>

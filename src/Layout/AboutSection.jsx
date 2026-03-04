@@ -1,72 +1,71 @@
 import React from "react";
 
+const aboutData = {
+  badge: "About Company",
+  heading: "One-Stop Solution For All Your Visa Needs",
+  intro:
+    "Shivasya Education is a leading study-abroad consultancy in India, providing expert guidance and comprehensive services for students seeking overseas education opportunities. With over a decade of experience, we have established ourselves as a trusted name committed to delivering excellence, convenience, and personalized support to aspiring global students.",
+};
+
+const sections = [
+  {
+    title: "Our Vision",
+    paragraphs: [
+      "At Shivasya Education, our vision is to create a world where every student has the opportunity to expand their horizons and gain meaningful global exposure through foreign education. We believe that studying abroad not only enhances academic and professional prospects but also fosters personal growth and cross-cultural understanding.",
+      "We are committed to a future where every student can participate in transformative study-abroad programs, helping them evolve into global citizens with the mindset and skills to make a positive impact on the world.",
+    ],
+  },
+  {
+    title: "Our Mission",
+    paragraphs: [
+      "At Shivasya Education, our mission is to provide students with exceptional study-abroad experiences that inspire personal growth, academic excellence, and cross-cultural understanding.",
+      "We strive to offer diverse programs that help students develop their skills, enhance critical thinking, encourage self-expression, and master multitasking. Our goal is to deliver a world-class study-abroad experience aligned with each student’s interests and budget.",
+      "To achieve this, we partner with leading colleges and universities across Canada, the UK, the USA, Australia, New Zealand, Germany, France, Italy, Europe, and Dubai. Through these collaborations, we empower students with the knowledge and experience needed to become global leaders capable of making a meaningful impact in the world.",
+    ],
+  },
+];
+
 const AboutSection = () => {
-    return (
-        <section className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-6 text-center">
-                <span className="inline-block bg-gray-100 text-[#3D1F14] text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded mb-4">
-                    About Company
-                </span>
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Badge */}
+        <span className="inline-block bg-gray-100 text-[#3D1F14] text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded mb-4">
+          {aboutData.badge}
+        </span>
 
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 leading-snug">
-                    One-Stop Solution For All Your Visa Needs
-                </h3>
+        {/* Heading */}
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 leading-snug">
+          {aboutData.heading}
+        </h3>
 
-                <p className="text-gray-600 max-w-5xl mx-auto mb-12 text-sm sm:text-base text-justify leading-relaxed">
-                    shivasya is a leading study abroad consultant in India, providing expert guidance
-                    and complete services for individuals seeking opportunities in overseas education. With
-                    over a decade of experience, shivasya has established itself as a trusted name
-                    among overseas education consultants in India, committed to delivering convenience and
-                    excellence to aspiring students.
-                </p>
+        {/* Intro */}
+        <p className="text-gray-600 max-w-5xl mx-auto mb-12 text-sm sm:text-base text-justify leading-relaxed">
+          {aboutData.intro}
+        </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                        <h3 className="text-[#3D1F14] font-semibold flex items-center mb-3">
-                            <span className="mr-2">➤</span> Our Vision
-                        </h3>
-                        <hr />
-                        <div className="pt-5">
-                            <p className="text-gray-500 text-sm sm:text-base text-justify">
-                                At shivasya, our vision is to create a world where every student has the
-                                opportunity to broaden their horizons and gain global exposure through foreign
-                                education. We believe studying abroad enhances one’s academic and professional
-                                prospects and promotes personal growth and cultural understanding.
-                            </p>
-                            <p className="text-gray-500 text-sm sm:text-base mt-4 text-justify">
-                                We strongly believe in a future where every student has the opportunity to participate
-                                in unique study abroad programs around the world, allowing them to evolve into global
-                                citizens with a mindset geared toward making a positive difference in our world.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                        <h3 className="text-[#3D1F14] font-semibold flex items-center mb-3">
-                            <span className="mr-2">➤</span> Our Mission
-                        </h3>
-                        <hr />
-                        <div className="pt-5">
-                            <p className="text-gray-500 text-sm sm:text-base text-justify">
-                                Our mission at shivasya is to provide students with exceptional study-abroad
-                                experiences that inspire personal growth, academic achievement, and cross-cultural
-                                understanding.
-                            </p>
-                            <p className="text-gray-500 text-sm sm:text-base mt-4 text-justify">
-                                shivasya aims to provide students with diverse programs that help them master
-                                their skills and encourage growth, critical thinking, self-expression, and
-                                multitasking. In addition, our mission is to offer our students exceptional study-abroad
-                                knowledge without compromising their interests or budget.
-                            </p>
-                            <p className="text-gray-500 text-sm sm:text-base mt-4 text-justify">
-                                To achieve this, shivasya has committed to collaborating with top-notch colleges and universities in Canada, the UK, the USA,  Australia, New Zealand, Germany, France, and Dubai . Our goal is to ensure the best education for our students, fostering global leaders who can drive meaningful impact in the world.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        {/* Vision & Mission */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {sections.map((section, index) => (
+            <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-[#3D1F14] font-semibold flex items-center mb-3">
+                <span className="mr-2">➤</span> {section.title}
+              </h3>
+              <hr />
+              <div className="pt-5">
+                {section.paragraphs.map((para, i) => (
+                  <p key={i} className="text-gray-500 text-sm sm:text-base text-justify mt-4 first:mt-0">
+                    {para}
+                  </p>
+                ))}
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
 export default AboutSection;

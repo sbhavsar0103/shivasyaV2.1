@@ -22,14 +22,7 @@ export default function LoopVideo() {
     return (
         <>
             <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] overflow-hidden">
-                <video
-                    className="w-full h-full object-cover"
-                    src={MainVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                />
+                <video className="w-full h-full object-cover" src={MainVideo} autoPlay loop muted playsInline/>
 
                 <div className="absolute inset-0 bg-[#3D1F14] opacity-40"></div>
 

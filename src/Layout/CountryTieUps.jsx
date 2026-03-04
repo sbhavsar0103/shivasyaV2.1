@@ -3,12 +3,12 @@ import ReactCountryFlag from "react-country-flag";
 
 export default function CountrySection() {
     const countries = [
-        { name: "AUSTRALIA", desc: "Tie-ups with Group of 8 Universities", code: "AU" },
-        { name: "USA", desc: "Tie-ups with 300+ Universities Across 35+ States", code: "US" },
-        { name: "CANADA", desc: "Tie-ups with 150+ Top Universities & Colleges", code: "CA" },
-        { name: "UK", desc: "Tie-ups with Russell Group Universities", code: "GB" },
-        { name: "EUROPE", desc: "Tie-ups with 150+ Universities", code: "EU" },
-        { name: "NEW ZEALAND", desc: "Tie-ups with 30+ Universities", code: "NZ" },
+        { name: "AUSTRALIA", desc: "Tie Ups with Group of 8 Top Universities", code: "AU" },
+        { name: "USA", desc: "Tie Ups with 500 + universities across 40+ States", code: "US" },
+        { name: "CANADA", desc: "Tie Ups with 180 + Top Universities & Colleges", code: "CA" },
+        { name: "UK", desc: "Tie Ups with Top Ranked Russel Group Universities", code: "GB" },
+        { name: "EUROPE", desc: "Tie Ups with 200 + Universities", code: "EU" },
+        { name: "NEW ZEALAND", desc: "Tie Ups with 50+ Universities", code: "NZ" },
     ];
 
     return (

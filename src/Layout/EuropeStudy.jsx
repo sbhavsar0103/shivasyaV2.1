@@ -18,7 +18,7 @@ export default function EuropeStudy() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                Unlock Your Potential in the{" "}
+                                Advance Your Career in the{" "}
                                 <span className="relative inline-block">
                                     Heart of Europe.
                                     <svg

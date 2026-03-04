@@ -16,7 +16,7 @@ export default function IrelandStudy() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                Green Fields, Bright Minds:{" "}
+                                Education Meets Adventure:{" "}
                                 <span className="relative inline-block">
                                     Study in Ireland.
                                     <svg

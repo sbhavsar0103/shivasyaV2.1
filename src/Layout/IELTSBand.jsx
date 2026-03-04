@@ -8,34 +8,36 @@ export default function IELTSBands() {
                 What is the IELTS Band Score?
             </h1>
 
-            {/* Introduction Paragraphs */}
             <div className="space-y-4 text-gray-700 text-base leading-relaxed">
                 <p className="text-justify">
-                    IELTS, the International English Language Testing System, is a widely popular English Test that is specifically crafted for students and individuals who are willing to study, work, or immigrate to official English-speaking countries such as the USA, UK, Canada, and Australia. Significantly, the IELTS Coaching Institute is more focused on students’ IELTS Band Score. An IELTS scale score of 0 to 9 determines the eligibility for IELTS marking criteria. The overall performance of the IELTS aspirant is determined based on four English language competency skills Speaking, Listening, Writing, and Reading. According to the requirements of a particular organization or institution, the overall band score is decided based on the average or a combination of the scores of each skill.
+                    The International English Language Testing System (IELTS) band score reflects a candidate’s overall English proficiency level. It plays a crucial role in determining eligibility for study abroad programs, work visas, permanent residency applications, and professional registrations.
                 </p>
 
                 <p className="text-justify">
-                    0 band score represents unsuccessful attempts in the IELTS test and 9 is considered the highest band score that shows that the candidate has completed the eligible command of the English language. One can particularly achieve enhanced proficiency for IELTS through IELTS Coaching Center as favourable.
+                    Achieving a higher band score improves opportunities for admission, employment, and immigration to countries such as the USA, UK, Canada, and Australia.
+                </p>
+
+                <p className="text-justify">
+                    IELTS uses a band score scale from 0 to 9 to measure English proficiency. Each module (Listening, Reading, Writing, Speaking) receives an individual band score, and the overall band score is calculated as the average of all four modules.
                 </p>
             </div>
 
-            {/* IELTS Test Types Section */}
             <section className="mt-8">
                 <div className="flex justify-center">
                     <table className="w-1/2 border border-gray-300 text-gray-800 text-sm sm:text-base">
                         <thead className="bg-gray-100">
                             <tr>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-center">
+                                <th className="border border-gray-300 px-4 py-2 text-center font-semibold">
                                     Band Score
                                 </th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-center">
-                                    English Proficiency
+                                <th className="border border-gray-300 px-4 py-2 text-center font-semibold">
+                                    English Proficiency Level
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             {[
-                                { score: 9, level: "Excellent" },
+                                { score: 9, level: "Expert User" },
                                 { score: 8, level: "Very Good" },
                                 { score: 7, level: "Good" },
                                 { score: 6, level: "Competent" },
@@ -60,21 +62,69 @@ export default function IELTSBands() {
                 </div>
             </section>
 
-            <h1 className="mt-8  text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                What is the Importance of IELTS Coaching?
-            </h1>
-            <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-                <p className="text-justify">
-                    For more than 30 years, IELTS has been the industry standard for evaluating English proficiency, certifying that candidates who plan to go Abroad match the required standard of English. Acknowledging the crucial influence that IELTS Coaching possesses on scholastic and professional endeavours, coaching classes or IELTS Academy has become an essential medium for those seeking centres for IELTS Preparation. Results of the IELTS exam are highly considered for International recognition and have been granted authorization by more than 9000 institutions globally. These IELTS Coaching consultancies also offer structured curriculum guides that cover all four modules of the IELTS exam, practice materials like sample questions and mock tests, Online Learning Platforms with flexible timings, Time Management Skills to ace each section within limited time constraints, online study references & resources, and expert guidance to assist candidates in achieving their aspirations worldwide.
+            <div className="mt-6 space-y-3 text-gray-700 text-base leading-relaxed">
+                <p>
+                    Band 9 indicates full operational command of English.
                 </p>
-
-                <p className="text-justify">
-                    While consulting IELTS Coaching Classes can add value in preparation for the IELTS test, making an impeccable IELTS Coaching choice of reliable and reputed IELTS Classes is essential to ensure a positive and effective IELTS Training process.
+                <p>
+                    Band 0 indicates no attempt made in the test.
                 </p>
-                <p className="text-justify">
-                    Ultimately, while there are ways to prepare for the IELTS even without formal coaching, tapping into an IELTS coaching academy can significantly improve a candidate’s preparation and also the chances of achieving their desired scores.
+                <p>
+                    Universities, employers, and immigration authorities set their own required band scores depending on their criteria.
                 </p>
             </div>
+
+            <h2 className="mt-12 text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                Achieve Your Target Band Score
+            </h2>
+
+            <div className="space-y-4 text-gray-700 text-base leading-relaxed">
+                <p>
+                    With proper guidance, structured preparation, and expert feedback, candidates can significantly improve their IELTS performance. Professional coaching helps enhance:
+                </p>
+
+                <ul className="list-disc mx-10 space-y-2">
+                    <li>Time management</li>
+                    <li>Writing structure</li>
+                    <li>Reading strategies</li>
+                    <li>Speaking confidence</li>
+                    <li>Listening accuracy</li>
+                </ul>
+
+                <p>
+                    Start preparing strategically and move one step closer to your global ambitions.
+                </p>
+            </div>
+
+            <h2 className="mt-12 text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                What is the Importance of IELTS Coaching?
+            </h2>
+
+            <div className="space-y-4 text-gray-700 text-base leading-relaxed">
+                <p>
+                    For over 30 years, the International English Language Testing System (IELTS) has been the global benchmark for assessing English language proficiency. It is widely accepted by universities, employers, professional bodies, and immigration authorities worldwide.
+                </p>
+
+                <p>
+                    As IELTS plays a crucial role in shaping academic and professional futures, enrolling in a professional IELTS coaching institute has become a strategic step for aspirants aiming to study, work, or migrate abroad.
+                </p>
+
+                <p>
+                    More than 9,000 institutions globally recognize IELTS scores, making structured preparation essential for achieving competitive band scores.
+                </p>
+            </div>
+
+            <h3 className="mt-8 text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                Why IELTS Coaching Matters
+            </h3>
+
+            <ul className="list-disc mx-10 space-y-3 text-gray-700">
+                <li>Structured Curriculum covering all four modules.</li>
+                <li>Practice materials and regular mock tests.</li>
+                <li>Expert guidance with personalized feedback.</li>
+                <li>Effective time management techniques.</li>
+                <li>Online and offline learning flexibility.</li>
+            </ul>
         </main>
     );
 }

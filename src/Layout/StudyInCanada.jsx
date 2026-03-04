@@ -4,66 +4,104 @@ export default function StudyInCanada() {
     return (
         <section className="w-full pb-16 px-4 sm:px-6 lg:px-16 bg-white mt-8">
             <div className="max-w-7xl mx-auto flex flex-col gap-12">
-                {/* Main Left + Right Section */}
+
+                {/* Top Section */}
                 <div className="flex flex-col lg:flex-row items-center gap-12">
-                    {/* Left Side: Title + Paragraph */}
+                    
+                    {/* Left Content */}
                     <div className="flex-1">
                         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                             Why Study in Canada?
                         </h3>
+
                         <p className="text-gray-800 text-base sm:text-lg lg:text-xl leading-relaxed">
-                            Canada is the most popular destination for international individuals. Studying in Canada is a highly desired dream for individuals who want to pursue career opportunities in an international environment. Likewise, one would want to study in Canada apart from any other country for multiple reasons. Here are some reasons why it is appealing to study in Canada:
+                            Canada is one of the most preferred destinations for international students. 
+                            With globally recognized universities, strong career opportunities, 
+                            and a welcoming multicultural society, studying in Canada offers 
+                            both academic excellence and global exposure.
                         </p>
                     </div>
 
-                    {/* Right Side: Image */}
+                    {/* Right Image */}
                     <div className="flex-1 flex justify-center lg:justify-end">
                         <img
                             src={USAStudentImage}
-                            alt="Study in USA"
+                            alt="Study in Canada"
                             className="w-full max-w-md lg:max-w-full h-auto rounded-xl shadow-xl object-cover"
                         />
                     </div>
                 </div>
 
-                <div className="space-y-8">
+                {/* Sections */}
+                <div className="space-y-10">
+
+                    {/* Education System */}
                     <div>
-                        <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                            Canadian Education System:
+                        <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                            1. Canadian Education System
                         </h4>
-                        <p className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                            Canada is famous for its established education system and a vast amount of Canada study consultants, with internationally recognized universities and colleges that open doors to a wide range of programs and many overseas career opportunities. Canadian degrees are valued and prestigious throughout the world. Since it provides detailed and accessible knowledge to succeed in career-oriented adventures, the Canadian educational system has a well-deserved reputation for being focused on careers. Currently, the Canadian Education System is ranked seventh best in the world. The Canada Student Visa Consultant guides students in making correct choices regarding their career goals.
+                        <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify">
+                            Canada is renowned for its world-class education system, offering 
+                            internationally recognized degrees across a wide range of programs. 
+                            Canadian universities emphasize career-focused and practical learning, 
+                            helping students build real-world skills. Canadian degrees are highly 
+                            respected worldwide, opening doors to global career opportunities.
                         </p>
                     </div>
 
+                    {/* Employment Opportunities */}
                     <div>
-                        <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                            Employment Opportunities:
+                        <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                            2. Employment Opportunities
                         </h4>
-                        <p className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                            To gain more foreign students to their nation, the Canadian government has been progressively introducing appealing features. Canada currently permits students to work for a certain period after completing their studies. Moreover, the unemployment rate in Canada has not been substantially influenced in comparison to other countries. This way, international students can get the benefits of Canadian work experience that can help them to boost their careers ahead. Students who initiate their careers by passing the visa process through the best Canada Student Visa Consultants can get more affordable and growing opportunities. Several Counseling centers offer free guidance and knowledge about and language training along with work creation programs for beginners known as Human Resources Development Canada Centres.
+                        <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify">
+                            Canada allows international students to work during their studies 
+                            and offers post-graduation work opportunities. Gaining Canadian 
+                            work experience significantly enhances career prospects. 
+                            Government-supported employment programs and career guidance 
+                            centers also help students transition smoothly into the workforce.
                         </p>
                     </div>
 
+                    {/* Life in Canada */}
                     <div>
-                        <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                            Life in Canada:
+                        <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                            3. Life in Canada
                         </h4>
-                        <p className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                            Canada is a comparatively cheaper country than many other European and North American countries. It provides affordable access to quality medical care. International students enrolled under their respective education consultants in Canada can also be eligible for additional health benefits. Being one of the wealthiest nations in the world, it covers two-thirds part of the country’s GDP through the service sector and plays a major role in the export of several mineral resources including petroleum, Natural Gas, and much more. In 1971, Canada was the first nation which introduce multiculturalism which makes it an easy to adaptable country for international students who want to study by getting a Canada Student Visa. Considerably, After Scotland, Canada is the second most beautiful country in the world.
+                        <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify">
+                            Canada offers a high quality of life with affordable healthcare 
+                            access and a safe environment. Since officially adopting 
+                            multiculturalism in 1971, Canada has become one of the most 
+                            welcoming countries for international students. Its diverse 
+                            communities and stunning natural landscapes make it an ideal 
+                            place to live and study.
                         </p>
                     </div>
 
+                    {/* Cost of Study */}
                     <div>
-                        <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                            Cost of Study in Canada
+                        <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                            4. Cost of Study in Canada
                         </h4>
-                        <p className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                            The range of cost of study in Canada consultants can vary depending on factors such as the course program and duration, the location, the institution, and the student’s style. Generally, International students are likely to pay more tuition fees compared to Canadian Citizens and permanent residents. On average, the range of tuition fees for Universities for undergrad programs can be around CAD 36,000 per year while graduation can be around CAD 21,100. (Statistics Canada, 2022) Living expenses are greatly dependent on the student’s lifestyle. However, it is estimated that the average annual cost of living in Canada can be nearly $10,100 which is roughly 5,22,000 Indian rupees.
+                        <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify">
+                            Tuition fees vary depending on the course, institution, and 
+                            location. On average:
+                        </p>
+
+                        <ul className="list-disc ml-6 mt-3 space-y-2 text-gray-800 text-base sm:text-lg">
+                            <li>Undergraduate Programs: ~CAD 36,000 per year</li>
+                            <li>Graduate Programs: ~CAD 21,100 per year (Statistics Canada, 2022)</li>
+                            <li>Average Living Expenses: ~CAD 10,100 per year (~INR 5,22,000)</li>
+                        </ul>
+
+                        <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify mt-4">
+                            While costs vary by lifestyle and city, Canada remains more 
+                            affordable compared to many other Western countries, making 
+                            it a smart investment for international education.
                         </p>
                     </div>
+
                 </div>
-
             </div>
         </section>
     );

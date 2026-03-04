@@ -1,129 +1,69 @@
-// import React, { useState } from "react";
-
-// const services = [
-//   {
-//     title: "Career Counseling",
-//     description: `
-//       shivasya study abroad consultancy takes pride in providing personalized and comprehensive counseling services that cater to your unique needs.
-
-//       Our dedicated, experienced team of study abroad consultants will guide you through every step of the study abroad process. To make your study abroad experience smooth and stress-free, we offer one-on-one support, providing valuable insights and information to help you make informed decisions regarding your course selection, college/university choice, budget, and the right country for you.
-//     `,
-//   },
-//   {
-//     title: "Course, Country, and College/University Selection",
-//     description: `
-//       Whether you are interested in computer science, fashion designing, AI technology, psychology, business school, mechanical engineering, law, or any other program, we have 100+ programs to help you choose from. Our counselors will get in touch with you to understand your academic interests, future prospects, career goals, and personal preferences. shivasya aims to help you discover courses that match your passion and long-term goals by providing detailed information about diverse programs in various fields.
-
-//       The choice of country and educational institute plays an important role in your study abroad journey. Thus, shivasya has collaborated with the best and highest-ranking colleges and universities across Canada, the UK, the USA, Australia, New Zealand, Germany, France, and Dubai. Our team will assist you in exploring options that match your course preferences, considering factors such as reputation, faculty expertise, facilities, and overall educational experience. We ensure that you comprehensively understand each institution to make an informed decision.
-//     `,
-//   },
-//   {
-//     title: "Visa Guidance & Documentation",
-//     description: `We provide complete support in preparing and filing your visa application with accuracy. Our team ensures youmeet all documentation and financial requirements to minimize delays or rejections. With years of experienceand in-depth country-wise knowledge, shivasya ensures that your visa process is seamless and transparent.
-//     `,
-//   },
-//   {
-//     title: "Pre-Departure & Post-Arrival Assistance",
-//     description: ` From travel arrangements to accommodation assistance, shivasya ensures that students have a hassle-free transition abroad. We provide orientation sessions covering lifestyle, culture, and academic preparation to help students adapt to their new environment smoothly. Our team continues to support you even after you’ve reached your study destination.
-//     `,
-//   },
-// ];
-
-// const OurServicesSection = () => {
-//   // 👇 Default: first service is open (index 0)
-//   const [openIndex, setOpenIndex] = useState(0);
-
-//   const toggleAccordion = (index) => {
-//     // If clicked item is already open, close it; otherwise, open the new one
-//     setOpenIndex(openIndex === index ? null : index);
-//   };
-
-//   return (
-//     <section className="py-20 bg-white">
-//       <div className="max-w-6xl mx-auto px-6">
-//         {/* Label */}
-//         <div className="text-center mb-6">
-//           <span className="inline-block bg-gray-100 text-[#3D1F14] text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded">
-//             Our Services
-//           </span>
-//         </div>
-
-//         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">
-//           One-Stop Solution for All Your Study Abroad Queries
-//         </h2>
-
-//         <p className="text-gray-500 text-center max-w-3xl mx-auto mb-12 leading-relaxed text-sm sm:text-base">
-//           Our services consist of counseling, course guidance, university selection, and much more. We meet your visa
-//           requirements in the most hassle-free manner. Our technically qualified professionals are always ready to
-//           assist you and clear your doubts at the time you prefer.
-//         </p>
-
-//         <div className="space-y-6">
-//           {services.map((service, index) => (
-//             <div
-//               key={index}
-//               className="border border-gray-200 rounded-md overflow-hidden shadow-sm transition-all duration-300"
-//             >
-//               <button
-//                 onClick={() => toggleAccordion(index)}
-//                 className={`w-full flex items-center justify-between bg-yellow-400 px-6 py-3 font-semibold text-gray-900 transition-colors duration-300 ${
-//                   openIndex === index ? "bg-yellow-500" : "hover:bg-yellow-300"
-//                 }`}
-//               >
-//                 <div className="flex items-center space-x-2">
-//                   <span className="text-lg">›</span>
-//                   <span>{service.title}</span>
-//                 </div>
-//               </button>
-
-//               <div
-//                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-//                   openIndex === index ? "max-h-[500px] py-5 px-6" : "max-h-0"
-//                 }`}
-//               >
-//                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify whitespace-pre-line">
-//                   {service.description}
-//                 </p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default OurServicesSection;
-
-
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 
 
 const services = [
   {
-    title: "Career Counseling",
+    title: "Career Counselling",
     description: `
-      shivasya study abroad consultancy takes pride in providing personalized and comprehensive counseling services that cater to your unique needs.
+At Shivasya Education, we take pride in offering personalized and comprehensive study-abroad counselling tailored to your unique goals.
 
-      Our dedicated, experienced team of study abroad consultants will guide you through every step of the study abroad process. To make your study abroad experience smooth and stress-free, we offer one-on-one support, providing valuable insights and information to help you make informed decisions regarding your course selection, college/university choice, budget, and the right country for you.
+Our experienced team of consultants guides you through every step of the study-abroad journey, ensuring a smooth and stress-free experience. Through one-on-one support and expert insights, we help you make informed decisions about course selection, university choice, budget planning, and the best country to pursue your education.
     `,
   },
   {
-    title: "Course, Country, and College/University Selection",
+    title: "Course, Country, and University / College Selection",
     description: `
-      Whether you are interested in computer science, fashion designing, AI technology, psychology, business school, mechanical engineering, law, or any other program, we have 100+ programs to help you choose from. Our counselors will get in touch with you to understand your academic interests, future prospects, career goals, and personal preferences. shivasya aims to help you discover courses that match your passion and long-term goals by providing detailed information about diverse programs in various fields.
+Whether your interests lie in computer science, fashion design, AI technology, psychology, business, mechanical engineering, law, or any other field, Shivasya Education offers over 100 programs to choose from.
 
-      The choice of country and educational institute plays an important role in your study abroad journey. Thus, shivasya has collaborated with the best and highest-ranking colleges and universities across Canada, the UK, the USA, Australia, New Zealand, Germany, France, and Dubai. Our team will assist you in exploring options that match your course preferences, considering factors such as reputation, faculty expertise, facilities, and overall educational experience. We ensure that you comprehensively understand each institution to make an informed decision.
+Our counsellors take the time to understand your academic background, career aspirations, and personal preferences to help you select courses that align with your passion and long-term goals.
+
+Choosing the right country and institution is a critical part of your study-abroad journey. We have partnered with top-ranking colleges and universities across Canada, the UK, the USA, Australia, New Zealand, Germany, France, and Dubai.
+
+Our team guides you in exploring options that match your preferences, considering reputation, faculty expertise, facilities, and overall educational experience—ensuring you make a confident and informed decision.
     `,
   },
   {
-    title: "Visa Guidance & Documentation",
-    description: `We provide complete support in preparing and filing your visa application with accuracy. Our team ensures you meet all documentation and financial requirements to minimize delays or rejections. With years of experience and in-depth country-wise knowledge, shivasya ensures that your visa process is seamless and transparent.`,
+    title: "Coaching and Clearing Prerequisites",
+    description: `
+Every college and university has specific admission requirements, including proof of English proficiency.
+
+For students from countries where English is not the first language, passing internationally recognised exams such as IELTS, TOEFL, or PTE is essential.
+
+At Shivasya Education, we provide expert preparation for IELTS, TOEFL, and PTE exams with a personalized approach and small batch sizes to ensure individual attention.
+
+With years of experience, we have successfully trained over 15,000 students, helping them achieve outstanding scores and move closer to their study-abroad dreams.
+    `,
   },
   {
-    title: "Pre-Departure & Post-Arrival Assistance",
-    description: `From travel arrangements to accommodation assistance, shivasya ensures that students have a hassle-free transition abroad. We provide orientation sessions covering lifestyle, culture, and academic preparation to help students adapt to their new environment smoothly. Our team continues to support you even after you’ve reached your study destination.`,
+    title: "Complete Support: From Application to Visa Process",
+    description: `
+Studying abroad involves multiple important steps—from selecting the right program, university, and country to preparing for required examinations.
+
+One of the most critical documents is the Statement of Purpose (SOP). This essay explains your academic goals, reasons for choosing a specific program and institution, and your future career plans. A strong, well-crafted SOP can significantly enhance your admission chances.
+
+Once you receive your admission confirmation, the next crucial step is applying for a student visa. This involves detailed documentation, including academic history, financial records, medical documents, and application forms.
+
+At Shivasya Education, we provide end-to-end support throughout the entire process, ensuring accuracy, completeness, and timely submission to make your journey smooth and stress-free.
+    `,
+  },
+  {
+    title: "Financial Aid & Education Loans",
+    description: `
+We help students explore various financial options, including merit-based scholarships, need-based grants, and education loans with competitive interest rates and flexible repayment plans.
+
+Our team provides guidance throughout the funding process, maximizing your chances of securing financial assistance and making your study-abroad dream affordable and achievable.
+    `,
+  },
+  {
+    title: "Pre-Departure and Post-Landing Services",
+    description: `
+At Shivasya Education, studying abroad is more than just securing admission—it’s about ensuring a smooth transition into a new academic and cultural environment.
+
+Our pre-departure support includes travel guidance, visa procedures, accommodation assistance, and preparation sessions.
+
+After you arrive, we continue supporting you with post-landing assistance, orientation resources, and local network connections—helping you adapt quickly, feel confident, and thrive in your international education journey.
+    `,
   },
 ];
 
@@ -164,8 +104,8 @@ const OurServicesSection = () => {
               <button
                 onClick={() => toggleAccordion(index)}
                 className={`w-full flex items-center justify-between px-6 py-3 font-semibold text-white transition-colors duration-300 ${openIndex === index
-                    ? "bg-[#C67B3E]"
-                    : "bg-[#3D1F14] hover:bg-[#C67B3E]"
+                  ? "bg-[#C67B3E]"
+                  : "bg-[#3D1F14] hover:bg-[#C67B3E]"
                   }`}
               >
                 <div className="flex items-center space-x-2">

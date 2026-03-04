@@ -5,39 +5,39 @@ import PatternBg from "../assets/utility/pattern-15.jpg";
 const faqData = [
   {
     title: "Management",
-    items: ["MBA/ MIM", "Luxury Brand Management", "Sports Management"],
+    items: ["Business Management", "Event Management", "Health Management", "Project Management", "Supply Chain Management"],
+  },
+  {
+    title: "Engineering",
+    items: [
+      "Automotive Engineering",
+      "Electrical Engineering",
+      "Electronics Engineering",
+      "Petroleum Engineering",
+    ],
   },
   {
     title: "Business",
     items: [
-      "International Business",
-      "Entrepreneurship",
-      "Sales, Marketing and Finance",
+      "Business Analytics",
+      "Business Management"
     ],
-  },
-  {
-    title: "Computer Science & IT",
-    items: [
-      "Artificial Intelligence",
-      "Robotics",
-      "Data Science & Business Analyst",
-    ],
-  },
-  {
-    title: "Engineering",
-    items: ["Computer Engineering", "Mechanical Engineering", "Civil Engineering"],
   },
   {
     title: "Health Science",
-    items: ["Public Health", "Healthcare Administration", "Health Informatics"],
-  },
-  {
-    title: "Law & Legal Studies",
-    items: ["Legal Studies", "International Law", "Business and Commercial"],
+    items: ["Cardiovascular Science", "Fitness", "Health Psychology", "Kinesiology", "Nursing"],
   },
   {
     title: "Biological & Life Sciences",
-    items: ["Biotechnology", "Biological Sciences", "Biomedical Engineering"],
+    items: ["Bioinformatics", "Clinical Science", "Genetics", "Zoology"],
+  },
+  {
+    title: "Law & Legal Studies",
+    items: ["LLB", "LLM", "Criminology", "Justice & Emergency Services", "Forensic Science"],
+  },
+  {
+    title: "Computer Science & IT",
+    items: ["Game Programming", "Software Development", "Cyber Security", "Mobile Applications", "Web Applications"],
   },
 ];
 
@@ -59,7 +59,8 @@ export default function PopularCourses() {
       <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 md:px-10">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D1F14]">
-            POPULAR COURSES
+            {/* POPULAR COURSES */}
+            Guiding You to the Best Fit
           </h2>
         </div>
 

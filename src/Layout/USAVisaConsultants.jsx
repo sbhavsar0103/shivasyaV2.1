@@ -1,91 +1,125 @@
 export default function USAVisaConsultants() {
     return (
         <section className="w-full pb-16 px-4 sm:px-6 lg:px-16 bg-white">
-            <div className="max-w-7xl mx-auto flex flex-col gap-8">
-                {/* H2 */}
+            <div className="max-w-7xl mx-auto flex flex-col gap-10">
+
+                {/* Main Heading */}
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                    Shivasya- One of the USA Visa Consultants
+                    Shivasya – Trusted USA Student Visa Consultants in Ahmedabad
                 </h3>
 
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed text-justify">
+                {/* Introduction */}
+                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg leading-relaxed">
                     <p>
-                        Students can enroll in USA Educational Institutions depending on their desired schooling level. Choosing the best USA study visa consultant to get enrollment in the desired institution, course, and visa, followed by the documentation or application, can become overwhelming for a student who wants to study in USA. Shivasya's USA Study Visa Consultant in Ahmedabad offers guidance catering to students' requirements, preparation for visa interviews, assistance regarding past-visa denials, SEVIS fee registration, and finally, help with post-visa approval departure. At Shivasya Educational and Immigration Services Pvt. Ltd., The team provides exclusive visa assistance, securing the dreams of several aspirants willing to move to the USA for study and post-study employment.
+                        Planning to study in the USA can feel overwhelming — from selecting the
+                        right course and university to completing visa documentation and preparing
+                        for interviews. Shivasya Education and Immigration Services provides
+                        complete guidance to students at every stage of the U.S. student visa process,
+                        ensuring a smooth and stress-free experience.
+                    </p>
+
+                    <p>
+                        With years of expertise and a student-first approach, we help aspirants
+                        successfully navigate complex visa procedures while improving their
+                        approval chances.
                     </p>
                 </div>
 
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Plan for USA Student Visa Consultant visit for application to study in USA-
+                {/* Services Heading */}
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900">
+                    Our USA Student Visa Services Include:
                 </h4>
 
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
+                {/* Service Sections */}
+
+                {/* 1 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">1. Personalized Visa Planning</h5>
                     <p>
-                        Students applying for a USA student visa do face challenges. The concerns revolve around the timing of visa filing, the deadlines, and gathering the documents in the given time frame. USA Study Visa Consultant in Ahmedabad assist them in planning and preparing for their visa applications by ensuring their application is submitted before the academic program begins to rid them of the potential hurdles to conduct study in USA.
+                        We create a structured visa application timeline, guide students in
+                        gathering required documents, and ensure deadlines are met so they
+                        can enroll in their academic program without delays.
                     </p>
                 </div>
 
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Addressing Concerns Regarding SEVIS Fee-
+                {/* 2 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">2. SEVIS Fee Guidance</h5>
+                    <p>
+                        The SEVIS (Student and Exchange Visitor Information System) fee
+                        is an essential part of the visa process. We clarify its purpose,
+                        check eligibility for waivers (if applicable), and guide students
+                        through the correct payment procedure.
+                    </p>
+                </div>
+
+                {/* 3 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">3. DS-160 Form Assistance</h5>
+                    <p>
+                        Completing the DS-160 online nonimmigrant visa application requires
+                        accuracy and attention to detail. Our experts ensure the form is filled
+                        correctly to prevent mistakes that may negatively impact the visa interview.
+                    </p>
+                </div>
+
+                {/* 4 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">4. Student Visa Interview Preparation</h5>
+                    <p>
+                        We assist in scheduling interviews at the nearest U.S. Embassy or
+                        Consulate and conduct mock interview sessions. Our guidance helps
+                        students answer confidently, truthfully, and clearly during this
+                        crucial stage of the visa process.
+                    </p>
+                </div>
+
+                {/* 5 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">5. Visa Denial Assistance</h5>
+                    <p>
+                        If a visa has been denied previously, we carefully analyze the
+                        reasons, rectify documentation errors, and conduct intensive
+                        mock interviews to strengthen reapplication chances and improve
+                        overall case presentation.
+                    </p>
+                </div>
+
+                {/* 6 */}
+                <div className="space-y-3 text-gray-800 text-base sm:text-lg leading-relaxed">
+                    <h5 className="font-semibold text-gray-900">6. Post-Visa Support</h5>
+                    <p>
+                        After visa approval, we guide students on travel preparation,
+                        legal formalities, and academic regulations in the USA to ensure
+                        a smooth transition and minimal challenges upon arrival.
+                    </p>
+                </div>
+
+                {/* Why Choose */}
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900">
+                    Why Choose Shivasya?
                 </h4>
 
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
+                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg leading-relaxed">
                     <p>
-                        The SEVIS fee is an important part of filing the visa application form. Students have many questions about the SEVIS (Student and Exchange Visitor Information System) fee, its purpose, whether it can be waived, and more. The Study Visa Consultants for the USA help determine if students qualify for any waiver. They make students understand the application structure, clarify the objective of the fee, and direct them to pay the SEVIS fee.
+                        Shivasya has successfully assisted hundreds of students in achieving
+                        their dream of studying in the USA. Our comprehensive and personalized
+                        approach ensures every stage — from documentation to post-visa support —
+                        is handled professionally.
+                    </p>
+
+                    <p>
+                        We focus on reducing stress, avoiding errors, and increasing visa
+                        success rates through structured guidance and expert consultation.
+                    </p>
+
+                    <p className="font-semibold text-gray-900">
+                        Contact Shivasya Education and Immigration Services today to schedule
+                        your consultation and take the first confident step toward your
+                        U.S. study journey.
                     </p>
                 </div>
 
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    General Visa Application Form Filling-
-                </h4>
-
-                {/* Paragraphs */}
-                <div className="stext-justify pace-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                    <p>
-                        Students have to fill out and submit the DS-160 form (Online Nonimmigrant Visa Application), which is used for various types of non-immigrant USA visas, including student visas. From accessing the form from the Consular Electronic Application Center (CEAC) website to correctly filling in the details, no error is entertained. Thus, the USA Study Visa Consultants take the responsibility for completing the online visa application so that students have the form when they go for the visa interview.
-                    </p>
-                </div>
-
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Organizing Student Visa Interviews for the USA-
-                </h4>
-
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                    <p>
-                        Consultants assist students in arranging a visa interview appointment at the closest U.S. Embassy or Consulate. Not only do they help to organize the interview but they also provide valuable advice on how students must conduct themselves and respond during the interview, focusing on the significance of being truthful and clear in their answers. They address students' concerns and worries related to the USA visa interview process, offering support and reassurance. They ensure that students are well-prepared for this critical step in their journey to studying in the United States.
-                    </p>
-                </div>
-
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    USA Visa Denial Assistance-
-                </h4>
-
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                    <p>
-                        USA Study Visa Consultants opt for an all-around approach to resolve concerns about visa denials. They study the reasons for the denial and correct errors in the visa application and paperwork. Improper communication in an interview could also be the reason, so consultants conduct mock interviews to improve those skills that can help to gain more quality while study in USA-based colleges. Their expertise helps students to gather substantial documentation to improve the case. The purpose is to increase students' chances of receiving a U.S. student visa upon reapplication. The aim is to ensure student visa approval by making informed decisions.
-                    </p>
-                </div>
-
-                <h4 className="text-xl sm:text-xl lg:text-2xl font-bold text-gray-900">
-                    Post-Student Visa Support-
-                </h4>
-
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                    <p>
-                        After students receive their student visa for the USA, they require help with guidance and assistance regarding other legal aspects, travel, etc. The consultants help students to become familiar with the US immigration and academic guidelines so that the chances of facing any challenges in the country are minimal. The USA Study Visa Consultant extend their help to students without missing out on any visa application and post-visa approval so that they easily start their journey to the USA.
-                    </p>
-                </div>
-
-                {/* Paragraphs */}
-                <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
-                    <p>
-                        Students reach out to experts to gain advice on their visa application because the process without any help can divert them from the right path. USA Student Visa Consultant in Ahmedabad, with several years of experience in helping students, offer help by simplifying the visa application journey to study in USA. Being a well-known USA Student Visa Consultants, Our assistance for USA Student Visa has made it possible for students to overcome all the hurdles and find their way to the USA- the dream study destination. Contact Shivasya Education and Immigration Services Pvt. Ltd. and schedule your counseling to have an in-person interaction with the visa consultants to study in USA.
-                    </p>
-                </div>
             </div>
         </section>
     );

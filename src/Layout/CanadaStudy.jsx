@@ -17,24 +17,7 @@ export default function CanadaStudy() {
                         {/* Left Content */}
                         <div className="flex-1 text-center lg:text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                                Elevate Your Education in the{" "}
-                                <span className="relative inline-block">
-                                    Heart of Canada.
-                                    <svg
-                                        className="absolute -bottom-2 left-0 w-full"
-                                        height="12"
-                                        viewBox="0 0 300 12"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M2 10C50 3 250 3 298 10"
-                                            stroke="#3D1F14"
-                                            strokeWidth="4"
-                                            strokeLinecap="round"
-                                        />
-                                    </svg>
-                                </span>
+                                Where your dreams meet global opportunities.{" "}
                             </h1>
 
                             <p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0">

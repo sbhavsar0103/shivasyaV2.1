@@ -1,45 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import admitImg from "../assets/utility/admit-guarantee.jpg";
-import counsellingImg from "../assets/utility/personalised-counselling.jpg";
-import testsImg from "../assets/utility/standardised-tests.jpg";
-import ieltsImg from "../assets/utility/scholarship-guarantee.jpg";
-import pattern6 from "../assets/utility/pattern-6.png";
+import Few_1 from "../assets/utility/Few_1.jpeg";
+import Few_2 from "../assets/utility/Few_2.jpeg";
+import Few_3 from "../assets/utility/Few_3.jpeg";
+import Few_4 from "../assets/utility/Few_4.jpeg";
 
 const reasons = [
     {
-        image: admitImg,
-        title: "ADMIT GUARANTEE",
+        image: Few_1,
+        title: "ADMISSION ASSURANCE",
         description:
-            "To top-ranked partner universities such as John Hopkins, Group of Eight Universities like ANU, UNSW, Russell Group Universities, and many more",
+            "Get access to top-ranked partner universities such as Johns Hopkins, Group of Eight universities like Monash, ANU, UNSW, UWA, leading Russell Group universities, and many more worldwide.",
     },
     {
-        image: counsellingImg,
+        image: Few_2,
         title: "PERSONALIZED COUNSELLING",
         description:
-            "To ensure you receive the end-to-end support needed to get the best admits",
+            "Receive end-to-end expert guidance tailored to your academic background, career goals, and university preferences to secure the best possible admits.",
     },
     {
-        image: testsImg,
-        title: "LOOK BEYOND STANDARDIZED TESTS",
+        image: Few_3,
+        title: "BEYOND MARKS & TEST SCORES",
         description:
-            "Because only GMAT/GRE score should not decide the quality of education you deserve",
+            "Your GRE/GMAT scores alone should not define your future. We focus on building a strong overall profile that highlights your true potential.",
     },
     {
-        image: ieltsImg,
-        title: "TAILORED IELTS TEST PREP",
-        description: "Support until you secure your desired band",
+        image: Few_4,
+        title: "PERSONALIZED IELTS PREPARATION",
+        description:
+            "Get dedicated support from certified trainers until you achieve your desired IELTS band score with confidence.",
     },
 ];
 
 export default function FewReasons() {
     return (
         <section className="relative py-24 bg-gradient-to-b from-[#fff8f4] to-[#fff] overflow-hidden">
-            <div
-                className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-20"
-                style={{ backgroundImage: `url(${pattern6})` }}
-                aria-hidden="true"
-            ></div>
+            <div className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-20" aria-hidden="true"></div>
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Title */}

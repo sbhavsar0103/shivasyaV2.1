@@ -43,7 +43,7 @@ export default function MiniNavbar() {
                     </a>
 
                     <a
-                        href="https://www.facebook.com/share/17DahFaa27/?mibextid=wwXIfr"
+                        href="https://www.facebook.comP/share/17DahFaa27/?mibextid=wwXIfr"
                         className="hover:opacity-70"
                     >
                         <Facebook className="w-4 h-4" />
