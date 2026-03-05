@@ -1,4 +1,4 @@
-import AustraliaVisaConsultant from "../assets/study/australia-visa-consultant_2.png";
+import AustraliaVisaConsultant from "../assets/study/study in australia.jpg";
 import { CheckCircle } from "lucide-react";
 
 export default function StudyInAustralia() {

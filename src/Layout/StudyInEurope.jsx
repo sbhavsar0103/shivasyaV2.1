@@ -1,4 +1,4 @@
-import EuropeVisaConsultant from "../assets/study/europe-visa-consultant.png";
+import EuropeVisaConsultant from "../assets/study/study in europe.jpg";
 
 export default function StudyInEurope() {
     return (

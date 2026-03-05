@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo/png/main-logo.png";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaChevronUp,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaPhoneAlt, FaEnvelope, FaChevronUp } from "react-icons/fa";
+import WhatsappChat from "../Layout/WhatsappChat"
 
 export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -28,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gray-900 text-gray-300 overflow-hidden">
+    <footer className="relative bg-[#724827] text-gray-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="flex flex-wrap -mx-4">
           {/* Logo & Address */}
@@ -37,7 +29,7 @@ export default function Footer() {
               <Link to="/">
                 <img src={logo} alt="Shivasya Education & Immigration Services" className="h-14 mb-6" />
               </Link>
-              <div className="space-y-2 text-sm text-gray-400">
+              <div className="space-y-2 text-sm text-white">
                 <p>117, Univeristy Plaza1, 120 Feet</p>
                 <p>Ring Road, Near Vijay Cross Road</p>
                 <p>Navrangpura, Ahmedabad, Gujarat</p>
@@ -105,15 +97,15 @@ export default function Footer() {
               <a href="https://instagram.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
                 <FaInstagram />
               </a>
-              <a href="https://twitter.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
+              {/* <a href="https://twitter.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
                 <FaTwitter />
-              </a>
-              <a href="https://linkedin.com/company/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
+              </a> */}
+              {/* <a href="https://linkedin.com/company/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
                 <FaLinkedinIn />
-              </a>
-              <a href="https://youtube.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
+              </a> */}
+              {/* <a href="https://youtube.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">
                 <FaYoutube />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -130,20 +122,15 @@ export default function Footer() {
             <li><Link to="/disclaimer" className="hover:text-orange-600">Disclaimer</Link></li>
             <li><Link to="/terms-conditions" className="hover:text-orange-600">Terms & Conditions</Link></li>
             <li><Link to="/copyright-notice" className="hover:text-orange-600">Copyright Notice</Link></li>
-            <li><Link to="/gdpr" className="hover:text-orange-600">GDPR</Link></li>
-            <li><Link to="/monetary-policy" className="hover:text-orange-600">Monetary Policy</Link></li>
           </ul>
         </div>
       </div>
 
       {/* Scroll to top */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:bg-green-600 hover:-translate-y-1 z-50 ${showScrollTop ? "opacity-100 visible" : "opacity-0 invisible"}`}
-        aria-label="Scroll to top"
-      >
+      <button onClick={scrollToTop} className={`fixed bottom-8 right-8 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:bg-green-600 hover:-translate-y-1 z-50 ${showScrollTop ? "opacity-100 visible" : "opacity-0 invisible"}`} aria-label="Scroll to top">
         <FaChevronUp />
       </button>
+      <WhatsappChat />
     </footer>
   );
 }

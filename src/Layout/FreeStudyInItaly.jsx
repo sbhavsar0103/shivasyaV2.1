@@ -1,20 +1,20 @@
 import React from "react";
-import freeCounsellingImg from "../assets/study/free-study-in-italy.png";
-import scholarshipDemoImg from "../assets/study/100_-minimum-Scholarship.webp";
-import experiencedFacultyImg from "../assets/study/Without-ielts.webp";
-import flexibleBatchImg from "../assets/study/top-ranked-universities.webp";
-import unlimitedPracticeImg from "../assets/study/admission-without-interview.webp";
-import individualAttentionImg from "../assets/study/study-under-bologna-process.webp";
-import latestStudyMaterialImg from "../assets/study/Can-take-transfer.webp";
-import exhaustiveLibraryImg from "../assets/study/work-20-hours-week.webp";
-import freeHeadphonesImg from "../assets/study/work-Full-Time.webp";
-import weeklyMockTestImg from "../assets/study/no-visa.webp";
-import modernFacilityImg from "../assets/study/1-Year-Job-Seeker.webp";
-import smartReadingImg from "../assets/study/2-Years-Work-Permit.webp";
-import writingTipsImg from "../assets/study/EASY-PR.webp";
-import speakingTipsImg from "../assets/study/work-anywhere-in-Europe.webp";
-import grammarTipsImg from "../assets/study/visa process.webp";
-import highBandImg from "../assets/study/100_-minimum-Scholarship.webp";
+import freeCounsellingImg from "../assets/study/Free-Education-without-any-Tuition-Fees.png";
+import scholarshipDemoImg from "../assets/study/100-minimum-Scholarship-of-7200-Euro-every-year.png";
+import experiencedFacultyImg from "../assets/study/Without-IELTS---Options-are-available.png";
+import flexibleBatchImg from "../assets/study/TOP-Ranked-Universities.png";
+import unlimitedPracticeImg from "../assets/study/Admission-without-Interview.png";
+import individualAttentionImg from "../assets/study/Study-under-Bologna-Process.png";
+import latestStudyMaterialImg from "../assets/study/Can-take-transfer-in-any-other-European-Country-on-the-base-of-ECTS.png";
+import exhaustiveLibraryImg from "../assets/study/Can-work-20-hours-week-during-study.png";
+import freeHeadphonesImg from "../assets/study/Can-work-Full-Time-during-holidays.png";
+import weeklyMockTestImg from "../assets/study/Don’t-need-of-Visa-to-visit-European-Countries.png";
+import modernFacilityImg from "../assets/study/1-Year-Job-Seeker.png";
+import smartReadingImg from "../assets/study/2-Years-Work-Permit-with-Blue-Card.png";
+import writingTipsImg from "../assets/study/easy-PR.png";
+import speakingTipsImg from "../assets/study/After-PR-can-work-anywhere-in-Europe-without-any-visa.png";
+import grammarTipsImg from "../assets/study/Easy-Visa-Process.png";
+import highBandImg from "../assets/study/100-Success-Ratio-in-Admission,-Scholarship-&-Visa-by-Visa-zone.png";
 
 
 

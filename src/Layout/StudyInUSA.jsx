@@ -1,4 +1,4 @@
-import USAStudentImage from "../assets/study/usa-visa-consultant.png";
+import USAStudentImage from "../assets/study/Study in usa.jpg";
 import { CheckCircle } from "lucide-react";
 
 export default function StudyInUSASection() {

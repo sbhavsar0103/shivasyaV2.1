@@ -1,4 +1,4 @@
-import NewZealandVisaConsultant from "../assets/study/new-zealand-visa-consultant.png";
+import NewZealandVisaConsultant from "../assets/study/uk-banner.jpeg";
 import { CheckCircle } from "lucide-react";
 
 export default function StudyInUK() {

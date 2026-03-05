@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import ServiceBanner from "../assets/utility/banner-image.webp";
+import ServiceBanner from "../assets/utility/VALUE-ADDED-SERVICES.png";
 import OurServices from "../Layout/OurServices";
 import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";

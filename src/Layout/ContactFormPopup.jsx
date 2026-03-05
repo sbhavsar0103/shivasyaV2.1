@@ -4,33 +4,37 @@ import ContactFormPopupSmall from "../Layout/ContactFormPopupSmall";
 export default function ContactFormPopup({ open, onClose, autoOpen = false }) {
   const [isOpen, setIsOpen] = useState(open || false);
 
-  // Allow parent to control modal state
+  // Only sync with parent IF open is defined
   useEffect(() => {
-    setIsOpen(open);
+    if (typeof open === "boolean") {
+      setIsOpen(open);
+    }
   }, [open]);
 
-  // Optional: auto open after delay (default 2 mins)
+  // Auto open every 30 sec
   useEffect(() => {
     if (!autoOpen) return;
-    const interval = setInterval(() => {
-      setIsOpen((prev) => (prev ? prev : true)); // Only open if currently closed
-    }, 120000);
-    return () => clearInterval(interval);
-  }, [autoOpen]);
 
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, [autoOpen, isOpen]);
 
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="relative w-full max-w-7xl max-h-[90vh] bg-white rounded-3xl shadow-xl overflow-hidden">
-        {/* Close button */}
+
         <button
           onClick={() => {
             setIsOpen(false);
             onClose && onClose();
           }}
-          className="absolute top-4 right-4 text-2xl font-bold text-gray-600 hover:text-gray-900"
+          // className="absolute top-4 right-4 text-2xl font-bold text-gray-600 hover:text-gray-900"
+          className="absolute top-4 right-4 z-50 bg-white/80 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold shadow hover:bg-white"
         >
           &times;
         </button>

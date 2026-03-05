@@ -5,11 +5,11 @@ import ApplicationAssistanceImage from "../assets/utility/applicationassistance.
 import EducationLoanImage from "../assets/utility/Educationloan.jpeg";
 import AccommodationImage from "../assets/utility/Accomodation.jpeg";
 import DependentVisaImage from "../assets/utility/Visitorvisa.jpeg";
+import ScholarshipImage from "../assets/utility/scholarship-application-form-foundation-concept.jpg.jpeg";
+import VisaGuidanceImage from "../assets/utility/Visa Guidance.jpg.jpeg";
+import TravelInsuranceImage from "../assets/utility/flight and insurance.jpg.jpeg";
+import SOPAssistanceImage from "../assets/utility/startup-hr-worker-identifying-right-candidates-job-opening-reviewing-resume.jpg.jpeg";
 
-// import SOPAssistanceImage from "../assets/utility/SOPAssistance.jpeg";
-// import ScholarshipImage from "../assets/utility/Scholarship.jpeg";
-// import VisaGuidanceImage from "../assets/utility/VisaGuidance.jpeg";
-// import TravelInsuranceImage from "../assets/utility/TravelInsurance.jpeg";
 
 import { CheckCircle } from "lucide-react";
 
@@ -231,7 +231,7 @@ export default function OurServices() {
         "Professional SOP, CV, and LOR assistance to help you stand out in competitive applications.",
         null,
         SOPAssistance,
-        UniversitySelectionImage
+        SOPAssistanceImage
       )}
 
       <hr />
@@ -241,7 +241,7 @@ export default function OurServices() {
         "Guidance on securing scholarships from international universities to make your study abroad journey more affordable.",
         null,
         ScholarshipSupport,
-        CoachingImage,
+        ScholarshipImage,
         false
       )}
 
@@ -262,7 +262,7 @@ export default function OurServices() {
         "Comprehensive visa guidance to navigate complex requirements and increase your chances of approval.",
         null,
         VisaGuidance,
-        UniversitySelectionImage,
+        VisaGuidanceImage,
         false
       )}
 
@@ -283,7 +283,7 @@ export default function OurServices() {
         "Helping you get the best deals on flight tickets and overseas student insurance for savings, safety, and peace of mind.",
         null,
         TravelInsuranceSupport,
-        ApplicationAssistanceImage,
+        TravelInsuranceImage,
         false
       )}
 

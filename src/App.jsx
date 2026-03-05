@@ -19,8 +19,6 @@ import PrivacyPolicy from "./Layout/PrivacyPolicy";
 import Disclaimer from "./Layout/Disclaimer";
 import TermsAndConditions from "./Layout/TermsAndConditions";
 import CopyrightNotice from "./Layout/CopyrightNotice";
-import GDPR from "./Layout/GDPR";
-import MonetaryPolicy from "./Layout/MonetaryPolicy";
 
 function App() {
   return (
@@ -47,8 +45,6 @@ function App() {
           <Route path="disclaimer" element={<Disclaimer />} />
           <Route path="terms-conditions" element={<TermsAndConditions />} />
           <Route path="copyright-notice" element={<CopyrightNotice />} />
-          <Route path="gdpr" element={<GDPR />} />
-          <Route path="monetary-policy" element={<MonetaryPolicy />} />
         </Route>
       </Routes>
     </Router>

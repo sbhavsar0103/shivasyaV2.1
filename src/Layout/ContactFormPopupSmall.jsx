@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Send } from "lucide-react";
-import ContactImage from "../assets/contact/form-image.png";
+import image_1 from "../assets/contact/image_1.jpeg";
+import image_2 from "../assets/contact/image_2.jpeg";
+import image_3 from "../assets/contact/image_3.jpeg";
+
+const slideshowImages = [image_1, image_2, image_3];
 
 const countries = [
   { code: "USA", name: "USA", flag: "🇺🇸" },
@@ -62,7 +66,6 @@ const faqData = [
   },
 ];
 
-
 export default function ContactFormPopupSmall({ onClose }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -70,13 +73,26 @@ export default function ContactFormPopupSmall({ onClose }) {
     email: "",
     coachingType: "",
     country: "",
+    course: "",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("idle");
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto slideshow
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!formData.coachingType || !formData.country) {
       alert("Please select a coaching type and country");
       return;
@@ -88,12 +104,14 @@ export default function ContactFormPopupSmall({ onClose }) {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus("success");
+
       setFormData({
         name: "",
         phone: "",
         email: "",
         coachingType: "",
         country: "",
+        course: "",
         message: "",
       });
     }, 1200);
@@ -101,12 +119,14 @@ export default function ContactFormPopupSmall({ onClose }) {
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-full">
-      {/* Form Section */}
+      {/* FORM SECTION */}
       <div className="w-full lg:w-1/2 p-6 lg:p-8 overflow-y-auto">
-        <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 leading-snug">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4">
           Contact Us
         </h3>
-        <form onSubmit={handleSubmit} className="space-y-3 flex-1 flex flex-col">
+
+        <form onSubmit={handleSubmit} className="space-y-3 flex flex-col">
+          {/* Name + Phone */}
           <div className="grid sm:grid-cols-2 gap-2">
             <input
               type="text"
@@ -126,21 +146,22 @@ export default function ContactFormPopupSmall({ onClose }) {
             />
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          {/* Email + Course */}
+          <div className="grid sm:grid-cols-2 gap-2">
             <input
               type="email"
               placeholder="Email *"
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
             />
 
             <select
               value={formData.course}
               onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-              className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all hide-scrollbar"
               required
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
             >
               <option value="">Select Course *</option>
               {faqData.map((category) => (
@@ -166,14 +187,17 @@ export default function ContactFormPopupSmall({ onClose }) {
                     name="coaching"
                     value={type}
                     checked={formData.coachingType === type}
-                    onChange={(e) => setFormData({ ...formData, coachingType: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, coachingType: e.target.value })
+                    }
                     className="sr-only"
                   />
                   <span
-                    className={`px-3 py-1 rounded-lg border text-sm ${formData.coachingType === type
-                      ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                      : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                      }`}
+                    className={`px-3 py-1 rounded-lg border text-sm ${
+                      formData.coachingType === type
+                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                    }`}
                   >
                     {type}
                   </span>
@@ -185,7 +209,7 @@ export default function ContactFormPopupSmall({ onClose }) {
           {/* Country */}
           <div>
             <p className="text-sm font-medium mb-1">Country</p>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 overflow-y-hidden">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1">
               {countries.map((country) => (
                 <label key={country.code} className="cursor-pointer text-xs">
                   <input
@@ -193,14 +217,17 @@ export default function ContactFormPopupSmall({ onClose }) {
                     name="country"
                     value={country.code}
                     checked={formData.country === country.code}
-                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, country: e.target.value })
+                    }
                     className="sr-only"
                   />
                   <span
-                    className={`flex flex-col items-center gap-1 p-1 rounded-lg border ${formData.country === country.code
-                      ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                      : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                      }`}
+                    className={`flex flex-col items-center gap-1 p-1 rounded-lg border ${
+                      formData.country === country.code
+                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
+                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                    }`}
                   >
                     <span className="text-lg">{country.flag}</span>
                     {country.name}
@@ -214,9 +241,11 @@ export default function ContactFormPopupSmall({ onClose }) {
           <textarea
             placeholder="Message *"
             required
-            rows={3}  // 🔹 smaller message box
+            rows={3}
             value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
             className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none resize-none"
           />
 
@@ -237,17 +266,19 @@ export default function ContactFormPopupSmall({ onClose }) {
         </form>
       </div>
 
-      {/* Image Section */}
-      {/* Image Section */}
-      <div className="hidden lg:flex w-1/2 items-center justify-center rounded-r-3xl overflow-hidden">
-        <img
-          src={ContactImage}
-          alt="Contact Illustration"
-          className="w-auto max-h-[85vh] object-contain" // ✅ shows full image, no crop
-        />
+      {/* SLIDESHOW SECTION */}
+      <div className="hidden lg:flex w-1/2 relative overflow-hidden rounded-r-3xl">
+        {slideshowImages.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt="Slide"
+            className={`absolute w-full h-full object-cover transition-opacity duration-700 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
-
     </div>
-
   );
 }

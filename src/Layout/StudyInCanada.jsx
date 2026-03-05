@@ -1,4 +1,4 @@
-import USAStudentImage from "../assets/study/usa-visa-consultant.png";
+import USAStudentImage from "../assets/study/study in canada.jpg";
 
 export default function StudyInCanada() {
     return (

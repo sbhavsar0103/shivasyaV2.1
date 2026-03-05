@@ -3,10 +3,9 @@ import { Menu, ChevronDown } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 import { Link } from "react-router-dom";
 import Mainlogo from "../assets/logo/png/main-logo.png";
-import ContactFormPopup from "../Layout/ContactFormPopup";
 import MiniNavbar from "./MiniNavbar";
 
-export default function Navbar({ toggleSidebar }) {
+export default function Navbar({ toggleSidebar, openPopup }) {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [isWorkAbroadOpen, setIsWorkAbroadOpen] = useState(false);
 
@@ -152,7 +151,7 @@ export default function Navbar({ toggleSidebar }) {
                         {/* Work Abroad Button */}
                         <li>
                             <button
-                                onClick={() => setIsWorkAbroadOpen(true)}
+                                onClick={openPopup}
                                 className="bg-[#C67B3E] text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-[#3D1F14] hover:text-[#C67B3E] transition-all"
                             >
                                 Work Abroad
@@ -163,17 +162,14 @@ export default function Navbar({ toggleSidebar }) {
 
                 {/* CTA Button */}
                 <div className="hidden lg:flex">
-                    <button className="bg-[#3D1F14] text-[#C67B3E] px-4 py-2 rounded-md hover:bg-[#C67B3E] hover:text-[#3D1F14] transition">
+                    <Link
+                        to="/contact-us"
+                        className="bg-[#3D1F14] text-[#C67B3E] px-4 py-2 rounded-md hover:bg-[#C67B3E] hover:text-[#3D1F14] transition"
+                    >
                         Book A Free Consultation
-                    </button>
+                    </Link>
                 </div>
             </nav>
-
-            {/* Modal Popup */}
-            <ContactFormPopup
-                open={isWorkAbroadOpen}
-                onClose={() => setIsWorkAbroadOpen(false)}
-            />
         </>
     );
 }
