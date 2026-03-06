@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Send } from "lucide-react";
-import ContactImage from "../assets/contact/contant_us.jpeg";
+import ContactImage from "../assets/contact/contant_us_1.1.jpeg";
 
 const countries = [
     { code: "USA", name: "USA", flag: "🇺🇸" },

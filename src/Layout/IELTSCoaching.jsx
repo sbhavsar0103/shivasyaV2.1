@@ -137,7 +137,7 @@ export default function IELTSCoaching() {
             <IELTSBands />
             <IELTSCoachingBenefits />
             <BestIELTSCoaching />
-            <Benefits />
+            {/* <Benefits /> */}
             <ContactForm />
             <Footer />
         </>

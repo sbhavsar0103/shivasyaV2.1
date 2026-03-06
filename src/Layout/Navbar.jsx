@@ -19,7 +19,6 @@ export default function Navbar({ toggleSidebar, openPopup }) {
         { name: "UK", code: "GB", path: "/uk-study" },
         { name: "Ireland", code: "IE", path: "/ireland-study" },
         { name: "Europe", code: "EU", path: "/europe-study" },
-        { name: "Italy", code: "IT", path: "/italy-study" },
         { name: "Russia", code: "RU", path: "/russia-study" },
     ];
 
