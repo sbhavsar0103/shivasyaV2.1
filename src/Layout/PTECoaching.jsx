@@ -3,7 +3,6 @@ import PTEContent from "../Layout/PTEContent";
 import EligibilityPTE from "../Layout/EligibilityPTE";
 import PTETestFormat from "../Layout/PTETestFormat";
 import WhyChoosePTECoaching from "../Layout/WhyChoosePTECoaching";
-import Benefits from "../Layout/Benefits";
 import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 
@@ -134,7 +133,6 @@ export default function PTECoaching() {
             <EligibilityPTE />
             <PTETestFormat />
             <WhyChoosePTECoaching />
-            <Benefits />
             <ContactForm />
             <Footer />
         </>

@@ -49,7 +49,8 @@ export default function Footer() {
                     <p>Gujarat 380009</p>
                   </div>
                 </div>
-              </div>              <div className="mt-4 space-y-2">
+              </div>
+              <div className="mt-4 space-y-2">
                 <div className="flex items-center space-x-2">
                   <FaPhoneAlt className="text-orange-600 w-4 h-4" />
                   <a href="tel:+917486860001" className="hover:text-orange-600">+91 7567981608</a>

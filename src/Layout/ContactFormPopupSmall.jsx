@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Send } from "lucide-react";
+
 import image_1 from "../assets/contact/image_1.jpeg";
 import image_2 from "../assets/contact/image_2.jpeg";
 import image_3 from "../assets/contact/image_3.jpeg";
@@ -66,7 +67,8 @@ const faqData = [
   },
 ];
 
-export default function ContactFormPopupSmall({ onClose }) {
+export default function ContactFormPopupSmall() {
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -78,10 +80,9 @@ export default function ContactFormPopupSmall({ onClose }) {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("idle");
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto slideshow
+  // slideshow auto change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
@@ -99,11 +100,9 @@ export default function ContactFormPopupSmall({ onClose }) {
     }
 
     setIsSubmitting(true);
-    setSubmitStatus("idle");
 
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitStatus("success");
 
       setFormData({
         name: "",
@@ -114,170 +113,162 @@ export default function ContactFormPopupSmall({ onClose }) {
         course: "",
         message: "",
       });
+
+      alert("Form Submitted Successfully!");
     }, 1200);
   };
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-full">
+
       {/* FORM SECTION */}
-      <div className="w-full lg:w-1/2 p-6 lg:p-8 overflow-y-auto">
-        <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4">
+      <div className="w-full lg:w-1/2 p-4 overflow-y-auto">
+
+        <h3 className="text-lg font-semibold mb-2">
           Contact Us
         </h3>
 
-        <form onSubmit={handleSubmit} className="space-y-3 flex flex-col">
+        <form onSubmit={handleSubmit} className="space-y-2 text-sm">
+
           {/* Name + Phone */}
-          <div className="grid sm:grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <input
               type="text"
-              placeholder="Name *"
+              placeholder="Name"
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="px-2 py-1 border rounded-md outline-none"
             />
+
             <input
               type="tel"
-              placeholder="Phone *"
+              placeholder="Phone"
               required
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="px-2 py-1 border rounded-md outline-none"
             />
           </div>
 
           {/* Email + Course */}
-          <div className="grid sm:grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <input
               type="email"
-              placeholder="Email *"
+              placeholder="Email"
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="px-2 py-1 border rounded-md outline-none"
             />
 
             <select
               value={formData.course}
               onChange={(e) => setFormData({ ...formData, course: e.target.value })}
               required
-              className="w-full px-3 py-3 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none"
+              className="px-2 py-1 border rounded-md outline-none"
             >
-              <option value="">Select Course *</option>
-              {faqData.map((category) => (
-                <optgroup key={category.title} label={category.title}>
-                  {category.items.map((item) => (
-                    <option key={item} value={item}>
-                      {item}
-                    </option>
+              <option value="">Course</option>
+
+              {faqData.map((cat) => (
+                <optgroup key={cat.title} label={cat.title}>
+                  {cat.items.map((item) => (
+                    <option key={item}>{item}</option>
                   ))}
                 </optgroup>
               ))}
+
             </select>
           </div>
 
-          {/* Coaching Type */}
+          {/* Coaching */}
           <div>
-            <p className="text-sm font-medium mb-1">Coaching Type</p>
-            <div className="flex gap-2 flex-wrap">
+            <p className="text-xs mb-1">Coaching</p>
+
+            <div className="flex gap-2">
               {["IELTS", "PTE"].map((type) => (
-                <label key={type} className="cursor-pointer">
+                <label key={type} className="text-xs flex items-center gap-1">
+
                   <input
                     type="radio"
-                    name="coaching"
                     value={type}
                     checked={formData.coachingType === type}
-                    onChange={(e) =>
-                      setFormData({ ...formData, coachingType: e.target.value })
-                    }
-                    className="sr-only"
+                    onChange={(e) => setFormData({ ...formData, coachingType: e.target.value })}
                   />
-                  <span
-                    className={`px-3 py-1 rounded-lg border text-sm ${
-                      formData.coachingType === type
-                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                    }`}
-                  >
-                    {type}
-                  </span>
+
+                  {type}
+
                 </label>
               ))}
             </div>
           </div>
 
-          {/* Country */}
-          <div>
-            <p className="text-sm font-medium mb-1">Country</p>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1">
-              {countries.map((country) => (
-                <label key={country.code} className="cursor-pointer text-xs">
-                  <input
-                    type="radio"
-                    name="country"
-                    value={country.code}
-                    checked={formData.country === country.code}
-                    onChange={(e) =>
-                      setFormData({ ...formData, country: e.target.value })
-                    }
-                    className="sr-only"
-                  />
-                  <span
-                    className={`flex flex-col items-center gap-1 p-1 rounded-lg border ${
-                      formData.country === country.code
-                        ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
-                    }`}
-                  >
-                    <span className="text-lg">{country.flag}</span>
-                    {country.name}
-                  </span>
-                </label>
-              ))}
-            </div>
+          {/* Countries */}
+          <div className="grid grid-cols-4 gap-1 text-[10px]">
+
+            {countries.map((country) => (
+              <label key={country.code} className="text-center cursor-pointer">
+
+                <input
+                  type="radio"
+                  name="country"
+                  value={country.code}
+                  checked={formData.country === country.code}
+                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  className="sr-only"
+                />
+
+                <div className={`border rounded p-[2px] ${formData.country === country.code
+                    ? "bg-[#C67B3E]/20 border-[#C67B3E]"
+                    : ""
+                  }`}>
+
+                  <div className="text-sm">{country.flag}</div>
+                  <div>{country.code}</div>
+
+                </div>
+
+              </label>
+            ))}
+
           </div>
 
           {/* Message */}
           <textarea
-            placeholder="Message *"
-            required
-            rows={3}
+            rows={1}
+            placeholder="Message"
             value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-[#C67B3E] outline-none resize-none"
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            className="w-full px-2 py-1 border rounded-md outline-none resize-none"
           />
 
-          {submitStatus === "success" && (
-            <div className="p-2 bg-green-50 border border-green-200 text-green-700 rounded-lg text-sm">
-              Form submitted successfully!
-            </div>
-          )}
-
+          {/* Submit */}
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 bg-[#C67B3E] hover:bg-[#3D1F14] text-white font-bold py-2 rounded-full text-sm transition-all"
+            className="w-full bg-[#C67B3E] text-white py-1.5 rounded-md flex items-center justify-center gap-2"
           >
-            {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+            {isSubmitting ? "Submitting..." : "Submit"}
             <Send className="w-4 h-4" />
           </button>
+
         </form>
+
       </div>
 
-      {/* SLIDESHOW SECTION */}
-      <div className="hidden lg:flex w-1/2 relative overflow-hidden rounded-r-3xl">
+      {/* IMAGE SLIDESHOW */}
+      <div className="hidden lg:flex w-1/2 relative overflow-hidden bg-gray-100">
+
         {slideshowImages.map((img, index) => (
           <img
             key={index}
             src={img}
             alt="Slide"
-            className={`absolute w-full h-full object-cover transition-opacity duration-700 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute w-full h-full object-contain transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           />
         ))}
+
       </div>
     </div>
   );

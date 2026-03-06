@@ -4,7 +4,6 @@ import IELTSModules from "../Layout/IELTSModules";
 import IELTSBands from "../Layout/IELTSBand";
 import IELTSCoachingBenefits from "../Layout/IELTSCoachingBenefits";
 import BestIELTSCoaching from "../Layout/BestIELTSCoaching";
-import Benefits from "../Layout/Benefits";
 import ContactForm from "../Layout/ContactUsForm";
 import Footer from "../Layout/footer";
 

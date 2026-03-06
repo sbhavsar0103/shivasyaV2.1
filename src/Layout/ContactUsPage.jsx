@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
   Send,
-  MapPin,
   Phone,
+  MapPin,
   Mail,
   Instagram,
   Facebook,
@@ -26,13 +26,6 @@ const socialMedia = [
     bgColor: "bg-[#C67B3E]/10",
     href: "https://www.facebook.com/share/17DahFaa27/?mibextid=wwXIfr",
   },
-  // {
-  //   name: "Twitter",
-  //   icon: MessageCircle,
-  //   color: "text-[#3D1F14]",
-  //   bgColor: "bg-[#C67B3E]/10",
-  //   href: "#",
-  // },
   {
     name: "Whatsapp",
     icon: MessageCircle,
@@ -40,13 +33,6 @@ const socialMedia = [
     bgColor: "bg-[#C67B3E]/10",
     href: "https://wa.me/message/FZN2DAMDZCISK1",
   },
-  // {
-  //   name: "Youtube",
-  //   icon: Youtube,
-  //   color: "text-[#3D1F14]",
-  //   bgColor: "bg-[#C67B3E]/10",
-  //   href: "#",
-  // },
   {
     name: "Google",
     icon: Mail,
@@ -314,16 +300,30 @@ export default function ContactForm() {
                     <div>
                       <h3 className="font-bold text-gray-900 mb-2">Address</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        117, Univeristy Plaza1, 120 Feet
+                        117, University Plaza
                         <br />
-                        Ring Road, Near Vijay Cross Road
+                        120 Feet Ring Road
                         <br />
-                        Navrangpura, Ahmedabad, Gujarat
+                        Near Vijay Cross Road
                         <br />
-                        380009
+                        Navrangpura, Ahmedabad
+                        <br />
+                        Gujarat 380009
                       </p>
                     </div>
                   </div>
+                  {/* <div className="mt-2 space-y-1 text-sm text-white">
+                    <div className="flex items-start gap-2">
+                      <FaMapMarkerAlt className="text-orange-600 mt-1" />
+                      <div>
+                        <p>117, University Plaza</p>
+                        <p>120 Feet Ring Road</p>
+                        <p>Near Vijay Cross Road</p>
+                        <p>Navrangpura, Ahmedabad</p>
+                        <p>Gujarat 380009</p>
+                      </div>
+                    </div>
+                  </div> */}
 
                   <div className="flex gap-4">
                     <Phone className="w-6 h-6 text-[#C67B3E] flex-shrink-0 mt-1" />
