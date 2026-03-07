@@ -60,7 +60,7 @@ export default function PopularCourses() {
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D1F14]">
             {/* POPULAR COURSES */}
-            Guiding You to the Best Fit
+            POPULAR COURSES
           </h2>
         </div>
 

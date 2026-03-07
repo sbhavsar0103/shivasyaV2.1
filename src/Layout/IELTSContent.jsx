@@ -1,4 +1,6 @@
 import React from "react";
+import IELTSImg from "../assets/IELTS/Iets.jpg"
+
 
 export default function IELTSCoachingPage() {
   const introParagraphs = [
@@ -92,33 +94,45 @@ export default function IELTSCoachingPage() {
   ];
 
   return (
-    
+
     <main className="mt-5 mx-20 px-2 sm:px-4">
-      {/* Main Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         IELTS Coaching Classes in Ahmedabad
       </h1>
+      <section className="flex flex-col md:flex-row items-center gap-6 text-gray-700 text-base leading-relaxed">
 
-      {/* Introduction */}
-      <section className="space-y-4 text-gray-700 text-base leading-relaxed">
-        {introParagraphs.map((para, index) => (
-          <p key={index} className="text-justify">
-            {para}
-          </p>
-        ))}
+        {/* Left Content */}
+        <div className="md:w-1/2 space-y-4">
+          <div>
+            {introParagraphs.map((para, index) => (
+              <p key={index} className="text-justify">
+                {para}
+              </p>
+            ))}
 
-        <ul className="list-disc ml-8 space-y-1">
-          {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
+            <ul className="list-disc ml-8 space-y-1">
+              {skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
 
-        <p className="text-justify">
-          The test is jointly administered by the British Council, IDP
-          Education, and Cambridge Assessment English. It is accepted by
-          thousands of universities, employers, professional bodies, and
-          immigration authorities worldwide.
-        </p>
+            <p className="text-justify">
+              The test is jointly administered by the British Council, IDP
+              Education, and Cambridge Assessment English. It is accepted by
+              thousands of universities, employers, professional bodies, and
+              immigration authorities worldwide.
+            </p>
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            src={IELTSImg}
+            alt="IELTS Coaching"
+            className="w-full max-h-[350px] rounded-lg object-cover"
+          />
+        </div>
       </section>
 
       {/* IELTS Test Types */}

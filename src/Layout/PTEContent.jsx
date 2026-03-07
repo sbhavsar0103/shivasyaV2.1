@@ -1,9 +1,10 @@
 import React from "react";
+import WhatIsPTE from "../assets/utility/what_pte.jpg"
 
 export default function PTEContent() {
   return (
     <main className="mt-5 mx-20 px-2 sm:px-4">
-      
+
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
         Importance of Best PTE Coaching Classes
       </h1>
@@ -31,20 +32,33 @@ export default function PTEContent() {
           What is PTE?
         </h2>
 
-        <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-          <p className="text-justify">
-            The Pearson Test of English (PTE) is an English proficiency exam administered by Pearson PLC. It allows non-native English speakers to demonstrate their English skills when applying to study, work, or migrate abroad.
-          </p>
+        <div className="flex flex-col md:flex-row items-center gap-8 text-gray-700 text-base leading-relaxed">
 
-          <p className="text-justify">
-            Countries like Canada, the USA, Australia, New Zealand, and the UK widely accept PTE scores. Universities and employers across the globe recognize PTE as proof of strong English communication skills.
-          </p>
+          {/* Left Content */}
+          <div className="md:w-1/2 space-y-4">
+            <p className="text-justify">
+              The Pearson Test of English (PTE) is an English proficiency exam administered by Pearson PLC. It allows non-native English speakers to demonstrate their English skills when applying to study, work, or migrate abroad.
+            </p>
 
-          <p className="text-justify">
-            The exam evaluates candidates across four sections: Speaking, Writing, Listening, and Reading. A high PTE score reflects your ability to communicate effectively in English, showcasing your readiness to pursue education or build a career in English-speaking countries.
-          </p>
-        </div>
-      </section>
+            <p className="text-justify">
+              Countries like Canada, the USA, Australia, New Zealand, and the UK widely accept PTE scores. Universities and employers across the globe recognize PTE as proof of strong English communication skills.
+            </p>
+
+            <p className="text-justify">
+              The exam evaluates candidates across four sections: Speaking, Writing, Listening, and Reading. A high PTE score reflects your ability to communicate effectively in English, showcasing your readiness to pursue education or build a career in English-speaking countries.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={WhatIsPTE}
+              alt="What is PTE"
+              className="w-full max-h-[350px] rounded-lg shadow-lg object-cover"
+            />
+          </div>
+
+        </div>      </section>
 
       <section className="mt-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">

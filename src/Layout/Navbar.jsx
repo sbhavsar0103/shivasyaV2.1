@@ -7,7 +7,6 @@ import MiniNavbar from "./MiniNavbar";
 
 export default function Navbar({ toggleSidebar, openPopup }) {
     const [openDropdown, setOpenDropdown] = useState(null);
-    const [isWorkAbroadOpen, setIsWorkAbroadOpen] = useState(false);
 
     const dropdownRef = useRef(null);
 
@@ -96,7 +95,7 @@ export default function Navbar({ toggleSidebar, openPopup }) {
                         </li>
 
                         {/* Study Abroad Dropdown */}
-                        <li className="relative cursor-pointer">
+                        {/* <li className="relative cursor-pointer">
                             <div
                                 className="flex items-center gap-1"
                                 onClick={() =>
@@ -126,7 +125,7 @@ export default function Navbar({ toggleSidebar, openPopup }) {
                                     ))}
                                 </ul>
                             )}
-                        </li>
+                        </li> */}
 
                         {/* Services */}
                         <li>
@@ -147,12 +146,37 @@ export default function Navbar({ toggleSidebar, openPopup }) {
                             </Link>
                         </li>
 
+                        <li className="relative">
+                            <button className="flex items-center gap-2 bg-[#C67B3E] text-white font-semibold px-3 py-2 rounded-full shadow-md hover:bg-[#3D1F14] hover:text-[#C67B3E] transition-all" onClick={() =>
+                                    setOpenDropdown(openDropdown === "study" ? null : "study")}>
+                                Study Abroad <ChevronDown className="w-4 h-4" />
+                            </button>
+
+                            {openDropdown === "study" && (
+                                <ul className="absolute left-0 mt-2 w-56 bg-white border rounded-lg shadow-xl z-50">
+                                    {studyAbroadCountries.map((country) => (
+                                        <Link
+                                            to={country.path}
+                                            key={country.name}
+                                            onClick={() => setOpenDropdown(null)}
+                                        >
+                                            <li className="px-4 py-3 hover:bg-blue-100 cursor-pointer flex items-center gap-3">
+                                                <ReactCountryFlag
+                                                    countryCode={country.code}
+                                                    svg
+                                                    style={{ width: "20px", height: "20px" }}
+                                                />
+                                                {country.name}
+                                            </li>
+                                        </Link>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+
                         {/* Work Abroad Button */}
                         <li>
-                            <button
-                                onClick={openPopup}
-                                className="bg-[#C67B3E] text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-[#3D1F14] hover:text-[#C67B3E] transition-all"
-                            >
+                            <button onClick={openPopup} className="bg-[#C67B3E] text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-[#3D1F14] hover:text-[#C67B3E] transition-all">
                                 Work Abroad
                             </button>
                         </li>

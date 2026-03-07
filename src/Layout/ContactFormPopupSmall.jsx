@@ -119,16 +119,17 @@ export default function ContactFormPopupSmall() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row w-full h-full">
+    // <div className="flex flex-col lg:flex-row w-full h-full">
+    <div className="flex flex-col lg:flex-row w-full h-full min-h-[560px]">
 
       {/* FORM SECTION */}
-      <div className="w-full lg:w-1/2 p-4 overflow-y-auto">
+      <div className="w-full lg:w-1/2 p-6 overflow-y-auto">
 
         <h3 className="text-lg font-semibold mb-2">
           Contact Us
         </h3>
 
-        <form onSubmit={handleSubmit} className="space-y-2 text-sm">
+        <form onSubmit={handleSubmit} className="space-y-4 text-sm">
 
           {/* Name + Phone */}
           <div className="grid grid-cols-2 gap-2">
@@ -138,7 +139,7 @@ export default function ContactFormPopupSmall() {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="px-2 py-1 border rounded-md outline-none"
+              className="px-3 py-2 border rounded-md outline-none"
             />
 
             <input
@@ -147,7 +148,7 @@ export default function ContactFormPopupSmall() {
               required
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="px-2 py-1 border rounded-md outline-none"
+              className="px-3 py-2 border rounded-md outline-none"
             />
           </div>
 
@@ -159,14 +160,14 @@ export default function ContactFormPopupSmall() {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="px-2 py-1 border rounded-md outline-none"
+              className="px-3 py-2 border rounded-md outline-none"
             />
 
             <select
               value={formData.course}
               onChange={(e) => setFormData({ ...formData, course: e.target.value })}
               required
-              className="px-2 py-1 border rounded-md outline-none"
+              className="px-3 py-2 border rounded-md outline-none"
             >
               <option value="">Course</option>
 
@@ -204,7 +205,7 @@ export default function ContactFormPopupSmall() {
           </div>
 
           {/* Countries */}
-          <div className="grid grid-cols-4 gap-1 text-[10px]">
+          <div className="flex flex-wrap gap-2 text-xs">
 
             {countries.map((country) => (
               <label key={country.code} className="text-center cursor-pointer">
@@ -218,10 +219,12 @@ export default function ContactFormPopupSmall() {
                   className="sr-only"
                 />
 
-                <div className={`border rounded p-[2px] ${formData.country === country.code
+                <div
+                  className={`flex items-center gap-1 border rounded-full px-2 py-[2px] ${formData.country === country.code
                     ? "bg-[#C67B3E]/20 border-[#C67B3E]"
-                    : ""
-                  }`}>
+                    : "border-gray-300"
+                    }`}
+                >
 
                   <div className="text-sm">{country.flag}</div>
                   <div>{country.code}</div>
@@ -235,7 +238,7 @@ export default function ContactFormPopupSmall() {
 
           {/* Message */}
           <textarea
-            rows={1}
+            rows={3}
             placeholder="Message"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -257,7 +260,7 @@ export default function ContactFormPopupSmall() {
       </div>
 
       {/* IMAGE SLIDESHOW */}
-      <div className="hidden lg:flex w-1/2 relative overflow-hidden bg-gray-100">
+      <div className="bg-white hidden lg:flex w-1/2 relative overflow-hidden bg-gray-100">
 
         {slideshowImages.map((img, index) => (
           <img

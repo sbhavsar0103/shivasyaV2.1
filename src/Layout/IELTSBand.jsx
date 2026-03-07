@@ -1,4 +1,5 @@
 import React from "react";
+import IELTSCoachingImg from "../assets/IELTS/ielts_coching.jpg";
 
 export default function IELTSBands() {
     return (
@@ -99,19 +100,32 @@ export default function IELTSBands() {
             <h2 className="mt-12 text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 What is the Importance of IELTS Coaching?
             </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8 text-gray-700 text-base leading-relaxed">
 
-            <div className="space-y-4 text-gray-700 text-base leading-relaxed">
-                <p>
-                    For over 30 years, the International English Language Testing System (IELTS) has been the global benchmark for assessing English language proficiency. It is widely accepted by universities, employers, professional bodies, and immigration authorities worldwide.
-                </p>
+                {/* Left Content */}
+                <div className="md:w-1/2 space-y-4">
+                    <p>
+                        For over 30 years, the International English Language Testing System (IELTS) has been the global benchmark for assessing English language proficiency. It is widely accepted by universities, employers, professional bodies, and immigration authorities worldwide.
+                    </p>
 
-                <p>
-                    As IELTS plays a crucial role in shaping academic and professional futures, enrolling in a professional IELTS coaching institute has become a strategic step for aspirants aiming to study, work, or migrate abroad.
-                </p>
+                    <p>
+                        As IELTS plays a crucial role in shaping academic and professional futures, enrolling in a professional IELTS coaching institute has become a strategic step for aspirants aiming to study, work, or migrate abroad.
+                    </p>
 
-                <p>
-                    More than 9,000 institutions globally recognize IELTS scores, making structured preparation essential for achieving competitive band scores.
-                </p>
+                    <p>
+                        More than 9,000 institutions globally recognize IELTS scores, making structured preparation essential for achieving competitive band scores.
+                    </p>
+                </div>
+
+                {/* Right Image */}
+                <div className="md:w-1/2 flex justify-center">
+                    <img
+                        src={IELTSCoachingImg}
+                        alt="IELTS Coaching"
+                        className="w-full max-h-[350px] rounded-lg object-cover"
+                    />
+                </div>
+
             </div>
 
             <h3 className="mt-8 text-xl sm:text-2xl font-bold text-gray-900 mb-4">

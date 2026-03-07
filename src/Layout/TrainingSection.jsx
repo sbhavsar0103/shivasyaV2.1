@@ -35,18 +35,17 @@ export default function TrainingSection() {
 
     const scrollSpeed = 1;
     const intervalDelay = 20;
-    const resetPoint = container.scrollWidth / 2;
 
     const interval = setInterval(() => {
       if (!container) return;
+
       scrollPosition += scrollSpeed;
-      if (scrollPosition >= resetPoint) {
+
+      if (scrollPosition >= container.scrollWidth / 2) {
         scrollPosition = 0;
       }
-      container.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
+
+      container.scrollLeft = scrollPosition;
     }, intervalDelay);
 
     return () => clearInterval(interval);
@@ -56,8 +55,8 @@ export default function TrainingSection() {
     <section className="relative py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
       <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 md:px-10">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D1F14]">
-            WE WILL HELP FIND THE PERFECT FIT
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D1F14] uppercase">
+            Guiding You to the Best Fit
           </h2>
         </div>
 

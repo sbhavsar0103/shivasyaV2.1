@@ -26,13 +26,13 @@ export default function LoopVideo() {
 
                 <div className="absolute inset-0 bg-[#3D1F14] opacity-40"></div>
 
-                <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-10 lg:px-24 text-white">
+                <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-10 lg:px-56 text-white">
                     <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight uppercase tracking-wide drop-shadow-md">
-                        Global
+                        Simplified
+                        <br />
+                        International
                         <br />
                         Admissions
-                        <br />
-                        Simplified
                     </h1>
 
                     <div className="mt-3 sm:mt-4 bg-white text-[#C67B3E] font-semibold px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base shadow-md">

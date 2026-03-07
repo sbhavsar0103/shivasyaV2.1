@@ -27,18 +27,17 @@ export default function TopUniversityItaly() {
 
         const scrollSpeed = 1;
         const intervalDelay = 20;
-        const resetPoint = container.scrollWidth / 2;
 
         const interval = setInterval(() => {
             if (!container) return;
+
             scrollPosition += scrollSpeed;
-            if (scrollPosition >= resetPoint) {
+
+            if (scrollPosition >= container.scrollWidth / 2) {
                 scrollPosition = 0;
             }
-            container.scrollTo({
-                left: scrollPosition,
-                behavior: "smooth",
-            });
+
+            container.scrollLeft = scrollPosition;
         }, intervalDelay);
 
         return () => clearInterval(interval);

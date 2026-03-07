@@ -96,14 +96,7 @@ export default function Footer() {
           <div className="w-full md:w-1/2 lg:w-1/3 px-4">
             <h4 className="text-white font-semibold text-lg mb-5 border-b-2 border-orange-600 inline-block pb-1">Contact Information</h4>
             <div className="mb-4 rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                title="Shivasya Education Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9234567890123!2d72.5647890123456!3d23.0358901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f123456789%3A0x123456789abcdef0!2sVisa%20Zone%20Education%20%26%20Immigration%20Services!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                className="w-full h-48 border-0"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5365197988303!2d72.54583807617631!3d23.040783879160973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85563a094e19%3A0xb71af9d02e48ba5a!2sShivasya%20Education%20and%20Immigration%20Services!5e0!3m2!1sen!2sin!4v1772876709112!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="w-full h-48 border-0"></iframe>
             </div>
             <div className="flex space-x-3">
               <a href="https://facebook.com/shivasyaeducation" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-orange-600 transition">

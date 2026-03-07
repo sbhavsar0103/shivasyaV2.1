@@ -2,7 +2,7 @@ import CoachingImage from "../assets/utility/CoachingImage.jpeg";
 import CareerCounselingImage from "../assets/utility/CareerCounseling.jpeg";
 import UniversitySelectionImage from "../assets/utility/CountryAnduniversityselection.jpeg";
 import ApplicationAssistanceImage from "../assets/utility/applicationassistance.jpeg";
-import EducationLoanImage from "../assets/utility/Educationloan.jpeg";
+import EducationLoanImage from "../assets/utility/education_loan_2.jpeg";
 import AccommodationImage from "../assets/utility/Accomodation.jpeg";
 import DependentVisaImage from "../assets/utility/Visitorvisa.jpeg";
 import ScholarshipImage from "../assets/utility/scholarship-application-form-foundation-concept.jpg.jpeg";

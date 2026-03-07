@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function MiniNavbar() {
     return (
-        <div className="w-full bg-[#3D1F14] text-[#C67B3E] text-sm">
+        <div className="w-full bg-[#3D1F14] text-white text-sm">
             <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
 
                 {/* Left info */}

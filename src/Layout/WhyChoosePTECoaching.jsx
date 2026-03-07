@@ -1,4 +1,5 @@
 import React from "react";
+import PTEImpImg from "../assets/utility/pte_class_imp.jpg"
 
 export default function WhyChoosePTECoaching() {
   return (
@@ -9,49 +10,64 @@ export default function WhyChoosePTECoaching() {
         Importance of PTE Coaching Classes
       </h1>
 
-      <div className="space-y-6 text-gray-700 text-base leading-relaxed">
+      <div className="flex flex-col md:flex-row items-center gap-8 text-gray-700 text-base leading-relaxed">
 
-        <p className="text-justify">
-          Preparing for the PTE exam requires more than basic English knowledge.
-          Professional PTE Coaching Classes provide structured preparation,
-          expert strategies, and consistent evaluation to help candidates
-          achieve their desired scores.
-        </p>
+        {/* Left Content */}
+        <div className="md:w-1/2 space-y-6">
 
-        <ul className="space-y-3 mx-6 list-disc">
-          <li>
-            <span className="font-semibold text-gray-900">Expert Guidance:</span>{" "}
-            Understand exam patterns, scoring criteria, and task-specific strategies
-            from experienced trainers.
-          </li>
+          <p className="text-justify">
+            Preparing for the PTE exam requires more than basic English knowledge.
+            Professional PTE Coaching Classes provide structured preparation,
+            expert strategies, and consistent evaluation to help candidates
+            achieve their desired scores.
+          </p>
 
-          <li>
-            <span className="font-semibold text-gray-900">Structured Environment:</span>{" "}
-            A disciplined schedule and competitive atmosphere improve focus,
-            motivation, and consistency.
-          </li>
+          <ul className="space-y-3 mx-6 list-disc">
+            <li>
+              <span className="font-semibold text-gray-900">Expert Guidance:</span>{" "}
+              Understand exam patterns, scoring criteria, and task-specific strategies
+              from experienced trainers.
+            </li>
 
-          <li>
-            <span className="font-semibold text-gray-900">Authentic Resources:</span>{" "}
-            Access updated study materials aligned with the official PTE format.
-          </li>
+            <li>
+              <span className="font-semibold text-gray-900">Structured Environment:</span>{" "}
+              A disciplined schedule and competitive atmosphere improve focus,
+              motivation, and consistency.
+            </li>
 
-          <li>
-            <span className="font-semibold text-gray-900">Personalized Mentorship:</span>{" "}
-            Receive individual feedback to identify and improve weak areas.
-          </li>
+            <li>
+              <span className="font-semibold text-gray-900">Authentic Resources:</span>{" "}
+              Access updated study materials aligned with the official PTE format.
+            </li>
 
-          <li>
-            <span className="font-semibold text-gray-900">Regular Mock Tests:</span>{" "}
-            Performance evaluation builds confidence and improves time management.
-          </li>
-        </ul>
+            <li>
+              <span className="font-semibold text-gray-900">Personalized Mentorship:</span>{" "}
+              Receive individual feedback to identify and improve weak areas.
+            </li>
 
-        <p className="text-justify">
-          With proper mentoring, practice, and evaluation, candidates can
-          significantly enhance their Reading, Writing, Speaking, and Listening
-          skills and maximize their PTE scores.
-        </p>
+            <li>
+              <span className="font-semibold text-gray-900">Regular Mock Tests:</span>{" "}
+              Performance evaluation builds confidence and improves time management.
+            </li>
+          </ul>
+
+          <p className="text-justify">
+            With proper mentoring, practice, and evaluation, candidates can
+            significantly enhance their Reading, Writing, Speaking, and Listening
+            skills and maximize their PTE scores.
+          </p>
+
+        </div>
+
+        {/* Right Image */}
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            src={PTEImpImg}
+            alt="PTE Coaching Importance"
+            className="w-full max-h-[350px] rounded-lg shadow-lg hover:scale-105 transition duration-300 object-cover"
+          />
+        </div>
+
       </div>
 
 
