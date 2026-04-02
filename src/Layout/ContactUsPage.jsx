@@ -6,7 +6,6 @@ import {
   Mail,
   Instagram,
   Facebook,
-  Youtube,
   MessageCircle,
 } from "lucide-react";
 import Footer from "../Layout/footer";
@@ -79,8 +78,9 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("idle");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!formData.coachingType || !formData.country) {
       alert("Please select a coaching type and country");
       return;
@@ -89,9 +89,32 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("http://127.0.0.1:8000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: formData.coachingType,
+          ielts_type: formData.coachingType,
+          country: formData.country,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const data = await response.json();
+      console.log("Success:", data);
+
       setSubmitStatus("success");
+
       setFormData({
         name: "",
         phone: "",
@@ -100,7 +123,13 @@ export default function ContactForm() {
         country: "",
         message: "",
       });
-    }, 1200);
+
+    } catch (error) {
+      console.error("Error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -312,19 +341,6 @@ export default function ContactForm() {
                       </p>
                     </div>
                   </div>
-                  {/* <div className="mt-2 space-y-1 text-sm text-white">
-                    <div className="flex items-start gap-2">
-                      <FaMapMarkerAlt className="text-orange-600 mt-1" />
-                      <div>
-                        <p>117, University Plaza</p>
-                        <p>120 Feet Ring Road</p>
-                        <p>Near Vijay Cross Road</p>
-                        <p>Navrangpura, Ahmedabad</p>
-                        <p>Gujarat 380009</p>
-                      </div>
-                    </div>
-                  </div> */}
-
                   <div className="flex gap-4">
                     <Phone className="w-6 h-6 text-[#C67B3E] flex-shrink-0 mt-1" />
                     <div>

@@ -56,7 +56,7 @@ const AboutBanner = () => {
 
                     {/* Description */}
                     <p className="max-w-3xl text-base lg:text-lg leading-relaxed mb-6">
-                        Shivasya Education is a premier study-abroad consultancy in Gujarat, offering expert guidance and comprehensive services to students aspiring to pursue education overseas. With over a decade of experience, we have built a reputation as a trusted partner, dedicated to providing convenience, excellence, and personalized support throughout your journey to global education.
+                        <strong>Shivasya Education</strong> is a premier study-abroad consultancy in Gujarat, offering expert guidance and comprehensive services to students aspiring to pursue education overseas. With over a decade of experience, we have built a reputation as a trusted partner, dedicated to providing convenience, excellence, and personalized support throughout your journey to global education.
                     </p>
 
                     {/* Country Flags */}

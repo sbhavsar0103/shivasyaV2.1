@@ -27,7 +27,7 @@ export default function LoopVideo() {
                 <div className="absolute inset-0 bg-[#3D1F14] opacity-40"></div>
 
                 <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-10 lg:px-56 text-white">
-                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight uppercase tracking-wide drop-shadow-md">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight uppercase tracking-wide drop-shadow-md">
                         Simplified
                         <br />
                         International

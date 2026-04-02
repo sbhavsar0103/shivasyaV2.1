@@ -38,20 +38,23 @@ export default function Navbar({ toggleSidebar, openPopup }) {
                 ref={dropdownRef}
                 className="sticky top-0 z-50 flex items-center justify-between bg-white border-b px-4 py-2 shadow-sm text-[#3D1F14]"
             >
-                <div className="flex items-center gap-6 w-full lg:w-auto">
+                <div className="flex items-center justify-between lg:justify-start w-full lg:w-auto lg:gap-6">
                     {/* Mobile Menu Button */}
                     <button className="lg:hidden" onClick={toggleSidebar}>
                         <Menu className="w-6 h-6 text-[#3D1F14]" />
                     </button>
 
                     {/* Logo */}
-                    <Link to="/" className="flex-1 lg:flex-none">
+                    <Link to="/" className="flex-shrink-0">
                         <img
                             src={Mainlogo}
                             alt="Logo"
-                            className="h-8 w-auto lg:h-12 mx-auto lg:mx-0"
+                            className="h-8 md:h-10 w-auto lg:h-12"
                         />
                     </Link>
+
+                    {/* Invisible spacer to center logo in mobile properly */}
+                    <div className="w-6 lg:hidden"></div>
 
                     {/* Desktop Menu */}
                     <ul className="hidden lg:flex gap-9 text-[#3D1F14] font-medium items-center">

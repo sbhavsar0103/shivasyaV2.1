@@ -9,9 +9,9 @@ export default function Layout() {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen relative">
+    <div className="flex min-h-screen relative overflow-x-hidden text-clip w-full">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 w-full overflow-x-hidden">
         <Navbar
           toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
           openPopup={() => setPopupOpen(true)}

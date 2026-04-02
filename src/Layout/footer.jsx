@@ -35,7 +35,6 @@ export default function Footer() {
           <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-10 md:mb-0">
             <div>
               <Link to="/">
-                {/* <img src={logo} alt="Shivasya Education & Immigration Services" className="h-14 mb-6" /> */}
                 <img src={logo} alt="Shivasya Education & Immigration Services" className="h-20 mb-6" />
               </Link>
               <div className="mt-2 space-y-1 text-sm text-white">

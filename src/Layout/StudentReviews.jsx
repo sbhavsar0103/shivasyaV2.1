@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const reviews = [
   {
@@ -46,39 +46,87 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % reviews.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+
+        {/* Header (UNCHANGED) */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3A1F16] uppercase tracking-wide">
             WE'RE THRILLED TO BE PART OF OUR STUDENT'S SUCCESSES
           </h2>
-          <p className="text-[#3A1F16] font-medium mt-2">(DON'T TAKE OUR WORD FOR IT!)</p>
+          <p className="text-[#3A1F16] font-medium mt-2">
+            (DON'T TAKE OUR WORD FOR IT!)
+          </p>
         </div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10">
+        {/* ✅ MOBILE ONLY SLIDER */}
+        <div className="md:hidden">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#D8752C] flex items-center justify-center text-white font-bold mr-3">
+                {reviews[current].initial}
+              </div>
+              <h4 className="font-semibold text-[#3A1F16]">
+                {reviews[current].name}
+              </h4>
+            </div>
+
+            <div className="flex mb-3">
+              {Array(5).fill(0).map((_, i) => (
+                <span key={i} className="text-yellow-400 text-xl">★</span>
+              ))}
+            </div>
+
+            <p className="text-gray-700 text-sm">
+              {reviews[current].text}
+            </p>
+          </div>
+
+          {/* dots */}
+          <div className="flex justify-center mt-4 gap-2">
+            {reviews.map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 w-2 rounded-full ${
+                  i === current ? "bg-[#D8752C]" : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ✅ YOUR ORIGINAL DESKTOP CODE (UNCHANGED) */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10">
+          
           {/* Google Rating Sticky Card */}
           <div className="sticky top-20">
             <div className="bg-white p-10 rounded-xl shadow-md border border-gray-200 text-center">
               <div className="text-5xl font-bold text-[#2c3e50] mb-4">4.9</div>
               <div className="flex justify-center mb-4">
-                {Array(5)
-                  .fill(0)
-                  .map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-2xl">★</span>
-                  ))}
+                {Array(5).fill(0).map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-2xl">★</span>
+                ))}
               </div>
               <h3 className="text-lg font-semibold text-[#2c3e50] mb-1">Overall Rating</h3>
               <p className="text-gray-600 font-medium">SHIVASYA</p>
             </div>
           </div>
 
-          {/* Vertical Scrollable Masonry */}
+          {/* Vertical Scrollable Masonry (UNCHANGED) */}
           <div className="max-h-[80vh] overflow-y-auto pr-4">
             <div className="flex gap-6">
-              {/* Split reviews into 3 columns */}
               {[0, 1, 2].map((colIndex) => (
                 <div key={colIndex} className="flex flex-col gap-6 flex-1">
                   {reviews
@@ -88,24 +136,21 @@ export default function Reviews() {
                         key={idx}
                         className="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-transform transition-shadow"
                       >
-                        {/* Reviewer Info */}
                         <div className="flex items-center mb-4">
                           <div className="w-10 h-10 rounded-full bg-[#D8752C] flex items-center justify-center text-white font-bold mr-3">
                             {review.initial}
                           </div>
                           <h4 className="font-semibold text-[#3A1F16]">{review.name}</h4>
                         </div>
-                        {/* Stars */}
+
                         <div className="flex mb-3">
-                          {Array(5)
-                            .fill(0)
-                            .map((_, i) => (
-                              <span key={i} className="text-yellow-400 text-xl">
-                                ★
-                              </span>
-                            ))}
+                          {Array(5).fill(0).map((_, i) => (
+                            <span key={i} className="text-yellow-400 text-xl">
+                              ★
+                            </span>
+                          ))}
                         </div>
-                        {/* Review Text */}
+
                         <p className="text-gray-700 text-sm">{review.text}</p>
                       </div>
                     ))}
@@ -113,6 +158,7 @@ export default function Reviews() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

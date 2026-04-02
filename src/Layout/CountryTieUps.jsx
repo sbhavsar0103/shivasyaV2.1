@@ -13,38 +13,79 @@ export default function CountrySection() {
 
     return (
         <section className="relative z-[1] w-full">
-            <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 md:px-10">
-                <div className="relative bg-[#C67B3E] rounded-[85px] py-9 px-6 sm:px-12 -mt-[90px]">
-                    <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 -mt-12 flex-nowrap">
+            <div className="max-w-[1400px] w-full mx-auto px-2 sm:px-6 md:px-10">
+
+                {/* ================= DESKTOP VIEW ================= */}
+                <div className="hidden md:flex relative bg-[#C67B3E] rounded-[85px] py-10 px-6 justify-between items-center -mt-[90px]">
+
+                    {countries.map((country, index) => (
+                        <div key={index} className="flex flex-col items-center text-center flex-1">
+
+                            {/* Flag (Top Floating Style) */}
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg -mt-16 mb-3 border-4 border-white">
+                                <ReactCountryFlag
+                                    countryCode={country.code}
+                                    svg
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover",
+                                    }}
+                                />
+                            </div>
+
+                            {/* Text */}
+                            <div className="text-white">
+                                <div className="text-sm md:text-base font-bold">
+                                    {country.name}
+                                </div>
+                                <p className="text-xs mt-1 leading-snug">
+                                    {country.desc}
+                                </p>
+                            </div>
+
+                        </div>
+                    ))}
+                </div>
+
+                {/* ================= MOBILE VIEW ================= */}
+                <div className="md:hidden relative bg-[#C67B3E] rounded-[40px] py-6 px-4 -mt-[50px]">
+
+                    <div className="flex flex-col gap-5">
+
                         {countries.map((country, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col items-center text-center w-[110px] sm:w-[130px] md:w-[150px] flex-shrink-0"
+                                className="flex items-center gap-4 border-b border-[#3D1F14] pb-3"
                             >
-                                <div className="w-13 h-13 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-lg -mt-8 mb-2">
+                                {/* Flag */}
+                                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-md">
                                     <ReactCountryFlag
                                         countryCode={country.code}
                                         svg
                                         style={{
-                                            width: "90%",
-                                            height: "90%",
-                                            borderRadius: "50%",
+                                            width: "100%",
+                                            height: "100%",
+                                            objectFit: "cover",
                                         }}
                                     />
                                 </div>
 
+                                {/* Text */}
                                 <div className="text-white">
-                                    <div className="text-sm sm:text-base md:text-lg font-bold">
+                                    <div className="text-sm font-bold">
                                         {country.name}
                                     </div>
-                                    <h6 className="text-xs sm:text-sm md:text-sm leading-snug mt-1">
+                                    <p className="text-xs mt-1">
                                         {country.desc}
-                                    </h6>
+                                    </p>
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 </div>
+
             </div>
         </section>
     );

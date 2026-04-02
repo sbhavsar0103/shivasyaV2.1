@@ -14,7 +14,7 @@ export default function EuropeStudentVisaConsultant() {
                 <div className="text-justify space-y-4 text-gray-800 text-base sm:text-lg lg:text-xxl leading-relaxed">
                     <p>
                         Visa procedures differ across European countries and require detailed documentation and compliance.
-                        At Shivasya Education and Immigration Services, our expert team provides:
+                        At <strong>Shivasya Education</strong> and Immigration Services, our expert team provides:
                     </p>
                 </div>
 

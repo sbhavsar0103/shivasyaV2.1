@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 #scrollbar2::-webkit-scrollbar {
   width: 100px;
   height: 8px;
