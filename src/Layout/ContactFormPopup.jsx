@@ -33,7 +33,6 @@ export default function ContactFormPopup({ open, onClose, autoOpen = false }) {
             setIsOpen(false);
             onClose && onClose();
           }}
-          // className="absolute top-4 right-4 text-2xl font-bold text-gray-600 hover:text-gray-900"
           className="absolute top-4 right-4 z-50 bg-white/80 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold shadow hover:bg-white"
         >
           &times;

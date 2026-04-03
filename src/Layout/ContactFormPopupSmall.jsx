@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Send } from "lucide-react";
 
 import image_1 from "../assets/contact/image_1.jpeg";
@@ -32,43 +32,97 @@ const countries = [
   { code: "Austria", name: "Austria", flag: "🇦🇹" },
 ];
 
-const faqData = [
-  {
-    title: "Management",
-    items: ["MBA/ MIM", "Luxury Brand Management", "Sports Management"],
-  },
-  {
-    title: "Business",
-    items: [
-      "International Business",
-      "Entrepreneurship",
-      "Sales, Marketing and Finance",
-    ],
-  },
-  {
-    title: "Computer Science & IT",
-    items: ["Artificial Intelligence", "Robotics", "Data Science & Business Analyst"],
-  },
-  {
-    title: "Engineering",
-    items: ["Computer Engineering", "Mechanical Engineering", "Civil Engineering"],
-  },
-  {
-    title: "Health Science",
-    items: ["Public Health", "Healthcare Administration", "Health Informatics"],
-  },
-  {
-    title: "Law & Legal Studies",
-    items: ["Legal Studies", "International Law", "Business and Commercial"],
-  },
-  {
-    title: "Biological & Life Sciences",
-    items: ["Biotechnology", "Biological Sciences", "Biomedical Engineering"],
-  },
+const COURSE_DATA = [
+  { title: "Management", items: ["Business Management", "Event Management", "Health Management", "Project Management", "Supply Chain Management"] },
+  { title: "Engineering", items: ["Automotive Engineering", "Electrical Engineering", "Electronics Engineering", "Petroleum Engineering"] },
+  { title: "Business", items: ["Business Analytics", "Business Management"] },
+  { title: "Health Science", items: ["Cardiovascular Science", "Fitness", "Health Psychology", "Kinesiology", "Nursing"] },
+  { title: "Biological & Life Sciences", items: ["Bioinformatics", "Clinical Science", "Genetics", "Zoology"] },
+  { title: "Law & Legal Studies", items: ["LLB", "LLM", "Criminology", "Justice & Emergency Services", "Forensic Science"] },
+  { title: "Computer Science & IT", items: ["Game Programming", "Software Development", "Cyber Security", "Mobile Applications", "Web Applications"] },
 ];
 
-export default function ContactFormPopupSmall() {
+// ---------- Reusable Input Components ----------
+const InputField = ({ type = "text", placeholder, value, onChange, required = false }) => (
+  <input
+    type={type}
+    placeholder={placeholder}
+    value={value}
+    required={required}
+    onChange={onChange}
+    className="px-3 py-2 border rounded-md outline-none w-full"
+  />
+);
 
+const SelectField = ({ value, onChange, required = false, options }) => (
+  <select value={value} onChange={onChange} required={required} className="px-3 py-2 border rounded-md outline-none w-full">
+    <option value="">Select Course</option>
+    {options.map((cat) => (
+      <optgroup key={cat.title} label={cat.title}>
+        {cat.items.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </optgroup>
+    ))}
+  </select>
+);
+
+const RadioGroup = ({ label, options, selected, onChange }) => (
+  <div>
+    <p className="text-xs mb-1">{label}</p>
+    <div className="flex gap-2">
+      {options.map((option) => (
+        <label key={option} className="text-xs flex items-center gap-1 cursor-pointer">
+          <input type="radio" value={option} checked={selected === option} onChange={onChange} />
+          {option}
+        </label>
+      ))}
+    </div>
+  </div>
+);
+
+const CountrySelector = ({ countries, selectedCountry, onChange }) => (
+  <div className="flex flex-wrap gap-2 text-xs">
+    {countries.map((country) => (
+      <label key={country.code} className="text-center cursor-pointer">
+        <input
+          type="radio"
+          name="country"
+          value={country.code}
+          checked={selectedCountry === country.code}
+          onChange={onChange}
+          className="sr-only"
+        />
+        <div
+          className={`flex items-center gap-1 border rounded-full px-2 py-[2px] ${selectedCountry === country.code ? "bg-[#C67B3E]/20 border-[#C67B3E]" : "border-gray-300"
+            }`}
+        >
+          <div className="text-sm">{country.flag}</div>
+          <div>{country.code}</div>
+        </div>
+      </label>
+    ))}
+  </div>
+);
+
+const Slideshow = ({ images, currentSlide }) => (
+  <div className="bg-white hidden lg:flex w-1/2 relative overflow-hidden bg-gray-100">
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`Slide ${index + 1}`}
+        className={`absolute w-full h-full object-contain transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0"
+          }`}
+      />
+    ))}
+  </div>
+);
+
+// ---------- Main Component ----------
+export default function ContactFormPopupSmall() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -78,174 +132,78 @@ export default function ContactFormPopupSmall() {
     course: "",
     message: "",
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("idle");
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // slideshow auto change
+  // Slideshow auto change
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
-    }, 3000);
-
+    const interval = setInterval(() => setCurrentSlide((prev) => (prev + 1) % slideshowImages.length), 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleChange = useCallback((field) => (e) => setFormData((prev) => ({ ...prev, [field]: e.target.value })), []);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!formData.coachingType || !formData.country) {
       alert("Please select a coaching type and country");
       return;
     }
 
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        coachingType: "",
-        country: "",
-        course: "",
-        message: "",
+    try {
+      const response = await fetch("https://api.shivasya.in/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: formData.course,
+          ielts_type: formData.coachingType,
+          country: formData.country,
+          message: formData.message,
+        }),
       });
 
-      alert("Form Submitted Successfully!");
-    }, 1200);
+      if (!response.ok) throw new Error("Failed to submit form");
+      await response.json();
+      setSubmitStatus("success");
+      setFormData({ name: "", phone: "", email: "", coachingType: "", country: "", course: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    // <div className="flex flex-col lg:flex-row w-full h-full">
     <div className="flex flex-col lg:flex-row w-full h-full min-h-[560px]">
-
       {/* FORM SECTION */}
       <div className="w-full lg:w-1/2 p-6 overflow-y-auto">
-
-        <h3 className="text-lg font-semibold mb-2">
-          Contact Us
-        </h3>
-
+        <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
         <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-
-          {/* Name + Phone */}
           <div className="grid grid-cols-2 gap-2">
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="px-3 py-2 border rounded-md outline-none"
-            />
-
-            <input
-              type="tel"
-              placeholder="Phone"
-              required
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="px-3 py-2 border rounded-md outline-none"
-            />
+            <InputField placeholder="Name" value={formData.name} onChange={handleChange("name")} required />
+            <InputField placeholder="Phone" value={formData.phone} onChange={handleChange("phone")} required type="tel" />
           </div>
-
-          {/* Email + Course */}
           <div className="grid grid-cols-2 gap-2">
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="px-3 py-2 border rounded-md outline-none"
-            />
-
-            <select
-              value={formData.course}
-              onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-              required
-              className="px-3 py-2 border rounded-md outline-none"
-            >
-              <option value="">Course</option>
-
-              {faqData.map((cat) => (
-                <optgroup key={cat.title} label={cat.title}>
-                  {cat.items.map((item) => (
-                    <option key={item}>{item}</option>
-                  ))}
-                </optgroup>
-              ))}
-
-            </select>
+            <InputField placeholder="Email" value={formData.email} onChange={handleChange("email")} required type="email" />
+            <SelectField value={formData.course} onChange={handleChange("course")} required options={COURSE_DATA} />
           </div>
-
-          {/* Coaching */}
-          <div>
-            <p className="text-xs mb-1">Coaching</p>
-
-            <div className="flex gap-2">
-              {["IELTS", "PTE"].map((type) => (
-                <label key={type} className="text-xs flex items-center gap-1">
-
-                  <input
-                    type="radio"
-                    value={type}
-                    checked={formData.coachingType === type}
-                    onChange={(e) => setFormData({ ...formData, coachingType: e.target.value })}
-                  />
-
-                  {type}
-
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {/* Countries */}
-          <div className="flex flex-wrap gap-2 text-xs">
-
-            {countries.map((country) => (
-              <label key={country.code} className="text-center cursor-pointer">
-
-                <input
-                  type="radio"
-                  name="country"
-                  value={country.code}
-                  checked={formData.country === country.code}
-                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                  className="sr-only"
-                />
-
-                <div
-                  className={`flex items-center gap-1 border rounded-full px-2 py-[2px] ${formData.country === country.code
-                    ? "bg-[#C67B3E]/20 border-[#C67B3E]"
-                    : "border-gray-300"
-                    }`}
-                >
-
-                  <div className="text-sm">{country.flag}</div>
-                  <div>{country.code}</div>
-
-                </div>
-
-              </label>
-            ))}
-
-          </div>
-
-          {/* Message */}
+          <RadioGroup label="Coaching" options={["IELTS", "PTE"]} selected={formData.coachingType} onChange={handleChange("coachingType")} />
+          <CountrySelector countries={countries} selectedCountry={formData.country} onChange={handleChange("country")} />
           <textarea
             rows={3}
             placeholder="Message"
             value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            onChange={handleChange("message")}
             className="w-full px-2 py-1 border rounded-md outline-none resize-none"
           />
-
-          {/* Submit */}
           <button
             type="submit"
             disabled={isSubmitting}
@@ -254,25 +212,15 @@ export default function ContactFormPopupSmall() {
             {isSubmitting ? "Submitting..." : "Submit"}
             <Send className="w-4 h-4" />
           </button>
-
+            {submitStatus === "success" && (
+              <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
+                Form submitted successfully!
+              </div>
+            )}
         </form>
-
       </div>
-
       {/* IMAGE SLIDESHOW */}
-      <div className="bg-white hidden lg:flex w-1/2 relative overflow-hidden bg-gray-100">
-
-        {slideshowImages.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt="Slide"
-            className={`absolute w-full h-full object-contain transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-          />
-        ))}
-
-      </div>
+      <Slideshow images={slideshowImages} currentSlide={currentSlide} />
     </div>
   );
 }
