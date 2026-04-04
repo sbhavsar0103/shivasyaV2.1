@@ -28,39 +28,14 @@ const countries = [
 ];
 
 // Course data
-const faqData = [
-    {
-        title: "Management",
-        items: ["MBA/ MIM", "Luxury Brand Management", "Sports Management"],
-    },
-    {
-        title: "Business",
-        items: [
-            "International Business",
-            "Entrepreneurship",
-            "Sales, Marketing and Finance",
-        ],
-    },
-    {
-        title: "Computer Science & IT",
-        items: ["Artificial Intelligence", "Robotics", "Data Science & Business Analyst"],
-    },
-    {
-        title: "Engineering",
-        items: ["Computer Engineering", "Mechanical Engineering", "Civil Engineering"],
-    },
-    {
-        title: "Health Science",
-        items: ["Public Health", "Healthcare Administration", "Health Informatics"],
-    },
-    {
-        title: "Law & Legal Studies",
-        items: ["Legal Studies", "International Law", "Business and Commercial"],
-    },
-    {
-        title: "Biological & Life Sciences",
-        items: ["Biotechnology", "Biological Sciences", "Biomedical Engineering"],
-    },
+const COURSE_DATA = [
+  { title: "Management", items: ["Business Management", "Event Management", "Health Management", "Project Management", "Supply Chain Management"] },
+  { title: "Engineering", items: ["Automotive Engineering", "Electrical Engineering", "Electronics Engineering", "Petroleum Engineering"] },
+  { title: "Business", items: ["Business Analytics", "Business Management"] },
+  { title: "Health Science", items: ["Cardiovascular Science", "Fitness", "Health Psychology", "Kinesiology", "Nursing"] },
+  { title: "Biological & Life Sciences", items: ["Bioinformatics", "Clinical Science", "Genetics", "Zoology"] },
+  { title: "Law & Legal Studies", items: ["LLB", "LLM", "Criminology", "Justice & Emergency Services", "Forensic Science"] },
+  { title: "Computer Science & IT", items: ["Game Programming", "Software Development", "Cyber Security", "Mobile Applications", "Web Applications"] },
 ];
 
 export default function ContactForm() {
@@ -76,18 +51,33 @@ export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState("idle");
 
-    const handleSubmit = (e) => {
+    const handleChange = (key) => (value) => {
+        setFormData({ ...formData, [key]: value });
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!formData.coachingType || !formData.country) {
-            alert("Please select a coaching type and country");
+        if (!formData.coachingType || !formData.country || !formData.course) {
+            alert("Please select coaching type, country, and course");
             return;
         }
 
         setIsSubmitting(true);
         setSubmitStatus("idle");
 
-        setTimeout(() => {
-            setIsSubmitting(false);
+        try {
+            const res = await fetch("https://api.shivasya.in/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    ...formData,
+                    course: formData.course,
+                    ielts_type: formData.coachingType,
+                }),
+            });
+
+            if (!res.ok) throw new Error("Failed to submit form");
+            await res.json();
             setSubmitStatus("success");
             setFormData({
                 name: "",
@@ -98,7 +88,12 @@ export default function ContactForm() {
                 country: "",
                 message: "",
             });
-        }, 1200);
+        } catch (error) {
+            console.error(error);
+            setSubmitStatus("error");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -121,7 +116,7 @@ export default function ContactForm() {
                                 placeholder="Name *"
                                 required
                                 value={formData.name}
-                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                onChange={(e) => handleChange("name")(e.target.value)}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                             <input
@@ -129,7 +124,7 @@ export default function ContactForm() {
                                 placeholder="Phone *"
                                 required
                                 value={formData.phone}
-                                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                onChange={(e) => handleChange("phone")(e.target.value)}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
                         </div>
@@ -141,18 +136,18 @@ export default function ContactForm() {
                                 placeholder="Email *"
                                 required
                                 value={formData.email}
-                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                onChange={(e) => handleChange("email")(e.target.value)}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all"
                             />
 
                             <select
                                 value={formData.course}
-                                onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+                                onChange={(e) => handleChange("course")(e.target.value)}
                                 className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all hide-scrollbar"
                                 required
                             >
                                 <option value="">Select Course *</option>
-                                {faqData.map((category) => (
+                                {COURSE_DATA.map((category) => (
                                     <optgroup key={category.title} label={category.title}>
                                         {category.items.map((item) => (
                                             <option key={item} value={item}>
@@ -178,9 +173,7 @@ export default function ContactForm() {
                                             name="coaching"
                                             value={type}
                                             checked={formData.coachingType === type}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, coachingType: e.target.value })
-                                            }
+                                            onChange={(e) => handleChange("coachingType")(e.target.value)}
                                             className="sr-only"
                                         />
                                         <span
@@ -209,9 +202,7 @@ export default function ContactForm() {
                                             name="country"
                                             value={country.code}
                                             checked={formData.country === country.code}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, country: e.target.value })
-                                            }
+                                            onChange={(e) => handleChange("country")(e.target.value)}
                                             className="sr-only"
                                         />
                                         <span
@@ -236,7 +227,7 @@ export default function ContactForm() {
                             required
                             rows={4}
                             value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            onChange={(e) => handleChange("message")(e.target.value)}
                             className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-[#C67B3E] focus:border-transparent outline-none transition-all resize-none"
                         />
 
@@ -244,6 +235,12 @@ export default function ContactForm() {
                         {submitStatus === "success" && (
                             <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
                                 Form submitted successfully!
+                            </div>
+                        )}
+
+                        {submitStatus === "error" && (
+                            <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl">
+                                Failed to submit form. Please try again.
                             </div>
                         )}
 
