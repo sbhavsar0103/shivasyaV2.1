@@ -86,8 +86,8 @@ const CountryOption = ({ countries, selected, onChange }) => (
     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
       {countries.map((country) => (
         <label key={country.code} className="cursor-pointer">
-          <input type="radio" name="country" value={country.code} checked={selected === country.code} onChange={(e) => onChange(e.target.value)} className="sr-only" />
-          <span className={`flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition-all ${selected === country.code ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]" : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"}`}>
+          <input type="checkbox" name="country" value={country.code} checked={selected.includes(country.code)} onChange={() => onChange(country.code)} className="sr-only" />
+          <span className={`flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition-all ${selected.includes(country.code) ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]" : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"}`}>
             <span className="text-2xl">{country.flag}</span>
             <span className="text-xs font-medium text-center leading-tight">{country.name}</span>
           </span>
@@ -129,7 +129,7 @@ export default function ContactForm() {
     phone: "",
     email: "",
     coachingType: "",
-    country: "",
+    country: [],
     course: "",
     message: "",
   });
@@ -140,8 +140,8 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.coachingType || !formData.country || !formData.course) {
-      alert("Please select coaching type, country, and course");
+    if (!formData.coachingType || formData.country.length === 0 || !formData.course) {
+      alert("Please select coaching type, at least one country, and course");
       return;
     }
 
@@ -162,7 +162,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error("Failed to submit form");
       await res.json();
       setSubmitStatus("success");
-      setFormData({ name: "", phone: "", email: "", coachingType: "", country: "", course: "", message: "" });
+      setFormData({ name: "", phone: "", email: "", coachingType: "", country: [], course: "", message: "" });
     } catch (err) {
       console.error(err);
       setSubmitStatus("error");
@@ -223,7 +223,12 @@ export default function ContactForm() {
 
                 <CourseDropdown courses={COURSE_DATA} selected={formData.course} onChange={handleChange("course")} />
 
-                <CountryOption countries={COUNTRIES} selected={formData.country} onChange={handleChange("country")} />
+                <CountryOption countries={COUNTRIES} selected={formData.country} onChange={(code) => setFormData(prev => ({
+                  ...prev,
+                  country: prev.country.includes(code)
+                    ? prev.country.filter(c => c !== code)
+                    : [...prev.country, code]
+                }))} />
 
                 <textarea
                   placeholder="Message *"

@@ -83,20 +83,20 @@ const RadioGroup = ({ label, options, selected, onChange }) => (
   </div>
 );
 
-const CountrySelector = ({ countries, selectedCountry, onChange }) => (
+const CountrySelector = ({ countries, selectedCountries, onChange }) => (
   <div className="flex flex-wrap gap-2 text-xs">
     {countries.map((country) => (
       <label key={country.code} className="text-center cursor-pointer">
         <input
-          type="radio"
+          type="checkbox"
           name="country"
           value={country.code}
-          checked={selectedCountry === country.code}
-          onChange={onChange}
+          checked={selectedCountries.includes(country.code)}
+          onChange={() => onChange(country.code)}
           className="sr-only"
         />
         <div
-          className={`flex items-center gap-1 border rounded-full px-2 py-[2px] ${selectedCountry === country.code ? "bg-[#C67B3E]/20 border-[#C67B3E]" : "border-gray-300"
+          className={`flex items-center gap-1 border rounded-full px-2 py-[2px] ${selectedCountries.includes(country.code) ? "bg-[#C67B3E]/20 border-[#C67B3E]" : "border-gray-300"
             }`}
         >
           <div className="text-sm">{country.flag}</div>
@@ -128,7 +128,7 @@ export default function ContactFormPopupSmall() {
     phone: "",
     email: "",
     coachingType: "",
-    country: "",
+    country: [],
     course: "",
     message: "",
   });
@@ -146,8 +146,8 @@ export default function ContactFormPopupSmall() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.coachingType || !formData.country) {
-      alert("Please select a coaching type and country");
+    if (!formData.coachingType || formData.country.length === 0) {
+      alert("Please select a coaching type and at least one country");
       return;
     }
 
@@ -172,7 +172,7 @@ export default function ContactFormPopupSmall() {
       if (!response.ok) throw new Error("Failed to submit form");
       await response.json();
       setSubmitStatus("success");
-      setFormData({ name: "", phone: "", email: "", coachingType: "", country: "", course: "", message: "" });
+      setFormData({ name: "", phone: "", email: "", coachingType: "", country: [], course: "", message: "" });
     } catch (error) {
       console.error(error);
       setSubmitStatus("error");
@@ -196,7 +196,10 @@ export default function ContactFormPopupSmall() {
             <SelectField value={formData.course} onChange={handleChange("course")} required options={COURSE_DATA} />
           </div>
           <RadioGroup label="Coaching" options={["IELTS", "PTE"]} selected={formData.coachingType} onChange={handleChange("coachingType")} />
-          <CountrySelector countries={countries} selectedCountry={formData.country} onChange={handleChange("country")} />
+          <CountrySelector countries={countries} selectedCountries={formData.country} onChange={(code) => setFormData(prev => ({
+            ...prev,
+            country: prev.country.includes(code) ? prev.country.filter(c => c !== code) : [...prev.country, code]
+          }))} />
           <textarea
             rows={3}
             placeholder="Message"
@@ -212,11 +215,11 @@ export default function ContactFormPopupSmall() {
             {isSubmitting ? "Submitting..." : "Submit"}
             <Send className="w-4 h-4" />
           </button>
-            {submitStatus === "success" && (
-              <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
-                Form submitted successfully!
-              </div>
-            )}
+          {submitStatus === "success" && (
+            <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
+              Form submitted successfully!
+            </div>
+          )}
         </form>
       </div>
       {/* IMAGE SLIDESHOW */}

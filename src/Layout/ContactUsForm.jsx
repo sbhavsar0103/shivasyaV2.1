@@ -29,13 +29,13 @@ const countries = [
 
 // Course data
 const COURSE_DATA = [
-  { title: "Management", items: ["Business Management", "Event Management", "Health Management", "Project Management", "Supply Chain Management"] },
-  { title: "Engineering", items: ["Automotive Engineering", "Electrical Engineering", "Electronics Engineering", "Petroleum Engineering"] },
-  { title: "Business", items: ["Business Analytics", "Business Management"] },
-  { title: "Health Science", items: ["Cardiovascular Science", "Fitness", "Health Psychology", "Kinesiology", "Nursing"] },
-  { title: "Biological & Life Sciences", items: ["Bioinformatics", "Clinical Science", "Genetics", "Zoology"] },
-  { title: "Law & Legal Studies", items: ["LLB", "LLM", "Criminology", "Justice & Emergency Services", "Forensic Science"] },
-  { title: "Computer Science & IT", items: ["Game Programming", "Software Development", "Cyber Security", "Mobile Applications", "Web Applications"] },
+    { title: "Management", items: ["Business Management", "Event Management", "Health Management", "Project Management", "Supply Chain Management"] },
+    { title: "Engineering", items: ["Automotive Engineering", "Electrical Engineering", "Electronics Engineering", "Petroleum Engineering"] },
+    { title: "Business", items: ["Business Analytics", "Business Management"] },
+    { title: "Health Science", items: ["Cardiovascular Science", "Fitness", "Health Psychology", "Kinesiology", "Nursing"] },
+    { title: "Biological & Life Sciences", items: ["Bioinformatics", "Clinical Science", "Genetics", "Zoology"] },
+    { title: "Law & Legal Studies", items: ["LLB", "LLM", "Criminology", "Justice & Emergency Services", "Forensic Science"] },
+    { title: "Computer Science & IT", items: ["Game Programming", "Software Development", "Cyber Security", "Mobile Applications", "Web Applications"] },
 ];
 
 export default function ContactForm() {
@@ -45,7 +45,7 @@ export default function ContactForm() {
         email: "",
         course: "",
         coachingType: "",
-        country: "",
+        country: [],
         message: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,8 +57,8 @@ export default function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!formData.coachingType || !formData.country || !formData.course) {
-            alert("Please select coaching type, country, and course");
+        if (!formData.coachingType || formData.country.length === 0 || !formData.course) {
+            alert("Please select coaching type, at least one country, and course");
             return;
         }
 
@@ -85,7 +85,7 @@ export default function ContactForm() {
                 email: "",
                 course: "",
                 coachingType: "",
-                country: "",
+                country: [],
                 message: "",
             });
         } catch (error) {
@@ -198,15 +198,23 @@ export default function ContactForm() {
                                 {countries.map((country) => (
                                     <label key={country.code} className="cursor-pointer">
                                         <input
-                                            type="radio"
+                                            type="checkbox"
                                             name="country"
                                             value={country.code}
-                                            checked={formData.country === country.code}
-                                            onChange={(e) => handleChange("country")(e.target.value)}
+                                            checked={formData.country.includes(country.code)}
+                                            onChange={(e) => {
+                                                const selected = e.target.value;
+                                                setFormData((prev) => ({
+                                                    ...prev,
+                                                    country: prev.country.includes(selected)
+                                                        ? prev.country.filter((c) => c !== selected)
+                                                        : [...prev.country, selected],
+                                                }));
+                                            }}
                                             className="sr-only"
                                         />
                                         <span
-                                            className={`flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition-all ${formData.country === country.code
+                                            className={`flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition-all ${formData.country.includes(country.code)
                                                 ? "border-[#C67B3E] bg-[#C67B3E]/10 text-[#3D1F14]"
                                                 : "border-gray-200 bg-white text-gray-700 hover:border-gray-300"
                                                 }`}
